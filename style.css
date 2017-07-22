@@ -8,11 +8,11 @@ body {
 .header {
 	font-family: Verdana;
 	font-weight: bold;
-	color: #f88379;
+	color: #fd8383;
 	padding: 20;
 }
 
 .header-background {
-	background-color: #0839ab;
+	background-color: #082a78;
 	width: 100%;
 }

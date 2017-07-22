@@ -21,6 +21,13 @@ body {
 .header-background {
 	background-color: #082a78;
 	width: 100%;
+	'padding-top': 10;
+	float: left;
+}
+
+.header_button-background {
+	background-color: #082a78;
+	width: 100%;
 	float: left;
 }
 

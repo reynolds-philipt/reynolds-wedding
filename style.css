@@ -1,5 +1,9 @@
 .header {
 	font-family: Verdana;
 	font-weight: bold;
-	color: #FF0000;
+	color: #ffdab9;
+}
+
+.header-background {
+	color: #4169e1
 }

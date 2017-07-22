@@ -9,6 +9,7 @@ body {
 	font-family: 'Great Vibes', Helvetica, sans-serif;
 	font-weight: bold;
 	color: #fd8383;
+	margin: 0;
 	padding-top: 20;
 	padding-left: 20;
 	padding-right: 20;
@@ -24,7 +25,7 @@ body {
 
 .header-button {
 	width: 100;
-	padding: 10;
+	padding-top: 10;
 	float: left;
 }
 

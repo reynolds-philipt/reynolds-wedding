@@ -6,7 +6,7 @@ body {
 }
 
 .header {
-	font-family: Arizonia;
+	font: 400 100px/1.3 'Arizonia', Helvetica, sans-serif;
 	font-weight: bold;
 	color: #fd8383;
 	padding: 20;

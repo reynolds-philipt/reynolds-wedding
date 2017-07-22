@@ -28,6 +28,7 @@ body {
 	float: left;
 	padding: 10;
 	text-align: center;
+	text-decoration: none;
 }
 
 .header-button-selected {
@@ -35,6 +36,7 @@ body {
 	float: left;
 	padding: 10;
 	text-align: center;
+	text-decoration: none;
 }
 
 .header-button-text {

@@ -3,22 +3,15 @@
 		<title>Philip and Kaitlyn's Wedding</title>
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script> 
+			$(function(){
+				$("#header").load("header.html");
+			});
+		</script> 
 	</head>
 	<body>
-		<div class="header-background", onclick="index.html">
-			<a class="header", href="index.html">Philip and Kaitlyn's Wedding</a>
-		</div>
-		<div class="header-button-background">
-			<div class="header-button">
-				<a class="header-button-text", href="date.html">Date</a>
-			</div>
-			<div class="header-button">
-				<a class="header-button-text", href="venue.html">Venue</a>
-			</div>
-			<div class="header-button">
-				<a class="header-button-text", href="contact.html">Contact</a>
-			</div>
-		</div>
+		<div id="header"></div>
 		<h2>Main Page</h2>
 		<p>A description will be here</p>
 	</body>

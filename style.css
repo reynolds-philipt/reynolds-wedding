@@ -54,3 +54,7 @@ body {
 	text-align: center;
 	text-decoration: none;
 }
+
+.email-input {
+	width: 200;
+}

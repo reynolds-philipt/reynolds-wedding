@@ -78,7 +78,9 @@ body {
 }
 
 .under-header {
-	
+	background-image: url("sandy-109-b-w.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
 

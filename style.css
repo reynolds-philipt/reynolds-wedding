@@ -58,6 +58,9 @@ body {
 .email-input {
 	width: 200;
 	text-align: center;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
 }
 
 .email-submit {

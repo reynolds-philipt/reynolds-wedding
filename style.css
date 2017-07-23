@@ -63,6 +63,8 @@ body {
 .email-submit {
 	width: 100;
 	text-align: center;
+	margin: 5;
+	background-color: #d19f21;
 }
 
 .email-form {

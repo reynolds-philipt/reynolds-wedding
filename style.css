@@ -80,8 +80,15 @@ body {
 	opacity: 0.8;
 }
 
+.email-form-div {
+	text-align: center;
+}
+
 .email-form {
 	text-align: center;
+	width: 350;
+	background-color: #ffffff;
+	opacity: 0.5;
 }
 
 .under-header {

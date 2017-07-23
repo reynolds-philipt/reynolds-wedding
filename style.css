@@ -81,7 +81,7 @@ body {
 }
 
 .email-form-div {
-	text-align: center;
+	text-align: -webkit-center;
 }
 
 .email-form {

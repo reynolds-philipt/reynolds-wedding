@@ -11,7 +11,7 @@ body {
 }
 
 .header-background {
-	background-color: #082a78;
+	background-color: #000080;
 	width: 100%;
 	padding-top: 10;
 	padding-bottom: 5;
@@ -22,7 +22,7 @@ body {
 	font-family: 'Great Vibes', Helvetica, sans-serif;
 	font-weight: bold;
 	font-size: 35;
-	color: #fd8383;
+	color: #ff7f50;
 	margin: 0;
 	padding-top: 20;
 	padding-left: 20;
@@ -33,7 +33,7 @@ body {
 }
 
 .header-button-background {
-	background-color: #082a78;
+	background-color: #000080;
 	width: 100%;
 	float: left;
 }
@@ -46,7 +46,7 @@ body {
 }
 
 .header-button-selected {
-	background-color: #5778bf;
+	background-color: #40e0d0;
 	width: 100;
 	float: left;
 	padding: 10;
@@ -54,7 +54,7 @@ body {
 }
 
 .header-button-text {
-	color: #fd8383;
+	color: #ff7f50;
 	text-shadow: 4px 4px 3px rgba(0,0,0,1);
 	text-align: center;
 	text-decoration: none;
@@ -73,7 +73,7 @@ body {
 	width: 100;
 	text-align: center;
 	margin: 5;
-	background-color: #ffd700;
+	background-color: #d4af37;
 	padding: 8;
 	border: none;
 	border-radius: 4px;
@@ -88,7 +88,7 @@ body {
 	text-align: center;
 	width: 350;
 	border-radius: 4px;
-	background-color: #fd8383;
+	background-color: #ff7f50;
 	opacity: 0.5;
 }
 

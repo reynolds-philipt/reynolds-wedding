@@ -40,6 +40,7 @@ body {
 
 .header-button {
 	width: 10%;
+	min-width: 50;
 	float: left;
 	padding: 10;
 	text-align: center;

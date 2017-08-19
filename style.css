@@ -110,13 +110,17 @@ body {
 }
 
 .under-header {
-	background-image: url("sandy-109-b-w.jpg");
-	background-size: 100%;
-	background-repeat: no-repeat;
 	height: 100%;
 	float: left;
 	width: 100%;
 	margin-top: 90;
+}
+
+.background-div {
+	background-image: url("sandy-109-b-w.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	height: 100%;
 }
 
 

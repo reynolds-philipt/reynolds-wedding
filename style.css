@@ -113,7 +113,7 @@ body {
 
 .header-empty-div {
 	width: 100%;
-	height: 90;
+	height: 10%;
 }
 
 .under-header {
@@ -126,8 +126,10 @@ body {
 	background-image: url("sandy-109-b-w.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
+	position: relative;
 	height: 100%;
-	overflow: auto;
+	min-height: 90%;
+	overflow: hidden;
 }
 
 

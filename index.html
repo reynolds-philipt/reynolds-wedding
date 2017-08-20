@@ -4,11 +4,6 @@
 		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-		<script>
-			$(function(){
-				$("#header").load("header.html");
-			});
-		</script>
 	</head>
 	<body class="background-beach">
 		<div id="header"></div>
@@ -27,5 +22,23 @@
 		</div>
 	</body>
 	<footer>
+		<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyBAPX4ORn6MWiFyNXUhg-eZ07awM4UeY9w",
+		    authDomain: "wedding-360af.firebaseapp.com",
+		    databaseURL: "https://wedding-360af.firebaseio.com",
+		    projectId: "wedding-360af",
+		    storageBucket: "",
+		    messagingSenderId: "833865959590"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+		<script>
+			$(function(){
+				$("#header").load("header.html");
+			});
+		</script>
 	</footer>
 </html>

@@ -11,6 +11,8 @@ function header() {
 	  messagingSenderId: "833865959590"
 	};
 	firebase.initializeApp(config);
+	
+	document.getElementById('date_header_button');
 
 }
 

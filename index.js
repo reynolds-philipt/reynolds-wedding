@@ -15,6 +15,6 @@ function index() {
 	var last_name = "Reynolds";
 	database.ref('guests/' + email).set({
 	    first_name: first_name,
-	    last_name: last_name,
+	    last_name: last_name
 	});
 }

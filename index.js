@@ -9,4 +9,12 @@ function index() {
 	  messagingSenderId: "833865959590"
 	};
 	firebase.initializeApp(config);
+	var database = firebase.database();
+	var user_id = 1;
+	var email = "reynolds.philipt@gmail.com";
+	var name = "Philip Reynolds";
+	database.ref('guests/' + user_id).set({
+	    username: name,
+	    email: email,
+	});
 }

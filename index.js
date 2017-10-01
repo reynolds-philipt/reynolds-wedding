@@ -10,10 +10,12 @@ function index() {
 	};
 	firebase.initializeApp(config);
 	var database = firebase.database();
+	var user_id = 1;
 	var email = "reynolds.philipt@gmail.com";
 	var first_name = "Philip";
 	var last_name = "Reynolds";
-	database.ref('guests/' + email).set({
+	database.ref('guests/' + user_id).set({
+	    email: email,
 	    first_name: first_name,
 	    last_name: last_name
 	});

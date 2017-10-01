@@ -11,8 +11,8 @@ function index() {
 	firebase.initializeApp(config);
 	var database = firebase.database();
 	var user_id = 2;
-	var email = "philepeo12@yahoo.com";
-	var first_name = "Philip";
+	var email = "testing@yahoo.com";
+	var first_name = "Test";
 	var last_name = "Reynolds";
 	database.ref('guests/' + user_id).set({
 	    email: email,

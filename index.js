@@ -18,9 +18,9 @@ function index() {
 	
 	user_email.addEventListener('focus', function() {
 		debugger;
-		user_email.style({
+		user_email.style = {
 			'opacity':100	
-		});
+		};
 	});
 	
 	var user_id = 2;

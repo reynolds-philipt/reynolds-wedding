@@ -88,6 +88,20 @@ body {
 	opacity: 0.8;
 }
 
+.name-input{
+	width: 200;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	padding: 5;
+	opacity: 0.8;
+	display: none;
+}
+
+.name-break{
+	display: none;
+}
+
 .email-submit {
 	width: 100;
 	text-align: center;

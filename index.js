@@ -15,6 +15,7 @@ function index() {
 	var user_email = document.getElementById('user_email');
 	var user_first_name = document.getElementById('user_first_name');
 	var user_last_name = document.getElementById('user_last_name');
+	var user_submit = document.getElementById('user_submit');
 	
 	user_email.addEventListener('focus', function() {
 		debugger;
@@ -28,6 +29,10 @@ function index() {
 		user_last_name.style = {
 			'display': 'initial'
 		};
+	});
+	
+	user_submit.addEventListener('submit', function() {
+		debugger;
 	});
 	
 	var user_id = 2;
@@ -46,7 +51,7 @@ function display_names() {
 	var user_last_break = document.getElementById('user_last_name_break');
 	
 	user_first_break.style = {
-		'display': 'initial'	
+		'display': 'initial'
 	};
 	user_last_break.style = {
 		'display': 'initial'

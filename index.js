@@ -21,15 +21,34 @@ function index() {
 		user_email.style = {
 			'opacity':100	
 		};
+		display_names();
+		user_first_name.style = {
+			'display': 'initial'
+		};
+		user_last_name.style = {
+			'display': 'initial'
+		};
 	});
 	
 	var user_id = 2;
 	var email = "testing@yahoo.com";
 	var first_name = "Test";
 	var last_name = "Reynolds";
-	database.ref('guests/' + user_id).set({
+	/*database.ref('guests/' + user_id).set({
 	    email: email,
 	    first_name: first_name,
 	    last_name: last_name
-	});
+	});*/
+}
+
+function display_names() {
+	var user_first_break = document.getElementById('user_first_name_break');
+	var user_last_break = document.getElementById('user_last_name_break');
+	
+	user_first_break.style = {
+		'display': 'initial'	
+	};
+	user_last_break.style = {
+		'display': 'initial'
+	};
 }

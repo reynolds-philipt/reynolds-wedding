@@ -33,6 +33,7 @@ function index() {
 	
 	user_submit.addEventListener('submit', function() {
 		debugger;
+		// todo: change submit? so it doesn't rerender the screen
 	});
 	
 	var user_id = 2;

@@ -17,6 +17,7 @@ function index() {
 	var user_last_name = document.getElementById('user_last_name');
 	
 	user_email.addEventListener('focus', function() {
+		debugger;
 		user_email.style({
 			'opacity':100	
 		});

@@ -43,8 +43,8 @@ function index() {
 function display_names() {
 	var first_name_input = document.getElementById('user_first_name');
 	var last_name_input = document.getElementById('user_last_name');
-	first_name_input[name_id].style.display = 'inline';
-	first_name_input[name_id].style.position = 'relative';
-	last_name_input[name_id].style.display = 'inline';
-	last_name_input[name_id].style.position = 'relative';
+	first_name_input.style.display = 'inline';
+	first_name_input.style.position = 'relative';
+	last_name_input.style.display = 'inline';
+	last_name_input.style.position = 'relative';
 }

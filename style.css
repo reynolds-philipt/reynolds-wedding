@@ -87,7 +87,7 @@ body {
 	display: inline;
 	position: relative;
 	padding: 5;
-	margin: 5;
+	margin: 5 auto;
 	opacity: 0.8;
 }
 
@@ -97,7 +97,7 @@ body {
 	border-radius: 4px;
 	box-sizing: border-box;
 	padding: 5;
-	margin: 5;
+	margin: 5 auto;
 	opacity: 0.8;
 	display: none;
 	margin: 10;
@@ -106,10 +106,10 @@ body {
 .email-submit {
 	width: 100;
 	text-align: center;
-	margin: 5;
+	margin: 5 auto;
 	background-color: #40e0d0;
-	display: inherit;
 	position: relative;
+	display: block;
 	padding: 8;
 	border: none;
 	border-radius: 4px;

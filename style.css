@@ -96,10 +96,7 @@ body {
 	padding: 5;
 	opacity: 0.8;
 	display: none;
-}
-
-.name-break{
-	display: none;
+	margin: 10;
 }
 
 .email-submit {

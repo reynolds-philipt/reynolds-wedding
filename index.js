@@ -46,13 +46,9 @@ function index() {
 }
 
 function display_names() {
-	var user_first_name = document.getElementById('user_first_name');
-	var user_last_name = document.getElementById('user_last_name');
+	var name_input = document.getElementByClassName('name-input');
 	
-	user_first_name.style = {
-		'display': 'flex'
-	};
-	user_last_name.style = {
+	name_input.style = {
 		'display': 'flex'
 	};
 }

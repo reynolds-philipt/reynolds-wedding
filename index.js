@@ -13,6 +13,8 @@ function index() {
 	var database = firebase.database();
 	
 	var user_email = document.getElementById('user_email');
+	var first_name_input = document.getElementById('user_first_name');
+	var last_name_input = document.getElementById('user_last_name');
 	var user_submit = document.getElementById('user_submit');
 	
 	user_email.addEventListener('focus', function() {
@@ -23,21 +25,22 @@ function index() {
 	});
 	
 	user_submit.addEventListener('click', function() {
-		var name_input = document.getElementsByClassName('name-input');
-		debugger;
-		display_names();
+		if (first_name_input.style.display === "") {
+			display_names();
+			user_submit.value = "Submit";
+		} else {
+			var user_id = 2;
+			var email = user_email.value;
+			var first_name = first_name_input.value;
+			var last_name = last_name_input.value;
+			database.ref('guests/' + user_id).set({
+				email: email,
+				first_name: first_name,
+				last_name: last_name
+			});
+		}
 		debugger;
 	});
-	
-	var user_id = 2;
-	var email = "testing@yahoo.com";
-	var first_name = "Test";
-	var last_name = "Reynolds";
-	/*database.ref('guests/' + user_id).set({
-	    email: email,
-	    first_name: first_name,
-	    last_name: last_name
-	});*/
 }
 
 function display_names() {

@@ -21,12 +21,6 @@ function index() {
 			'opacity':100	
 		};
 		display_names();
-		user_first_name.style = {
-			'display': 'initial'
-		};
-		user_last_name.style = {
-			'display': 'initial'
-		};
 	});
 	
 	user_submit.addEventListener('submit', function() {
@@ -46,9 +40,9 @@ function index() {
 }
 
 function display_names() {
-	var name_input = document.getElementByClassName('name-input');
+	var name_input = document.getElementsByClassName('name-input');
 	
-	name_input.style = {
-		'display': 'flex'
-	};
+	for (var name_id  in name_input) {
+		name_input[name_id].style.display = 'flex';
+	}
 }

@@ -23,7 +23,7 @@ function index() {
 		display_names();
 	});
 	
-	user_submit.addEventListener('submit', function() {
+	user_submit.addEventListener('click', function() {
 		debugger;
 		// todo: change submit? so it doesn't rerender the screen
 	});

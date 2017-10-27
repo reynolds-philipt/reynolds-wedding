@@ -26,6 +26,7 @@ function index() {
 		var name_input = document.getElementsByClassName('name-input');
 		debugger;
 		display_names();
+		debugger;
 	});
 	
 	var user_id = 2;

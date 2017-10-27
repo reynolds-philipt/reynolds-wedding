@@ -20,12 +20,12 @@ function index() {
 		user_email.style = {
 			'opacity':100	
 		};
-		display_names();
 	});
 	
 	user_submit.addEventListener('click', function() {
+		var name_input = document.getElementsByClassName('name-input');
 		debugger;
-		// todo: change submit? so it doesn't rerender the screen
+		display_names();
 	});
 	
 	var user_id = 2;

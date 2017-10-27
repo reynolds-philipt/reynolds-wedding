@@ -43,6 +43,7 @@ function display_names() {
 	var name_input = document.getElementsByClassName('name-input');
 	
 	for (var name_id  in name_input) {
-		name_input[name_id].style.display = 'flex';
+		name_input[name_id].style.display = 'inline';
+		name_input[name_id].style.position = 'relative';
 	}
 }

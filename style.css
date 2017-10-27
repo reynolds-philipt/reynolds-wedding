@@ -87,7 +87,7 @@ body {
 	display: block;
 	position: relative;
 	padding: 5;
-	margin: 5 auto;
+	margin: 10 auto;
 }
 
 .name-input{
@@ -96,7 +96,7 @@ body {
 	border-radius: 4px;
 	box-sizing: border-box;
 	padding: 5;
-	margin: 5 auto;
+	margin: 10 auto;
 	display: none;
 }
 

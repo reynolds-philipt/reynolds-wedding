@@ -13,8 +13,6 @@ function index() {
 	var database = firebase.database();
 	
 	var user_email = document.getElementById('user_email');
-	var user_first_name = document.getElementById('user_first_name');
-	var user_last_name = document.getElementById('user_last_name');
 	var user_submit = document.getElementById('user_submit');
 	
 	user_email.addEventListener('focus', function() {
@@ -48,13 +46,13 @@ function index() {
 }
 
 function display_names() {
-	var user_first_break = document.getElementById('user_first_name_break');
-	var user_last_break = document.getElementById('user_last_name_break');
+	var user_first_name = document.getElementById('user_first_name');
+	var user_last_name = document.getElementById('user_last_name');
 	
-	user_first_break.style = {
-		'display': 'initial'
+	user_first_name.style = {
+		'display': 'flex'
 	};
-	user_last_break.style = {
-		'display': 'initial'
+	user_last_name.style = {
+		'display': 'flex'
 	};
 }

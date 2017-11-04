@@ -1,6 +1,9 @@
-function index() {
+function index(user) {
 	debugger;
 	var self = this;
+	if (user) {
+		self.user = user;	
+	}
 	var config = {
 	  apiKey: "AIzaSyBAPX4ORn6MWiFyNXUhg-eZ07awM4UeY9w",
 	  authDomain: "wedding-360af.firebaseapp.com",

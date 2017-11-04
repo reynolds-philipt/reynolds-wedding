@@ -52,7 +52,7 @@ function index() {
 					if (!self.user) {
 						display_names();
 					} else {
-						welcome(true, self.user);
+						welcome(true);
 					}
 				});
 		} else {
@@ -82,7 +82,7 @@ function display_names() {
 	user_submit.value = "Submit";
 }
 
-function welcome(returning, user) {
+function welcome(returning) {
 	var self = this;
 	var email_p = document.getElementById('email_p');
 	var user_email = document.getElementById('user_email');
@@ -95,6 +95,6 @@ function welcome(returning, user) {
 	last_name_input.style.display = 'none';
 	user_submit.style.display = 'none';
 	debugger;
-	email_p.innerHTML = "Welcome" + (returning ? " back" + user.first_name + "!" : "!") + "  We will send out an email for your invitation three months out.<br>" +
+	email_p.innerHTML = "Welcome" + (returning ? " back" + self.user.first_name + "!" : "!") + "  We will send out an email for your invitation three months out.<br>" +
 		"";
 }

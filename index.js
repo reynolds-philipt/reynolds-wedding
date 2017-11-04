@@ -27,6 +27,13 @@ function index() {
 	user_submit.addEventListener('click', function() {
 		if (first_name_input.style.display === "") {
 			var guests = database.ref("guests");
+			guests.once("value")
+				.then(function(snapshot) {
+					snapshot.forEach(function(childSnapshot) {
+						var key = childSnapshot.key;
+						debugger;
+					});
+				});
 			debugger;
 			display_names();
 			user_submit.value = "Submit";

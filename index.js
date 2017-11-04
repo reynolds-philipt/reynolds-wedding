@@ -26,7 +26,7 @@ function index() {
 	
 	user_submit.addEventListener('click', function() {
 		if (first_name_input.style.display === "") {
-			var guests = database.ref("guests");
+			var guests = database.ref("guests").orderByKey();
 			guests.once("value")
 				.then(function(snapshot) {
 					snapshot.forEach(function(childSnapshot) {

@@ -12,6 +12,7 @@ function index() {
 	firebase.initializeApp(config);
 	var database = firebase.database();
 	
+	self.displaying_names = false;
 	var user_email = document.getElementById('user_email');
 	var first_name_input = document.getElementById('user_first_name');
 	var last_name_input = document.getElementById('user_last_name');
@@ -63,6 +64,8 @@ function index() {
 }
 
 function display_names() {
+	var self = this;
+	self.displaying_names = true;
 	var first_name_input = document.getElementById('user_first_name');
 	var last_name_input = document.getElementById('user_last_name');
 	first_name_input.style.display = 'block';

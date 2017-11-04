@@ -31,11 +31,13 @@ function index() {
 				.then(function(snapshot) {
 					snapshot.forEach(function(childSnapshot) {
 						var key = childSnapshot.key;
+						if (childSnapshot.val().email === user_email.value) {
+							display_names();
+							return true;
+						}
 						debugger;
 					});
 				});
-			debugger;
-			display_names();
 			user_submit.value = "Submit";
 		} else {
 			var user_id = 2;

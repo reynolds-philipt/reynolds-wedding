@@ -13,6 +13,7 @@ function index() {
 	var database = firebase.database();
 	
 	self.displaying_names = false;
+	var email_p = document.getElementById('email_p');
 	var user_email = document.getElementById('user_email');
 	var first_name_input = document.getElementById('user_first_name');
 	var last_name_input = document.getElementById('user_last_name');
@@ -48,7 +49,6 @@ function index() {
 						welcome();
 					}
 				});
-			user_submit.value = "Submit";
 		} else {
 			var email = user_email.value;
 			var first_name = first_name_input.value;
@@ -73,13 +73,16 @@ function display_names() {
 	first_name_input.style.position = 'relative';
 	last_name_input.style.display = 'block';
 	last_name_input.style.position = 'relative';
+	user_submit.value = "Submit";
 }
 
-function welcome() {
+function welcome(var returning) {
 	var self = this;
 	self.displaying_names = false;
 	user_email.style.display = 'none';
 	first_name_input.style.display = 'none';
 	last_name_input.style.display = 'none';
 	user_submit.style.display = 'none';
+	email_p.innerHTML = "Welcome" + (returning ? " back!" : "!") + "  We will send out an email for your invitation three months out.<br>" +
+		"";
 }

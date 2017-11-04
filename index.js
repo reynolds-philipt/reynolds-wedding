@@ -76,7 +76,7 @@ function display_names() {
 	user_submit.value = "Submit";
 }
 
-function welcome(var returning) {
+function welcome(returning) {
 	var self = this;
 	self.displaying_names = false;
 	user_email.style.display = 'none';

@@ -78,7 +78,7 @@ function display_names() {
 function welcome() {
 	var self = this;
 	self.displaying_names = false;
-	email_input.style.display = 'none';
+	user_email.style.display = 'none';
 	first_name_input.style.display = 'none';
 	last_name_input.style.display = 'none';
 	user_submit.style.display = 'none';

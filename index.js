@@ -19,7 +19,7 @@ function index() {
 	var first_name_input = document.getElementById('user_first_name');
 	var last_name_input = document.getElementById('user_last_name');
 	var user_submit = document.getElementById('user_submit');
-	var user;
+	self.user;
 	
 	user_email.addEventListener('focus', function() {
 		email_form.style = {
@@ -39,7 +39,7 @@ function index() {
 				.then(function(snapshot) {
 					snapshot.forEach(function(childSnapshot) {
 						if (childSnapshot.val().email === user_email.value) {
-							user = {
+							self.user = {
 								'id': childSnapshot.key,
 								'email': childSnapshot.val().email,
 								'first_name': childSnapshot.val().first_name,
@@ -49,10 +49,10 @@ function index() {
 						}
 						debugger;
 					});
-					if (!user) {
+					if (!self.user) {
 						display_names();
 					} else {
-						welcome(true);
+						welcome(true, );
 					}
 				});
 		} else {

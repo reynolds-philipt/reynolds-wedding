@@ -78,6 +78,11 @@ function display_names() {
 
 function welcome(returning) {
 	var self = this;
+	var email_p = document.getElementById('email_p');
+	var user_email = document.getElementById('user_email');
+	var first_name_input = document.getElementById('user_first_name');
+	var last_name_input = document.getElementById('user_last_name');
+	var user_submit = document.getElementById('user_submit');
 	self.displaying_names = false;
 	user_email.style.display = 'none';
 	first_name_input.style.display = 'none';

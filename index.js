@@ -16,6 +16,7 @@ function index() {
 	var first_name_input = document.getElementById('user_first_name');
 	var last_name_input = document.getElementById('user_last_name');
 	var user_submit = document.getElementById('user_submit');
+	var user;
 	
 	user_email.addEventListener('focus', function() {
 		debugger;
@@ -32,11 +33,18 @@ function index() {
 					snapshot.forEach(function(childSnapshot) {
 						var key = childSnapshot.key;
 						if (childSnapshot.val().email === user_email.value) {
-							display_names();
+							user = {
+								'email': childSnapshot.val().email,
+								'first_name': childSnapshot.val().first_name,
+								'last_name': childSnapshot.val().last_name,
+							};
 							return true;
 						}
 						debugger;
 					});
+					if (!user) {
+						display_names();
+					}
 				});
 			user_submit.value = "Submit";
 		} else {

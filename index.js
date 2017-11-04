@@ -95,6 +95,6 @@ function welcome(returning) {
 	last_name_input.style.display = 'none';
 	user_submit.style.display = 'none';
 	debugger;
-	email_p.innerHTML = "Welcome" + (returning ? " back" + self.user.first_name + "!" : "!") + "  We will send out an email for your invitation three months out.<br>" +
+	email_p.innerHTML = "Welcome" + (returning ? " back " + self.user.first_name + "!" : "!") + "  We will send out an email for your invitation three months out.<br>" +
 		"";
 }

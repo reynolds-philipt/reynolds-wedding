@@ -52,7 +52,7 @@ function index() {
 					if (!user) {
 						display_names();
 					} else {
-						welcome();
+						welcome(true);
 					}
 				});
 		} else {

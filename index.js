@@ -27,14 +27,14 @@ function index() {
 	});
 	
 	user_submit.addEventListener('click', function() {
-		if (first_name_input.style.display === "") {
+		if (self.displaying_names === false) {
 			var guests = database.ref("guests").orderByKey();
 			guests.once("value")
 				.then(function(snapshot) {
 					snapshot.forEach(function(childSnapshot) {
-						var key = childSnapshot.key;
 						if (childSnapshot.val().email === user_email.value) {
 							user = {
+								'id': childSnapshot.key,
 								'email': childSnapshot.val().email,
 								'first_name': childSnapshot.val().first_name,
 								'last_name': childSnapshot.val().last_name,
@@ -49,11 +49,10 @@ function index() {
 				});
 			user_submit.value = "Submit";
 		} else {
-			var user_id = 2;
 			var email = user_email.value;
 			var first_name = first_name_input.value;
 			var last_name = last_name_input.value;
-			database.ref('guests/' + user_id).set({
+			database.ref('guests').push({
 				email: email,
 				first_name: first_name,
 				last_name: last_name

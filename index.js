@@ -44,6 +44,8 @@ function index() {
 					});
 					if (!user) {
 						display_names();
+					} else {
+						welcome();
 					}
 				});
 			user_submit.value = "Submit";
@@ -56,6 +58,7 @@ function index() {
 				first_name: first_name,
 				last_name: last_name
 			});
+			welcome();
 		}
 		debugger;
 	});

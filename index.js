@@ -19,7 +19,11 @@ function index() {
 	var first_name_input = document.getElementById('user_first_name');
 	var last_name_input = document.getElementById('user_last_name');
 	var user_submit = document.getElementById('user_submit');
-	self.user;
+	
+	debugger;
+	if (self.user) {
+		debugger;
+	}
 	
 	user_email.addEventListener('focus', function() {
 		email_form.style = {

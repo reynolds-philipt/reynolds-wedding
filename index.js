@@ -13,6 +13,7 @@ function index() {
 	var database = firebase.database();
 	
 	self.displaying_names = false;
+	var email_form = document.getElementById('email_form');
 	var email_p = document.getElementById('email_p');
 	var user_email = document.getElementById('user_email');
 	var first_name_input = document.getElementById('user_first_name');
@@ -21,8 +22,13 @@ function index() {
 	var user;
 	
 	user_email.addEventListener('focus', function() {
-		user_email.style = {
-			'opacity':100	
+		email_form.style = {
+			'opacity': 1	
+		};
+	});
+	user_email.addEventListener('blur', function() {
+		email_form.style = {
+			'opacity': 0.5	
 		};
 	});
 	

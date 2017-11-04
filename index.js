@@ -26,6 +26,8 @@ function index() {
 	
 	user_submit.addEventListener('click', function() {
 		if (first_name_input.style.display === "") {
+			var guests = database.ref("guests");
+			debugger;
 			display_names();
 			user_submit.value = "Submit";
 		} else {

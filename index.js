@@ -20,7 +20,6 @@ function index() {
 	var user;
 	
 	user_email.addEventListener('focus', function() {
-		debugger;
 		user_email.style = {
 			'opacity':100	
 		};
@@ -71,4 +70,13 @@ function display_names() {
 	first_name_input.style.position = 'relative';
 	last_name_input.style.display = 'block';
 	last_name_input.style.position = 'relative';
+}
+
+function welcome() {
+	var self = this;
+	self.displaying_names = false;
+	email_input.style.display = 'none';
+	first_name_input.style.display = 'none';
+	last_name_input.style.display = 'none';
+	user_submit.style.display = 'none';
 }

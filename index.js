@@ -23,7 +23,7 @@ function index(user) {
 	debugger;
 	var user_saved = self.load("user");
 	if (user_saved) {
-		debugger;
+		welcome(true);
 	}
 	
 	user_email.addEventListener('focus', function() {

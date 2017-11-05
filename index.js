@@ -1,9 +1,6 @@
 function index(user) {
 	debugger;
 	var self = this;
-	if (user) {
-		self.user = user;	
-	}
 	var config = {
 	  apiKey: "AIzaSyBAPX4ORn6MWiFyNXUhg-eZ07awM4UeY9w",
 	  authDomain: "wedding-360af.firebaseapp.com",
@@ -24,7 +21,7 @@ function index(user) {
 	var user_submit = document.getElementById('user_submit');
 	
 	debugger;
-	if (self.user) {
+	if (window.user) {
 		debugger;
 	}
 	
@@ -46,7 +43,7 @@ function index(user) {
 				.then(function(snapshot) {
 					snapshot.forEach(function(childSnapshot) {
 						if (childSnapshot.val().email === user_email.value) {
-							self.user = {
+							window.user = {
 								'id': childSnapshot.key,
 								'email': childSnapshot.val().email,
 								'first_name': childSnapshot.val().first_name,
@@ -56,7 +53,7 @@ function index(user) {
 						}
 						debugger;
 					});
-					if (!self.user) {
+					if (!window.user) {
 						display_names();
 					} else {
 						welcome(true);
@@ -102,6 +99,6 @@ function welcome(returning) {
 	last_name_input.style.display = 'none';
 	user_submit.style.display = 'none';
 	debugger;
-	email_p.innerHTML = "Welcome" + (returning ? " back " + self.user.first_name + "!" : "!") +
+	email_p.innerHTML = "Welcome" + (returning ? " back " + window.user.first_name + "!" : "!") +
 		"  We will send out an email<br>invitation for you three months out.";
 }

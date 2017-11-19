@@ -1,31 +1,29 @@
-
-
 function save(save_string_key, save_string) {
-	var self = this;
-	//converts to JSON string the Object
-	var json_save_string = JSON.stringify(save_string);
-	//creates a base-64 encoded ASCII string
-	var encoded_save_string = btoa(json_save_string);
-	//save the encoded accout to web storage
-	localStorage.setItem('_' + save_string_key, encoded_save_string);
+  var self = this;
+  //converts to JSON string the Object
+  var json_save_string = JSON.stringify(save_string);
+  //creates a base-64 encoded ASCII string
+  var encoded_save_string = btoa(json_save_string);
+  //save the encoded accout to web storage
+  localStorage.setItem('_' + save_string_key, encoded_save_string);
 }
 
 function load(load_string_key) {
-	var self = this;
-	var encoded_load_string = localStorage.getItem('_' + load_string_key);
-	if (!encoded_load_string) return false;
-	//decodes a string data encoded using base-64
-	var decoded_load_string = atob(encoded_load_string);
-	//parses to Object the JSON string
-	var load_string = JSON.parse(decoded_load_string);
-	//do what you need with the Object
-	window[load_string_key] = load_string;
-	return true;
+  var self = this;
+  var encoded_load_string = localStorage.getItem('_' + load_string_key);
+  if (!encoded_load_string) return false;
+  //decodes a string data encoded using base-64
+  var decoded_load_string = atob(encoded_load_string);
+  //parses to Object the JSON string
+  var load_string = JSON.parse(decoded_load_string);
+  //do what you need with the Object
+  window[load_string_key] = load_string;
+  return true;
 }
 
 function remove(remove_string_key) {
-	localStorage.removeItem('_' + remove_string_key);
-	return true;
+  localStorage.removeItem('_' + remove_string_key);
+  return true;
 }
 
 function add_load_event(func) {
@@ -40,4 +38,8 @@ function add_load_event(func) {
       func();
     }
   }
+}
+
+function load_tab(tab) {
+  window.open('https://reynolds-philipt.github.io/reynolds-wedding/' + tab);
 }

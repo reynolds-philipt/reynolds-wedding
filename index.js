@@ -75,9 +75,11 @@ function index() {
 		submit_user();
 	});
 	
-	user_email.addEventListener('enter', function() {
+	user_email.addEventListener('keydown', function(event) {
 		debugger;
-		submit_user();
+		if (event.key === 'enter') {
+			submit_user();
+		}
 	});
 }
 
@@ -133,7 +135,6 @@ function load(load_string_key) {
 }
 
 function remove(remove_string_key) {
-	debugger;
 	localStorage.removeItem('_' + remove_string_key);
 	return true;
 }

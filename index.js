@@ -132,6 +132,11 @@ function load(load_string_key) {
 	return true;
 }
 
+function remove(remove_string_key) {
+	localStorage.removeItem('_' + remove_string_key);
+	return true;
+}
+
 function add_load_event(func) {
   var old_on_load = window.onload;
   if (typeof window.onload != 'function') {

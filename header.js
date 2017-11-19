@@ -15,11 +15,11 @@ function header() {
 	
 	document.getElementById('date_header_button');
 */
-	//var header_user_login = document.getElementById('header_user_login_out');
+	var header_user_login = document.getElementById('header_user_login_out');
 	
 	var user_saved = self.load("user");
 	if (user_saved) {
-	//	header_user_login.innerHTML(user_saved.first_name + ' ' + user_saved.last_name + ' (Sign out)';
+		header_user_login.innerHTML(user_saved.first_name + ' ' + user_saved.last_name + ' (Sign out)');
 	}
 }
 

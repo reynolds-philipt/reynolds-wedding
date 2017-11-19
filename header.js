@@ -1,7 +1,6 @@
 function header() {
 	var self = this;
 	// Initialize Firebase
-	debugger;
 	/*
 	var config = {
 	  apiKey: "AIzaSyBAPX4ORn6MWiFyNXUhg-eZ07awM4UeY9w",
@@ -21,6 +20,7 @@ function header() {
 	if (user_saved) {
 		header_user_login.innerHTML = window.user.first_name + ' ' + window.user.last_name + ' (Sign out)';
 		header_user_login.addEventListener('click', function() {
+			debugger;
 			localStorage.removeItem('user');
 			render();
 		});

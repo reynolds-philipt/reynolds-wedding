@@ -75,9 +75,15 @@ function index(user) {
 		debugger;
 	};
 	
-	user_submit.addEventListener('click', submit_user());
+	user_submit.addEventListener('click', function() {
+		debugger;
+		submit_user();
+	});
 	
-	user_email.addEventListender('enter', submit_user());
+	user_email.addEventListender('enter', function() {
+		debugger;
+		submit_user();
+	});
 }
 
 function display_names() {

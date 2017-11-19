@@ -1,4 +1,4 @@
-function index(user) {
+function index() {
 	var self = this;
 	var config = {
 	  apiKey: "AIzaSyBAPX4ORn6MWiFyNXUhg-eZ07awM4UeY9w",

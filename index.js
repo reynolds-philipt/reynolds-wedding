@@ -109,6 +109,9 @@ function welcome(returning) {
 	user_submit.style.display = 'none';
 	email_p.innerHTML = "Welcome" + (returning ? " back " + window.user.first_name + "!" : "!") +
 		"  We will send out an email<br>invitation for you three months prior to our special day.";
+
+	var header_user_login = document.getElementById('header_user_login_out');
+	header_user_login.innerHTML = window.user.first_name + ' ' + window.user.last_name + ' (Sign out)';
 }
 
 function save(save_string_key, save_string) {

@@ -37,7 +37,7 @@ function index(user) {
 		};
 	});
 	
-	user_submit.addEventListener('click', function() {
+	var submit_user = function() {
 		if (self.displaying_names === false) {
 			var guests = database.ref("guests").orderByKey();
 			guests.once("value")
@@ -73,7 +73,11 @@ function index(user) {
 			welcome();
 		}
 		debugger;
-	});
+	};
+	
+	user_submit.addEventListener('click', submit_user());
+	
+	user_email.addEventListender('enter', submit_user());
 }
 
 function display_names() {

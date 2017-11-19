@@ -75,7 +75,7 @@ function index(user) {
 		submit_user();
 	});
 	
-	user_email.addEventListender('enter', function() {
+	user_email.addEventListener('enter', function() {
 		debugger;
 		submit_user();
 	});

@@ -81,8 +81,8 @@ body {
 
 .header_user_login_out {
 	color: #ff7f50;
-	
-	
+	float: right;
+	margin-right: 20px;
 }
 
 .email-input {

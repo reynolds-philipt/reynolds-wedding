@@ -25,6 +25,7 @@ function header() {
 		});
 	}
 	
+  debugger;
 	var pathname = window.location.pathname;
   if (pathname.length > 20) {
     var usable_pathname = pathname.substr(18, pathname.length - 23);

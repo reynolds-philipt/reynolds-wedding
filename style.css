@@ -45,6 +45,9 @@ body {
 	float: left;
 	padding: 10;
 	text-align: center;
+	border-right: 2px solid transparent;
+	border-image: linear-gradient('#000080', '#ff7f50');
+	border-image-slice: 1;
 }
 
 .header_button_selected {

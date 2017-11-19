@@ -74,7 +74,7 @@ body {
 .header_button_selected_light {
 	background: rgba(64,224,208,0.5);
 	border-bottom: 5px solid #40e0d0;
-	width: 10%;
+	width: 20%;
 	float: left;
 	padding: 10;
 	text-align: center;

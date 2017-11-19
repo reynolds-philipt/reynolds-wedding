@@ -76,8 +76,7 @@ function index() {
 	});
 	
 	user_email.addEventListener('keydown', function(event) {
-		debugger;
-		if (event.key === 'enter') {
+		if (event.keyCode === 13) {
 			submit_user();
 		}
 	});

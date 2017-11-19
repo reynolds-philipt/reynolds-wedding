@@ -51,6 +51,7 @@ body {
 .header_button_divider {
 	width: 2px;
 	background-image: linear-gradient(#000080, #ff7f50);
+	border-bottom: 5px solid #ff7f50;
 }
 
 .header_button_selected {

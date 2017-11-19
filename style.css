@@ -5,13 +5,13 @@ body {
 	width: 100%;
 }
 
-.header-container {
+.header_container {
 	position: fixed;
 	width: 100%;
 	z-index: 1000;
 }
 
-.header-background {
+.header_background {
 	background-color: #000080;
 	width: 100%;
 	padding-top: 10;
@@ -33,13 +33,13 @@ body {
 	text-decoration: none;
 }
 
-.header-button-background {
+.header_button_background {
 	background-color: #000080;
 	width: 100%;
 	float: left;
 }
 
-.header-button {
+.header_button {
 	width: 10%;
 	min-width: 50;
 	float: left;
@@ -47,7 +47,7 @@ body {
 	text-align: center;
 }
 
-.header-button-selected {
+.header_button_selected {
 	background-color: #40e0d0;
 	width: 100;
 	float: left;
@@ -55,7 +55,7 @@ body {
 	text-align: center;
 }
 
-.header-button-selected-fade {
+.header_button_selected_fade {
 	background-image: linear-gradient(#000080, #40e0d0);
 	width: 100;
 	float: left;
@@ -63,7 +63,7 @@ body {
 	text-align: center;
 }
 
-.header-button-selected-light {
+.header_button_selected_light {
 	background: rgba(64,224,208,0.5);
 	border-bottom: 5px solid #40e0d0;
 	width: 100;
@@ -72,7 +72,7 @@ body {
 	text-align: center;
 }
 
-.header-button-text {
+.header_button_text {
 	color: #ff7f50;
 	text-shadow: 4px 4px 3px rgba(0,0,0,1);
 	text-align: center;
@@ -85,7 +85,7 @@ body {
 	margin-right: 20px;
 }
 
-.email-input {
+.email_input {
 	width: 200;
 	border: 1px solid #ccc;
 	border-radius: 4px;
@@ -96,7 +96,7 @@ body {
 	margin: 10 auto;
 }
 
-.name-input{
+.name_input{
 	width: 200;
 	border: 1px solid #ccc;
 	border-radius: 4px;
@@ -106,7 +106,7 @@ body {
 	display: none;
 }
 
-.email-submit {
+.email_submit {
 	width: 100;
 	text-align: center;
 	margin: 5 auto;
@@ -119,11 +119,11 @@ body {
 	cursor: pointer;
 }
 
-.email-form-div {
+.email_form_div {
 	text-align: -webkit-center;
 }
 
-.email-form {
+.email_form {
 	text-align: center;
 	width: 350;
 	border-radius: 4px;
@@ -133,18 +133,18 @@ body {
 	padding-bottom: 10px;
 }
 
-.header-empty-div {
+.header_empty_div {
 	width: 100%;
 	height: 10%;
 }
 
-.under-header {
+.under_header {
 	height: 100%;
 	float: left;
 	width: 100%;
 }
 
-.index-background-div {
+.index_background_div {
 	background-image: url("sandy-109-b-w.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;

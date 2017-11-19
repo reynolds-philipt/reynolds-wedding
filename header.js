@@ -24,5 +24,14 @@ function header() {
 			render();
 		});
 	}
+	
+	var pathname = window.location.pathname;
+  if (pathname.length > 20) {
+    var usable_pathname = pathname.substr(18, pathname.length - 23);
+    if (usable_pathname !== 'index') {
+      var button_id = 'header_button_' + usable_pathname;
+      document.getElementById(button_id).style.backgroundColor('#42eef4');
+    }
+  }
 }
 

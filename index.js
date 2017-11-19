@@ -133,6 +133,7 @@ function load(load_string_key) {
 }
 
 function remove(remove_string_key) {
+	debugger;
 	localStorage.removeItem('_' + remove_string_key);
 	return true;
 }

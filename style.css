@@ -48,6 +48,7 @@ body {
 	border-right: 2px solid transparent;
 	border-image: linear-gradient(#000080, #ff7f50);
 	border-image-slice: 1;
+	cursor: pointer;
 }
 
 .header_button_selected {

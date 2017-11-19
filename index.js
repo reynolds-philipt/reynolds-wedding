@@ -131,3 +131,17 @@ function load(load_string_key) {
 	window[load_string_key] = load_string;
 	return true;
 }
+
+function add_load_event(func) {
+  var old_on_load = window.onload;
+  if (typeof window.onload != 'function') {
+    window.onload = func;
+  } else {
+    window.onload = function() {
+      if (old_on_load) {
+        old_on_load();
+      }
+      func();
+    }
+  }
+}

@@ -112,7 +112,7 @@ function welcome(returning) {
 	user_submit.style.display = 'none';
 	debugger;
 	email_p.innerHTML = "Welcome" + (returning ? " back " + window.user.first_name + "!" : "!") +
-		"  We will send out an email<br>invitation for you three months out.";
+		"  We will send out an email<br>invitation for you three months prior to our special day.";
 }
 
 function save(save_string_key, save_string) {

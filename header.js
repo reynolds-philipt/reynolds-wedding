@@ -21,7 +21,7 @@ function header() {
 		header_user_login.innerHTML = window.user.first_name + ' ' + window.user.last_name + ' (Sign out)';
 		header_user_login.addEventListener('click', function() {
 			debugger;
-			localStorage.removeItem('user');
+			self.remove('user');
 			render();
 		});
 	}

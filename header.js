@@ -1,8 +1,11 @@
 function header() {
+	/*
 	var self = this;
 	var headerText = document.createElement("div");
+	*/
 	// Initialize Firebase
 	debugger;
+	/*
 	var config = {
 	  apiKey: "AIzaSyBAPX4ORn6MWiFyNXUhg-eZ07awM4UeY9w",
 	  authDomain: "wedding-360af.firebaseapp.com",
@@ -21,5 +24,6 @@ function header() {
 	if (user_saved) {
 		header_user_login.innerHTML(user_saved.first_name + ' ' + user_saved.last_name + ' (Sign out)';
 	}
+	*/
 }
 

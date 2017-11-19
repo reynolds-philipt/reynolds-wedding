@@ -1,5 +1,4 @@
 function index(user) {
-	debugger;
 	var self = this;
 	var config = {
 	  apiKey: "AIzaSyBAPX4ORn6MWiFyNXUhg-eZ07awM4UeY9w",
@@ -20,7 +19,6 @@ function index(user) {
 	var last_name_input = document.getElementById('user_last_name');
 	var user_submit = document.getElementById('user_submit');
 	
-	debugger;
 	var user_saved = self.load("user");
 	if (user_saved) {
 		welcome(true);
@@ -53,7 +51,6 @@ function index(user) {
 							self.save("user", window.user);
 							return true;
 						}
-						debugger;
 					});
 					if (!window.user) {
 						display_names();
@@ -72,11 +69,9 @@ function index(user) {
 			});
 			welcome();
 		}
-		debugger;
 	};
 	
 	user_submit.addEventListener('click', function() {
-		debugger;
 		submit_user();
 	});
 	
@@ -110,7 +105,6 @@ function welcome(returning) {
 	first_name_input.style.display = 'none';
 	last_name_input.style.display = 'none';
 	user_submit.style.display = 'none';
-	debugger;
 	email_p.innerHTML = "Welcome" + (returning ? " back " + window.user.first_name + "!" : "!") +
 		"  We will send out an email<br>invitation for you three months prior to our special day.";
 }

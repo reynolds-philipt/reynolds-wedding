@@ -111,6 +111,10 @@ function welcome(returning) {
 
 	var header_user_login = document.getElementById('header_user_login_out');
 	header_user_login.innerHTML = window.user.first_name + ' ' + window.user.last_name + ' (Sign out)';
+	header_user_login.addEventListener('click', function() {
+		self.remove('user');
+		render();
+	});
 }
 
 function save(save_string_key, save_string) {

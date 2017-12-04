@@ -38,6 +38,7 @@ function index() {
 	var submit_user = function() {
 		if (self.displaying_names === false) {
 			var guests = database.ref("guests").orderByKey();
+			var self = this;
 			guests.once("value")
 				.then(function(snapshot) {
 					snapshot.forEach(function(childSnapshot) {

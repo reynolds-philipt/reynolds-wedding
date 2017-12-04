@@ -70,7 +70,7 @@ function index() {
 			});
 			debugger;
 			window.user = {
-				'id': new_user.id,
+				'id': new_user.path.ct[1],
 				'email': email,
 				'first_name': first_name,
 				'last_name': last_name,

@@ -49,6 +49,7 @@ function index() {
 								'first_name': childSnapshot.val().first_name,
 								'last_name': childSnapshot.val().last_name,
 							};
+							debugger;
 							self.save("user", window.user);
 							return true;
 						}

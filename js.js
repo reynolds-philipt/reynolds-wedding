@@ -11,6 +11,7 @@ function save(save_string_key, save_string) {
 
 function load(load_string_key) {
   var self = this;
+  debugger;
   var encoded_load_string = localStorage.getItem('_' + load_string_key);
   if (!encoded_load_string) return false;
   //decodes a string data encoded using base-64

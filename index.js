@@ -76,7 +76,7 @@ function index() {
 				'last_name': last_name,
 			};
 			self.save("user", window.user);
-			welcome();
+			welcome(true);
 		}
 	};
 	

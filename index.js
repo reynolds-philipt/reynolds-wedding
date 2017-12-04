@@ -49,7 +49,6 @@ function index() {
 								'first_name': childSnapshot.val().first_name,
 								'last_name': childSnapshot.val().last_name,
 							};
-							debugger;
 							self.save("user", window.user);
 							return true;
 						}
@@ -64,11 +63,19 @@ function index() {
 			var email = user_email.value;
 			var first_name = first_name_input.value;
 			var last_name = last_name_input.value;
-			database.ref('guests').push({
+			var new_user = database.ref('guests').push({
 				email: email,
 				first_name: first_name,
 				last_name: last_name
 			});
+			debugger;
+			window.user = {
+				'id': new_user.id,
+				'email': email,
+				'first_name': first_name,
+				'last_name': last_name,
+			};
+			self.save("user", window.user);
 			welcome();
 		}
 	};

@@ -162,6 +162,15 @@ body {
 	overflow: hidden;
 }
 
-
+.about_us_background_div {
+	background-image: url("future mrs.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top;
+	position: relative;
+	height: 90%;
+	min-height: 90%;
+	overflow: hidden;
+}
 
 

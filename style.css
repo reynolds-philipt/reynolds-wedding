@@ -93,6 +93,22 @@ body {
 	margin-right: 20px;
 }
 
+.her_story {
+	overflow-wrap: break-word;
+	margin: 10px;
+	background: #ff7f50;
+	border: 2px solid #40e0d0;
+	border_radius: 20px;
+}
+
+.his_story {
+	overflow-wrap: break-word;
+	margin: 10px;
+	background: rgba(64,224,208,0.5);
+	border: 2px solid #40e0d0;
+	border_radius: 20px;
+}
+
 .email_input {
 	width: 200;
 	border: 1px solid #ccc;

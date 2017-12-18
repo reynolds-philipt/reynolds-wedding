@@ -120,6 +120,15 @@ body {
 	margin-right: 20px;
 }
 
+.story_image_90 {
+	width: 90%;
+	height: auto;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .email_input {
 	width: 200;
 	border: 1px solid #ccc;

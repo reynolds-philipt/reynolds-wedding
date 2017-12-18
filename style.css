@@ -112,13 +112,12 @@ body {
 	text-indent: 20px;
 }
 
-.story_image {
+.story_image_40 {
 	width: 40%;
 	height: auto;
 	text-align: center;
-	display: block;
-	margin-left: auto;
-	margin-right: auto
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 .email_input {

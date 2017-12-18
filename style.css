@@ -180,7 +180,7 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top;
-	position: relative;
+	position: absolute;
 	height: 90%;
 	min-height: 90%;
 	overflow: hidden;
@@ -191,7 +191,7 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top;
-	position: relative;
+	position: absolute;
 	height: 90%;
 	min-height: 90%;
 	overflow: hidden;

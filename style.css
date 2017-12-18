@@ -112,6 +112,15 @@ body {
 	text-indent: 20px;
 }
 
+.story_image {
+	width: 40%;
+	height: auto;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
 .email_input {
 	width: 200;
 	border: 1px solid #ccc;

@@ -7,6 +7,11 @@ body {
 
 .contact_div {
 	overflow-wrap: break-word;
+	text-align: center;
+	width: 500px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
 	background: rgba(00,00,80,0.8);
 	border: 2px solid #000080;
 	border-radius: 20px;

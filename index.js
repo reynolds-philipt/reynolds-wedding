@@ -76,7 +76,7 @@ function index() {
 				'last_name': last_name,
 			};
 			self.save("user", window.user);
-			welcome(true);
+			welcome(false);
 		}
 	};
 	
@@ -115,7 +115,7 @@ function welcome(returning) {
 	first_name_input.style.display = 'none';
 	last_name_input.style.display = 'none';
 	user_submit.style.display = 'none';
-	email_p.innerHTML = "Welcome" + (returning ? " back " + window.user.first_name + "!" : "!") +
+	email_p.innerHTML = "Welcome " + (returning ? " back " : "") + window.user.first_name + "!" +
 		"  We will send out an email<br>invitation for you three months prior to our special day.";
 
 	var header_user_login = document.getElementById('header_user_login_out');

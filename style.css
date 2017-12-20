@@ -5,6 +5,13 @@ body {
 	width: 100%;
 }
 
+.contact_div {
+	overflow-wrap: break-word;
+	background: rgba(00,00,80,0.8);
+	border: 2px solid #000080;
+	border-radius: 20px;
+}
+
 .header_container {
 	position: fixed;
 	width: 100%;

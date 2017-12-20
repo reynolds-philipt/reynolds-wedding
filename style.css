@@ -9,6 +9,7 @@ body {
 	overflow-wrap: break-word;
 	text-align: center;
 	width: 500px;
+	margin-left: 250px;
 	position: fixed;
 	top: 50%;
 	left: 50%;

@@ -121,6 +121,12 @@ body {
 	border-radius: 20px;
 }
 
+.index_header {
+    text-align: center;
+    font-size: 50;
+    font-family: 'Great Vibes', Helvetica, sans-serif;
+}
+
 .paragraph_story {
 	margin: 20px;
 	text-indent: 20px;

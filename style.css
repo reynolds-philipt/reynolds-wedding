@@ -123,6 +123,7 @@ body {
 
 .index_header {
     	text-align: center;
+	color: #000040;
     	font-size: 50;
     	font-family: 'Great Vibes', Helvetica, sans-serif;
 	text-shadow: 4px 4px 3px rgba(0,0,40,0.3);

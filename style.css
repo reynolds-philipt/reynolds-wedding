@@ -13,8 +13,8 @@ body {
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	background: rgba(00,00,80,0.8);
-	border: 2px solid #000080;
+	background: rgba(00,00,64,0.8);
+	border: 2px solid #000040;
 	border-radius: 20px;
 	color: white;
 }
@@ -126,7 +126,7 @@ body {
 	color: #000040;
     	font-size: 50;
     	font-family: 'Great Vibes', Helvetica, sans-serif;
-	text-shadow: 4px 4px 3px rgba(0,0,40,0.3);
+	text-shadow: 4px 4px 3px rgba(0,0,64,0.3);
 }
 
 .paragraph_story {

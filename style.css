@@ -215,7 +215,7 @@ body {
 }
 
 .index_background_div {
-	background-image: url("sandy-109-b-w.jpg");
+	background-image: url("pictures/sandy-109-b-w.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top;
@@ -227,7 +227,7 @@ body {
 }
 
 .about_us_background_div {
-	background-image: url("beach1.JPG");
+	background-image: url("pictures/beach1.JPG");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top;
@@ -238,7 +238,7 @@ body {
 }
 
 .contact_background_div {
-	background-image: url("future_mrs_cropped_blurred.jpg");
+	background-image: url("pictures/future_mrs_cropped_blurred.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top;

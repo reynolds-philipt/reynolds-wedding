@@ -134,6 +134,16 @@ body {
 	text-indent: 20px;
 }
 
+.save_the_date_background {
+	height: 90%;
+	image-background: linear-gradient(#ffffff, #000000);
+}
+
+.save_the_date_style {
+	margin-top: 50px;
+	margin-left: 35%;
+}
+
 .story_image_40 {
 	width: 40%;
 	height: auto;

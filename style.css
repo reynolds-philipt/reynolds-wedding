@@ -146,7 +146,8 @@ body {
 
 .save_the_date_background {
 	height: 90%;
-	background-color: #bbbbbb;
+	background-image: url("pictures/SaThDa-background.jpg");
+	background-repeat: repeat;
 }
 
 .save_the_date_style {

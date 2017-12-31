@@ -35,6 +35,12 @@ function index() {
 		};
 	});
 	
+	last_name_input.addEventListener('keydown', function(event) {
+		if (event.keyCode === 13) {
+			submit_user();
+		}
+	});
+	
 	var submit_user = function() {
 		var self = this;
 		if (self.displaying_names === false) {

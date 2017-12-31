@@ -139,6 +139,15 @@ body {
 	text-shadow: 4px 4px 3px rgba(0,0,64,0.3);
 }
 
+.kelly {
+	width: auto;
+	height: auto;
+	margin: 10px;
+	background-color: #000040;
+	text-align: center;
+	
+}
+
 .paragraph_story {
 	margin: 20px;
 	text-indent: 20px;

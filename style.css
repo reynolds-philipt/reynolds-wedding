@@ -145,8 +145,8 @@ body {
 	color: #ffffff;
 	background-color: #000040;
 	text-align: center;
-	bottom: 0;
-	top: 0;
+	bottom: 10;
+	right: 10;
 	position: absolute;
 	border-radius: 16px;
 }

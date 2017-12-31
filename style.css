@@ -140,6 +140,7 @@ body {
 }
 
 .kelly {
+	height: fit-content;
 	margin: 10px;
 	color: #ffffff;
 	background-color: #000040;

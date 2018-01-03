@@ -16,11 +16,11 @@ function header() {
 */
   var header_user_login = document.getElementById('header_user_login_out');
 
-  var user_saved = self.load('user');
+  var user_saved = self.load_local('user');
   if (user_saved) {
     header_user_login.innerHTML = window.user.first_name + ' ' + window.user.last_name + ' (Sign out)';
     header_user_login.addEventListener('click', function() {
-      self.remove('user');
+      self.remove_local('user');
       render();
     });
   }

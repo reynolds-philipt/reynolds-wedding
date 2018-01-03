@@ -1,4 +1,4 @@
-function save(save_string_key, save_string) {
+function save_local(save_string_key, save_string) {
   var self = this;
   debugger;
   //converts to JSON string the Object
@@ -9,7 +9,7 @@ function save(save_string_key, save_string) {
   localStorage.setItem('_' + save_string_key, encoded_save_string);
 }
 
-function load(load_string_key) {
+function load_local(load_string_key) {
   var self = this;
   var encoded_load_string = localStorage.getItem('_' + load_string_key);
   if (!encoded_load_string) return false;
@@ -22,9 +22,21 @@ function load(load_string_key) {
   return true;
 }
 
-function remove(remove_string_key) {
+function remove_local(remove_string_key) {
   localStorage.removeItem('_' + remove_string_key);
   return true;
+}
+
+function get_config() {
+  var config = {
+	  apiKey: "AIzaSyBAPX4ORn6MWiFyNXUhg-eZ07awM4UeY9w",
+	  authDomain: "wedding-360af.firebaseapp.com",
+	  databaseURL: "https://wedding-360af.firebaseio.com",
+	  projectId: "wedding-360af",
+	  storageBucket: "",
+	  messagingSenderId: "833865959590"
+	};
+  return config;
 }
 
 function add_load_event(func) {

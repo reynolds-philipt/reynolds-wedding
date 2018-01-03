@@ -1,6 +1,6 @@
 function index() {
 	var self = this;
-	var config = self.load_config();
+	var config = self.get_config();
 	firebase.initializeApp(config);
 	var database = firebase.database();
 	

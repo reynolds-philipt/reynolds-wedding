@@ -1,13 +1,6 @@
 function index() {
 	var self = this;
-	var config = {
-	  apiKey: "AIzaSyBAPX4ORn6MWiFyNXUhg-eZ07awM4UeY9w",
-	  authDomain: "wedding-360af.firebaseapp.com",
-	  databaseURL: "https://wedding-360af.firebaseio.com",
-	  projectId: "wedding-360af",
-	  storageBucket: "",
-	  messagingSenderId: "833865959590"
-	};
+	var config = self.load_config();
 	firebase.initializeApp(config);
 	var database = firebase.database();
 	
@@ -19,7 +12,7 @@ function index() {
 	var last_name_input = document.getElementById('user_last_name');
 	var user_submit = document.getElementById('user_submit');
 	
-	var user_saved = self.load("user");
+	var user_saved = self.load_local("user");
 	if (user_saved) {
 		welcome(true);
 	}
@@ -55,7 +48,7 @@ function index() {
 								'first_name': childSnapshot.val().first_name,
 								'last_name': childSnapshot.val().last_name,
 							};
-							self.save("user", window.user);
+							self.save_local("user", window.user);
 							return true;
 						}
 					});
@@ -81,7 +74,7 @@ function index() {
 				'first_name': first_name,
 				'last_name': last_name,
 			};
-			self.save("user", window.user);
+			self.save_local("user", window.user);
 			welcome(false);
 		}
 	};
@@ -127,7 +120,7 @@ function welcome(returning) {
 	var header_user_login = document.getElementById('header_user_login_out');
 	header_user_login.innerHTML = window.user.first_name + ' ' + window.user.last_name + ' (Sign out)';
 	header_user_login.addEventListener('click', function() {
-		self.remove('user');
+		self.remove_local('user');
 		render();
 	});
 }

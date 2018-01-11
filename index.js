@@ -62,12 +62,25 @@ function index() {
 			var email = user_email.value;
 			var first_name = first_name_input.value;
 			var last_name = last_name_input.value;
+			/*
 			var new_user = database.ref('guests').push({
 				email: email,
 				first_name: first_name,
 				last_name: last_name
-			});
+			});*/
+			var new_user = {
+				email: email,
+				first_name: first_name,
+				last_name: last_name
+			};
+			var url = '/php/guest.php';
 			debugger;
+			$.ajax({
+				type: 'POST',
+				url: url,
+				data: JSON.stringify(new_user),
+				dataType: 'json'
+			});
 			window.user = {
 				'id': new_user.path.ct[1],
 				'email': email,

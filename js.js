@@ -1,6 +1,5 @@
 function save_local(save_string_key, save_string) {
   var self = this;
-  debugger;
   //converts to JSON string the Object
   var json_save_string = JSON.stringify(save_string);
   //creates a base-64 encoded ASCII string

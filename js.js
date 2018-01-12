@@ -55,5 +55,5 @@ function add_load_event(func) {
 }
 
 function load_tab(tab) {
-  window.location = 'https://reynolds-philipt.github.io/reynolds-wedding/' + tab;
+  window.location = 'kpwedding2018.com/' + tab;
 }

@@ -1,5 +1,4 @@
 function date() {
-	debugger;
 	document.getElementById('header_button_date').style.backgroundColor('#42eef4');
 }
 

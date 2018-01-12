@@ -73,7 +73,6 @@ function index() {
 				last_name: last_name
 			};
 			var url = '/php/guest.php';
-			debugger;
 			$.ajax({
 				type: 'POST',
 				url: url,

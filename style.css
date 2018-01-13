@@ -160,6 +160,7 @@ body {
 	height: 90%;
 	background-image: url("pictures/SaThDa-background.jpg");
 	background-repeat: repeat;
+	overflow: hidden;
 }
 
 .save_the_date_style {

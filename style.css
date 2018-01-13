@@ -157,15 +157,16 @@ body {
 }
 
 .save_the_date_background {
-	height: 90%;
+	height: 100%;
 	background-image: url("pictures/SaThDa-background.jpg");
 	background-repeat: repeat;
 	overflow: hidden;
+	text-align: center;
 }
 
 .save_the_date_style {
 	margin: auto;
-	width: 50%;
+	display: inline-block;
 }
 
 .story_image_40 {

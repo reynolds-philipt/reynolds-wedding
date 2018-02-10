@@ -40,6 +40,7 @@ function decorate_guest_list_table(guests) {
 	heading[7] = {'name': "Guest3", 'code': 'guest3'};
 	heading[8] = {'name': "Guest4", 'code': 'guest4'};
 	heading[9] = {'name': "Guest5", 'code': 'guest5'};
+	heading[10] = {'name': "Guest6", 'code': 'guest6'};
 	
 	
 	//TABLE COLUMNS

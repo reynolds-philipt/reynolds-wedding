@@ -40,7 +40,7 @@ function decorate_guest_list_table(guests) {
 	
 	//TABLE COLUMNS
 	var tr = document.createElement('TR');
-	tableBody.appendChild(tr);
+	table_body.appendChild(tr);
 	for (i = 0; i < heading.length; i++) {
 		var th = document.createElement('TH')
 		th.width = '75';

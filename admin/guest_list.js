@@ -7,7 +7,20 @@ function guest_list() {
 	var guest_list_table = document.getElementById('admin_guest_list_table');
   
   
-	var guests = database.ref("guests").orderByKey();
+	var guests = [];
+	var firebase_guests = database.ref("guests").orderByKey();
+	firebase_guests.once("value")
+		.then(function(snapshot) {
+			snapshot.forEach(function(childSnapshot) {
+				var user = {
+					'id': childSnapshot.key,
+					'email': childSnapshot.val().email,
+					'first_name': childSnapshot.val().first_name,
+					'last_name': childSnapshot.val().last_name,
+				};
+				guests.push(user);
+			});
+		});
 	debugger;
 
 }

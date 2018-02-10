@@ -75,7 +75,7 @@ function decorate_guest_list_table(guests) {
 				} 
 			} else if (heading[j].code.substr(0, heading[j].code.length - 1) === 'guest') {
 				var name_input = document.createElement('input');
-				input.type = 'text';
+				name_input.type = 'text';
 				td.appendChild(name_input);
 				if (heading[j].code === 'guest1' && !guests[i][heading[j]]) {
 					name_input.value = (guests[i].first_name + ' ' + guests[i].last_name);

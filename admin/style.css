@@ -6,17 +6,6 @@ body {
 }
 
 .admin_background_div {
-	overflow-wrap: break-word;
-	text-align: center;
-	width: 500px;
-	margin-left: -250px;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	background: rgba(00,00,64,0.8);
-	border: 2px solid #000040;
-	border-radius: 20px;
-	color: white;
 }
 
 .admin_guest_list_div {

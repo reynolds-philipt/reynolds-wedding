@@ -1,4 +1,4 @@
-function index() {
+function login() {
 	var self = this;
 	var config = self.get_config();
 	firebase.initializeApp(config);

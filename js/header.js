@@ -15,8 +15,7 @@ function header() {
   if (pathname.length > 20) {
     var usable_pathname = pathname.substr(18, pathname.length - 23);
     if (usable_pathname !== 'index') {
-      debugger;
-      var button_id = 'header_button_' + usable_pathname;
+      var button_id = 'header_button_' + usable_pathname.substr(5);
       document.getElementById(button_id).classList.add('header_button_selected_light');
     }
   }

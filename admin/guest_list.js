@@ -22,5 +22,6 @@ function guest_list() {
 				guests.push(user);
 			});
 		});
+	debugger;
 
 }

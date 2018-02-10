@@ -57,7 +57,9 @@ function decorate_guest_list_table(guests) {
 		for (var j = 0; j < heading.length; j++) {
 			var td = document.createElement('TD');
 			td.width = '75';
-			if (heading[j].code === 'guest1' && !guests[i][heading[j]] && !guests[i][heading[j]].first_name) {
+			if (heading[j].code === 'number_of_guests' && !guests[i][heading[j]]) {
+				td.appendChild(document.createTextNode('1');
+			} else if (heading[j].code === 'guest1' && !guests[i][heading[j]] && !guests[i][heading[j]].first_name) {
 				td.appendChild(document.createTextNode(guests[i].first_name + ' ' + guests[i].last_name));
 			} else {
 				td.appendChild(document.createTextNode(guests[i][heading[j].code]));

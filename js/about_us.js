@@ -1,2 +1,0 @@
-function about_us() {
-}

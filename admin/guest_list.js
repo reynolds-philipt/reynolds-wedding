@@ -42,6 +42,7 @@ function decorate_guest_list_table(guests) {
 	heading[9] = {'name': "Guest5", 'code': 'guest5'};
 	heading[10] = {'name': "Guest6", 'code': 'guest6'};
 	
+	var guest_numbers = ['1', '2', '3', '4', '5', '6'];
 	
 	//TABLE COLUMNS
 	var tr = document.createElement('TR');
@@ -59,8 +60,19 @@ function decorate_guest_list_table(guests) {
 		for (var j = 0; j < heading.length; j++) {
 			var td = document.createElement('TD');
 			td.width = '75';
-			if (heading[j].code === 'number_of_guests' && !guests[i][heading[j]]) {
-				td.appendChild(document.createTextNode('1'));
+			if (heading[j].code === 'number_of_guests'){
+				var select = document.createElement('select');
+				select.id = 'num_guests_' + i;
+				td.appendChild(select);
+				for (var k = 0; k < guest_numbers.length; k++) {
+					var option = document.createElement('option');
+					option.value = guest_numbers[k];
+					option.text = guest_numbers[k];
+					select.appendChild(option);
+				}
+				if (guests[i].number_of_guests) {
+					select.value = guests[i].number_of_guests;
+				} 
 			} else if (heading[j].code === 'guest1' && !guests[i][heading[j]]) {
 				td.appendChild(document.createTextNode(guests[i].first_name + ' ' + guests[i].last_name));
 			} else {

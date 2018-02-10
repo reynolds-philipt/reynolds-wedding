@@ -36,10 +36,10 @@ function decorate_guest_list_table(guests) {
 	heading[3] = {'name': "Last Name", 'code': 'last_name'};
 	heading[4] = {'name': "Number of guests", 'code': 'number_of_guests'};
 	heading[5] = {'name': "Guest1", 'code': 'guest1'};
-	heading[5] = {'name': "Guest2", 'code': 'guest2'};
-	heading[5] = {'name': "Guest3", 'code': 'guest3'};
-	heading[5] = {'name': "Guest4", 'code': 'guest4'};
-	heading[5] = {'name': "Guest5", 'code': 'guest5'};
+	heading[6] = {'name': "Guest2", 'code': 'guest2'};
+	heading[7] = {'name': "Guest3", 'code': 'guest3'};
+	heading[8] = {'name': "Guest4", 'code': 'guest4'};
+	heading[9] = {'name': "Guest5", 'code': 'guest5'};
 	
 	
 	//TABLE COLUMNS
@@ -57,7 +57,11 @@ function decorate_guest_list_table(guests) {
 		for (var j = 0; j < heading.length; j++) {
 			var td = document.createElement('TD');
 			td.width = '75';
-			td.appendChild(document.createTextNode(guests[i][heading[j].code]));
+			if (heading[j].code === 'guest1' && !guests[i][heading[j]].first_name) {
+				td.appendChild(document.createTextNode(guests[i].first_name + ' ' + guests[i].last_name));
+			} else {
+				td.appendChild(document.createTextNode(guests[i][heading[j].code]));
+			}
 			tr.appendChild(td);
 		}
 		table_body.appendChild(tr);

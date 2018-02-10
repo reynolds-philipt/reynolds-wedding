@@ -9,6 +9,7 @@ function guest_list() {
   
 	var guests = [];
 	var firebase_guests = database.ref("guests").orderByKey();
+	debugger;
 	firebase_guests.once("value")
 		.then(function(snapshot) {
 			snapshot.forEach(function(childSnapshot) {
@@ -21,6 +22,5 @@ function guest_list() {
 				guests.push(user);
 			});
 		});
-	debugger;
 
 }

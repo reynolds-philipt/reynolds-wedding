@@ -23,8 +23,8 @@ function guest_list() {
 }
 
 function decorate_guest_list_table(guests) {
-	var guest_list_table = document.getElementById('admin_guest_list_table');
-	
+	var guest_list_div = document.getElementById('admin_guest_list_div');
+	var guest_list_table = document.createElement('TABLE');
 	var table_body = document.createElement('TBODY');
 	
 	guest_list_table.border = '1';
@@ -58,5 +58,6 @@ function decorate_guest_list_table(guests) {
 		}
 		table_body.appendChild(tr);
 	}
-	
+	debugger;
+	guest_list_div.appendChild(guest_list_table);
 }

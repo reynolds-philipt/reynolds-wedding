@@ -14,6 +14,7 @@ function header() {
   var pathname = window.location.pathname;
   if (pathname.length > 20) {
     var usable_pathname = pathname.substr(23, pathname.length - 23);
+    debugger;
     if (usable_pathname !== 'index') {
       var button_id = 'header_button_' + usable_pathname;
       document.getElementById(button_id).classList.add('header_button_selected_light');

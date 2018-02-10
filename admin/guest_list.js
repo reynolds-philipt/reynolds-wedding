@@ -17,8 +17,8 @@ function guest_list() {
 					'last_name': childSnapshot.val().last_name,
 				};
 				guests.push(user);
-				decorate_guest_list_table(guests);
 			});
+			decorate_guest_list_table(guests);
 		});
 }
 

@@ -140,11 +140,11 @@ body {
 	border-radius: 20px;
 }
 
-.index_container {
+.login_container {
         width: 50%;
 }
 
-.index_header_date {
+.login_header_date {
     	text-align: center;
 	color: #40e0d0;
     	font-size: 60;
@@ -152,7 +152,7 @@ body {
 	text-shadow: 4px 4px 3px rgba(0,0,64,0.3);
 }
 
-.index_header_title {
+.login_header_title {
     	text-align: center;
 	color: #40e0d0;
     	font-size: 90;
@@ -266,7 +266,7 @@ body {
 	width: 100%;
 }
 
-.index_background_div {
+.login_background_div {
 	background-image: url("pictures/57-napa.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;

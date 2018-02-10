@@ -53,7 +53,7 @@ function decorate_guest_list_table(guests) {
 		for (var j = 0; j < heading.length; j++) {
 			var td = document.createElement('TD');
 			td.width = '75';
-			td.appendChild(document.createTextNode(guests[i][heading[j].code]);
+			td.appendChild(document.createTextNode(guests[i][heading[j].code]));
 			tr.appendChild(td);
 		}
 		table_body.appendChild(tr);

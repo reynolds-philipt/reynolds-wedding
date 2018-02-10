@@ -52,6 +52,7 @@ function decorate_guest_list_table(guests) {
 		tr.appendChild(th);
 	}
 	
+	debugger;
 	for (var i = 0; i < guests.length; i++) {
 		var tr = document.createElement('TR');
 		for (var j = 0; j < heading.length; j++) {

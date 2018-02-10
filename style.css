@@ -1,4 +1,3 @@
-
 body {
 	margin: 0;
 	padding: 0;
@@ -20,17 +19,20 @@ body {
 }
 
 .header_container {
+	background-color: #000040;
 	width: 100%;
-	height: 10%;
+        height: 10%;
 	z-index: 1000;
 }
 
 .header_background {
 	background-color: #000040;
 	width: 100%;
+        height: 50%;
 	padding-top: 5;
 	padding-bottom: 5;
 	float: left;
+        display: table;
 }
 
 .header {
@@ -45,12 +47,26 @@ body {
 	padding-bottom: 5;
 	text-shadow: 4px 4px 3px rgba(0,0,0,1);
 	text-decoration: none;
+        position: absolute;
+}
+
+.header_title_container {
+        height: 100%;
+        display: table-caption;
+        vertical-align: middle;
 }
 
 .header_button_background {
 	background-color: #000040;
 	width: 100%;
+        height: 50%;
 	float: left;
+        position: relative;
+}
+
+.header_button_container {
+        position: absolute;
+        bottom: 0;
 }
 
 .header_button {
@@ -103,8 +119,11 @@ body {
 
 .header_user_login_out {
 	color: #ff7f50;
-	float: right;
 	margin-right: 20px;
+        margin-top: 20px;
+        right: 0;
+        top: 0;
+        position: absolute;
 }
 
 .her_story {
@@ -121,9 +140,12 @@ body {
 	border-radius: 20px;
 }
 
+.index_container {
+        width: 50%;
+}
+
 .index_header_date {
     	text-align: center;
-	margin-right: 700px;
 	color: #40e0d0;
     	font-size: 60;
     	font-family: 'Great Vibes', Helvetica, sans-serif;
@@ -132,7 +154,6 @@ body {
 
 .index_header_title {
     	text-align: center;
-	margin-right: 700px;
 	color: #40e0d0;
     	font-size: 90;
     	font-family: 'Great Vibes', Helvetica, sans-serif;
@@ -223,7 +244,6 @@ body {
 
 .email_form_div {
 	text-align: -webkit-center;
-	margin-right: 700px;
 }
 
 .email_form {
@@ -251,8 +271,7 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top;
-	position: absolute;
-	height: 90%;
+	height: 100%;
 	min-height: 90%;
 	overflow: hidden;
 	width: 100%;
@@ -280,5 +299,3 @@ body {
 	overflow: hidden;
 	width: 100%;
 }
-
-

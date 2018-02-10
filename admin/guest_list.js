@@ -35,7 +35,11 @@ function decorate_guest_list_table(guests) {
 	heading[2] = {'name': "First Name", 'code': 'first_name'};
 	heading[3] = {'name': "Last Name", 'code': 'last_name'};
 	heading[4] = {'name': "Number of guests", 'code': 'number_of_guests'};
-	heading[5] = {'name': "Email", 'code': 'email'};
+	heading[5] = {'name': "Guest1", 'code': 'guest1'};
+	heading[5] = {'name': "Guest2", 'code': 'guest2'};
+	heading[5] = {'name': "Guest3", 'code': 'guest3'};
+	heading[5] = {'name': "Guest4", 'code': 'guest4'};
+	heading[5] = {'name': "Guest5", 'code': 'guest5'};
 	
 	
 	//TABLE COLUMNS

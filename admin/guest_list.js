@@ -78,7 +78,7 @@ function decorate_guest_list_table(guests) {
 				input.type = 'text';
 				td.appendChild(name_input);
 				if (heading[j].code === 'guest1' && !guests[i][heading[j]]) {
-					name_input.value = (guests[i].first_name + ' ' + guests[i].last_name));
+					name_input.value = (guests[i].first_name + ' ' + guests[i].last_name);
 				}
 			} else {
 				td.appendChild(document.createTextNode(guests[i][heading[j].code]));

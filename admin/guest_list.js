@@ -76,16 +76,16 @@ function decorate_guest_list_table(guests) {
 					select.value = guests[i].number_of_guests;
 				} 
 				select.addEventListener('update', function(value) {
-					updated_guest[i].number_of_guests = value;
 					debugger;
+					updated_guest[i].number_of_guests = value;
 				});
 				select.addEventListener('updated', function(value) {
-					updated_guest[i].number_of_guests = value;
 					debugger;
+					updated_guest[i].number_of_guests = value;
 				});
 				select.addEventListener('change', function(value) {
-					updated_guest[i].number_of_guests = value;
 					debugger;
+					updated_guest[i].number_of_guests = value;
 				});
 			} else if (heading[j].code.substr(0, heading[j].code.length - 1) === 'guest') {
 				var name_input = document.createElement('input');

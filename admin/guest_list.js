@@ -76,7 +76,7 @@ function decorate_guest_list_table(guests) {
 				td.addEventListener('click', function() {
 					debugger;
 					var guest_index = this.id.substr(3, 1);
-					update_guest_list(self.updated_guests, guest_index) {
+					update_guest_list(self.updated_guests, guest_index);
 				});
 			} else if (heading[j].code === 'number_of_guests') {
 				var select = document.createElement('select');

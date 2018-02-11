@@ -162,6 +162,6 @@ function update_guest_list(guest_list, guest_index) {
 	}
 	debugger;
 	
-	var new_user = database.ref('guests').update(update_user);
+	var new_user = database.ref('guests/' + current_guest.id).update(update_user[current_guest.id]);
 	debugger;
 }

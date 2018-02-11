@@ -94,7 +94,6 @@ function decorate_guest_list_table(guests) {
 				text_node.style = {'cursor': 'pointer'};
 				td.appendChild(text_node);
 				td.addEventListener('click', function() {
-					debugger;
 					var guest_index = this.id.substr(3);
 					update_guest_list(self.updated_guests, guest_index);
 				});

@@ -109,12 +109,17 @@ function decorate_guest_list_table(guests) {
 				}
 				if (guests[i].number_of_guests) {
 					select.value = guests[i].number_of_guests;
-				} 
+					select.index = guests[i].number_of_guests;
+				}  else {
+					select.value = '1';
+					select.index = '1';
+				}
 				select.addEventListener('change', function(value) {
 					//this.id is 'num_guests_' + i
 					var array_split_ids = this.id.split('_');
 					var guest_id = array_split_ids[2];
 					self.updated_guests[guest_id].number_of_guests = this.value;
+					select.index = this.value;
 				});
 			} else if (heading[j].code.substr(0, heading[j].code.length - 1) === 'guest') {
 				var name_input = document.createElement('input');

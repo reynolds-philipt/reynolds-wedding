@@ -122,7 +122,7 @@ function decorate_guest_list_table(guests) {
 				name_input.id = 'name_input_' + heading[j].code + '_' + i;
 				td.appendChild(name_input);
 				var guest_name = null;
-				if (heading[j].code === 'guest1' && !guests[i][heading[j]]) {
+				if (heading[j].code === 'guest1' && !guests[i][heading[j].code]) {
 					guest_name = (guests[i].first_name + ' ' + guests[i].last_name);
 				} else if (guests[i][heading[j].code]) {
 					guest_name = guests[i][heading[j].code].name;

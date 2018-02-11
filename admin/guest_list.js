@@ -74,7 +74,6 @@ function decorate_guest_list_table(guests) {
 				td.style = {'cursor': 'pointer'};
 				td.appendChild(document.createTextNode(guests[i][heading[j].code]));
 				td.addEventListener('click', function() {
-					debugger;
 					var guest_index = this.id.substr(3, 1);
 					update_guest_list(self.updated_guests, guest_index);
 				});
@@ -130,11 +129,10 @@ function decorate_guest_list_table(guests) {
 		table_body.appendChild(tr);
 		this.updated_guests[i] = updated_guest;
 	}
-	debugger;
 	guest_list_div.appendChild(guest_list_table);
 	save_button.addEventListener('click', function() {
-		debugger;
-		update_guest_list(self.updated_guests, null);
+		// Do nothing for now
+		// update_guest_list(self.updated_guests, null);
 	});
 }
 
@@ -149,7 +147,6 @@ function update_guest_list(guest_list, guest_index) {
 	update_user[current_guest.id] = {
 		'number_of_guests': current_guest.number_of_guests
 	};
-	debugger;
 	for(var j = 0; j < current_guest.number_of_guests; j++) {
 		if (!update_user[current_guest.id]['guest' + (j + 1)]) {
 			update_user[current_guest.id]['guest' + (j + 1)] = {};
@@ -160,8 +157,6 @@ function update_guest_list(guest_list, guest_index) {
 			update_user[current_guest.id]['guest' + (j + 1)].name = '';
 		}
 	}
-	debugger;
 	
 	var new_user = database.ref('guests/' + current_guest.id).update(update_user[current_guest.id]);
-	debugger;
 }

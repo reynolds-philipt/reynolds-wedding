@@ -57,7 +57,7 @@ function decorate_guest_list_table(guests) {
 	
 	var updated_guests = [];
 	for (var i = 0; i < guests.length; i++) {
-		var updated_guest[i] = guests;
+		var updated_guest = guests;
 		var tr = document.createElement('TR');
 		for (var j = 0; j < heading.length; j++) {
 			var td = document.createElement('TD');
@@ -92,6 +92,7 @@ function decorate_guest_list_table(guests) {
 			tr.appendChild(td);
 		}
 		table_body.appendChild(tr);
+		updated_guests[i] = updated_guest;
 	}
 	debugger;
 	guest_list_div.appendChild(guest_list_table);

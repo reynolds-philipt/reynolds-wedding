@@ -108,7 +108,10 @@ function decorate_guest_list_table(guests) {
 				name_input.addEventListener('blur', function(value) {
 					var guest_id = this.id.substr(18, 1);
 					var guest = this.id.substr(11, 6);
-					self.updated_guests[guest_id][guest].name;
+					if (!self.updated_guests[guest_id][guest]) {
+						self.updated_guests[guest_id][guest] = {};
+					}
+					self.updated_guests[guest_id][guest].name = this.value;
 				});
 			} else {
 				td.appendChild(document.createTextNode(guests[i][heading[j].code]));

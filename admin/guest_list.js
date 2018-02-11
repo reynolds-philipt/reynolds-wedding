@@ -145,8 +145,8 @@ function update_guest_list(guest_list, guest_index) {
 	var database = firebase.database();
 	
 	var current_guest = guest_list[guest_index];
-	var update_user = {
-		'id': current_guest.id,
+	var update_user = [];
+	update_user[current_guest.id] = {
 		'number_of_guests': current_guest.number_of_guests
 	};
 	debugger;
@@ -162,6 +162,6 @@ function update_guest_list(guest_list, guest_index) {
 	}
 	debugger;
 	
-	var new_user = database.ref('guests').update(current_guest);
+	var new_user = database.ref('guests').update(update_user);
 	debugger;
 }

@@ -15,6 +15,7 @@ function guest_list() {
 					'email': childSnapshot.val().email,
 					'first_name': childSnapshot.val().first_name,
 					'last_name': childSnapshot.val().last_name,
+					'number_of_guests': childSnapshot.val().number_of_guests ? childSnapshot.val().number_of_guests : '1',
 				};
 				guests.push(user);
 			});

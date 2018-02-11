@@ -151,13 +151,13 @@ function update_guest_list(guest_list, guest_index) {
 	};
 	debugger;
 	for(var j = 0; j < current_guest.number_of_guests; j++) {
-		if (!update_user['guest' + (j + 1)]) {
-			update_user['guest' + (j + 1)] = {};
+		if (!update_user[current_guest.id]['guest' + (j + 1)]) {
+			update_user[current_guest.id]['guest' + (j + 1)] = {};
 		}
 		if (current_guest['guest' + (j + 1)]) {
-			update_user['guest' + (j + 1)].name = current_guest['guest' + (j + 1)].name;
+			update_user[current_guest.id]['guest' + (j + 1)].name = current_guest['guest' + (j + 1)].name;
 		} else {
-			update_user['guest' + (j + 1)].name = '';
+			update_user[current_guest.id]['guest' + (j + 1)].name = '';
 		}
 	}
 	debugger;

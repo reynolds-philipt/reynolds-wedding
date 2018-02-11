@@ -27,7 +27,11 @@ function decorate_guest_list_table(guests) {
 	var guest_list_div = document.getElementById('admin_guest_list_div');
 	
 	var save_button = document.createElement('BUTTON');
-	
+	save_button.innerHTML = 'Save';
+	guest_list_div.appendChild(save_button);
+	save_button.addEventListener('click', function() {
+		debugger;
+	});
 	
 	var guest_list_table = document.createElement('TABLE');
 	var table_body = document.createElement('TBODY');

@@ -69,7 +69,14 @@ function decorate_guest_list_table(guests) {
 		for (var j = 0; j < heading.length; j++) {
 			var td = document.createElement('TD');
 			td.width = '75';
-			if (heading[j].code === 'number_of_guests'){
+			if (heading[j].code === 'id') {
+				td.id = 'id_' + i;
+				td.style = {'cursor': 'pointer'};
+				td.appendChild(document.createTextNode(guests[i][heading[j].code]));
+				td.addEventListener('click', function() {
+					debugger;
+				});
+			} else if (heading[j].code === 'number_of_guests') {
 				var select = document.createElement('select');
 				select.id = 'num_guests_' + i;
 				td.appendChild(select);
@@ -108,6 +115,7 @@ function decorate_guest_list_table(guests) {
 				name_input.addEventListener('blur', function(value) {
 					var guest_id = this.id.substr(18, 1);
 					var guest = this.id.substr(11, 6);
+					if (self.updated_guests[guest_id].number_of_guests
 					if (!self.updated_guests[guest_id][guest]) {
 						self.updated_guests[guest_id][guest] = {};
 					}
@@ -128,15 +136,28 @@ function decorate_guest_list_table(guests) {
 	});
 }
 
-function update_guest_list(guest_list) {
+function update_guest_list(guest_list, guest_index) {
 	var self = this;
 	var config = self.get_config();
 	firebase.initializeApp(config);
 	var database = firebase.database();
 	
-	var new_user = database.ref('guests').push({
-		email: email,
-		first_name: first_name,
-		last_name: last_name,
-	});
+	var current_guest = guest_list[guest_index];
+	var update_user = {
+		'id': current_guest.id,
+		'number_of_guests': current_guest.number_of_guests
+	};
+	for(var j = 0; j < current_guest.number_of_guests; j++) {
+		if (!update_user['guest' + (j + 1)]) {
+			update_user['guest' + (j + 1)] = {};
+		}
+		if (current_guest['guest' + (j + 1)]) {
+			update_user['guest' + (j + 1)].name = current_guest['guest' + (j + 1)].name;
+		} else {
+			update_user['guest' + (j + 1)].name = '';
+		}
+	}
+	debugger;
+	/*
+	var new_user = database.ref('guests').update(current_guest);*/
 }

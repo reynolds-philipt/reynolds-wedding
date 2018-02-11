@@ -123,3 +123,16 @@ function decorate_guest_list_table(guests) {
 	debugger;
 	guest_list_div.appendChild(guest_list_table);
 }
+
+function update_guest_list(guest_list) {
+	var self = this;
+	var config = self.get_config();
+	firebase.initializeApp(config);
+	var database = firebase.database();
+	
+	var new_user = database.ref('guests').push({
+		email: email,
+		first_name: first_name,
+		last_name: last_name,
+	});
+}

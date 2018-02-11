@@ -15,8 +15,27 @@ function guest_list() {
 					'email': childSnapshot.val().email,
 					'first_name': childSnapshot.val().first_name,
 					'last_name': childSnapshot.val().last_name,
-					'number_of_guests': childSnapshot.val().number_of_guests ? childSnapshot.val().number_of_guests : '1',
+					'number_of_guests':
+						childSnapshot.val().number_of_guests ? childSnapshot.val().number_of_guests : '1',
 				};
+				if (childSnapshot.val().guest1) {
+					user.guest1 = childSnapshot.val().guest1;
+				}
+				if (childSnapshot.val().guest2) {
+					user.guest2 = childSnapshot.val().guest2;
+				} 
+				if (childSnapshot.val().guest3) {
+					user.guest3 = childSnapshot.val().guest3;
+				} 
+				if (childSnapshot.val().guest4) {
+					user.guest4 = childSnapshot.val().guest4;
+				} 
+				if (childSnapshot.val().guest5) {
+					user.guest5 = childSnapshot.val().guest5;
+				} 
+				if (childSnapshot.val().guest6) {
+					user.guest6 = childSnapshot.val().guest6;
+				} 
 				guests.push(user);
 			});
 			decorate_guest_list_table(guests);

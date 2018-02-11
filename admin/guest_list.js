@@ -24,6 +24,7 @@ function guest_list() {
 }
 
 function decorate_guest_list_table(guests) {
+	var self = this;
 	var guest_list_div = document.getElementById('admin_guest_list_div');
 	
 	var save_button = document.createElement('BUTTON');
@@ -60,7 +61,7 @@ function decorate_guest_list_table(guests) {
 		tr.appendChild(th);
 	}
 	
-	var updated_guests = guests;
+	this.updated_guests = guests;
 	debugger;
 	for (var i = 0; i < guests.length; i++) {
 		var updated_guest = guests[i];
@@ -84,7 +85,7 @@ function decorate_guest_list_table(guests) {
 				select.addEventListener('change', function(value) {
 					//this.id is 'num_guests_' + i
 					var guest_id = this.id.substr(11);
-					updated_guests[guest_id].number_of_guests = this.value;
+					self.updated_guests[guest_id].number_of_guests = this.value;
 				});
 			} else if (heading[j].code.substr(0, heading[j].code.length - 1) === 'guest') {
 				var name_input = document.createElement('input');
@@ -107,7 +108,7 @@ function decorate_guest_list_table(guests) {
 				name_input.addEventListener('blur', function(value) {
 					var guest_id = this.id.substr(18, 1);
 					var guest = this.id.substr(11, 6);
-					updated_guests[guest_id][guest].name;
+					self.updated_guests[guest_id][guest].name;
 				});
 			} else {
 				td.appendChild(document.createTextNode(guests[i][heading[j].code]));
@@ -115,7 +116,7 @@ function decorate_guest_list_table(guests) {
 			tr.appendChild(td);
 		}
 		table_body.appendChild(tr);
-		updated_guests[i] = updated_guest;
+		this.updated_guests[i] = updated_guest;
 	}
 	debugger;
 	guest_list_div.appendChild(guest_list_table);

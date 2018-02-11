@@ -63,10 +63,10 @@ function decorate_guest_list_table(guests) {
 		tr.appendChild(th);
 	}
 	
-	var updated_guests = [];
+	var updated_guests = guests;
 	debugger;
 	for (var i = 0; i < guests.length; i++) {
-		var updated_guest = guests;
+		var updated_guest = guests[i];
 		var tr = document.createElement('TR');
 		for (var j = 0; j < heading.length; j++) {
 			var td = document.createElement('TD');

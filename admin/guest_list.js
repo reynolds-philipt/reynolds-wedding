@@ -75,17 +75,9 @@ function decorate_guest_list_table(guests) {
 				if (guests[i].number_of_guests) {
 					select.value = guests[i].number_of_guests;
 				} 
-				select.addEventListener('update', function(value) {
-					debugger;
-					//updated_guest[i].number_of_guests = value;
-				});
-				select.addEventListener('updated', function(value) {
-					debugger;
-					//updated_guest[i].number_of_guests = value;
-				});
 				select.addEventListener('change', function(value) {
 					debugger;
-					//updated_guest[i].number_of_guests = value;
+					updated_guest[i].number_of_guests = this.value;
 				});
 			} else if (heading[j].code.substr(0, heading[j].code.length - 1) === 'guest') {
 				var name_input = document.createElement('input');

@@ -54,6 +54,7 @@ function decorate_guest_list_table(guests) {
 		tr.appendChild(th);
 	}
 	
+	var rows = [];
 	debugger;
 	for (var i = 0; i < guests.length; i++) {
 		var tr = document.createElement('TR');
@@ -86,6 +87,7 @@ function decorate_guest_list_table(guests) {
 			tr.appendChild(td);
 		}
 		table_body.appendChild(tr);
+		rows.push(tr);
 	}
 	debugger;
 	guest_list_div.appendChild(guest_list_table);

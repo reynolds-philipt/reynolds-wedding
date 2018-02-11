@@ -55,9 +55,9 @@ function decorate_guest_list_table(guests) {
 		tr.appendChild(th);
 	}
 	
-	var rows = [];
-	debugger;
+	var updated_guests = [];
 	for (var i = 0; i < guests.length; i++) {
+		var updated_guest[i] = guests;
 		var tr = document.createElement('TR');
 		for (var j = 0; j < heading.length; j++) {
 			var td = document.createElement('TD');
@@ -75,6 +75,10 @@ function decorate_guest_list_table(guests) {
 				if (guests[i].number_of_guests) {
 					select.value = guests[i].number_of_guests;
 				} 
+				select.addEventListener('select', function(value) {
+					updated_guest[i].number_of_guests = value;
+					debugger;
+				});
 			} else if (heading[j].code.substr(0, heading[j].code.length - 1) === 'guest') {
 				var name_input = document.createElement('input');
 				name_input.type = 'text';
@@ -88,7 +92,6 @@ function decorate_guest_list_table(guests) {
 			tr.appendChild(td);
 		}
 		table_body.appendChild(tr);
-		rows.push(tr);
 	}
 	debugger;
 	guest_list_div.appendChild(guest_list_table);

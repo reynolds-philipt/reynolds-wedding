@@ -149,6 +149,7 @@ function update_guest_list(guest_list, guest_index) {
 		'id': current_guest.id,
 		'number_of_guests': current_guest.number_of_guests
 	};
+	debugger;
 	for(var j = 0; j < current_guest.number_of_guests; j++) {
 		if (!update_user['guest' + (j + 1)]) {
 			update_user['guest' + (j + 1)] = {};
@@ -160,6 +161,7 @@ function update_guest_list(guest_list, guest_index) {
 		}
 	}
 	debugger;
-	/*
-	var new_user = database.ref('guests').update(current_guest);*/
+	
+	var new_user = database.ref('guests').update(current_guest);
+	debugger;
 }

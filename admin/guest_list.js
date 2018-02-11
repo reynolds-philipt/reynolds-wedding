@@ -103,7 +103,7 @@ function decorate_guest_list_table(guests) {
 				var guest_name = null;
 				if (heading[j].code === 'guest1' && !guests[i][heading[j]]) {
 					guest_name = (guests[i].first_name + ' ' + guests[i].last_name);
-				} else if (guests[i][heading[j]]) {
+				} else if (guests[i][heading[j].code]) {
 					guest_name = guests[i][heading[j]].name;
 				}
 				name_input.value = guest_name;

@@ -25,6 +25,10 @@ function guest_list() {
 
 function decorate_guest_list_table(guests) {
 	var guest_list_div = document.getElementById('admin_guest_list_div');
+	
+	var save_button = document.createElement('BUTTON');
+	
+	
 	var guest_list_table = document.createElement('TABLE');
 	var table_body = document.createElement('TBODY');
 	
@@ -83,10 +87,27 @@ function decorate_guest_list_table(guests) {
 			} else if (heading[j].code.substr(0, heading[j].code.length - 1) === 'guest') {
 				var name_input = document.createElement('input');
 				name_input.type = 'text';
+				name_input.id = 'name_input_' + heading[j].code + '_' + i;
 				td.appendChild(name_input);
+				var guest_name = null;
 				if (heading[j].code === 'guest1' && !guests[i][heading[j]]) {
-					name_input.value = (guests[i].first_name + ' ' + guests[i].last_name);
+					guest_name = (guests[i].first_name + ' ' + guests[i].last_name);
+				} else if (guests[i][heading[j]) {
+					guest_name = guests[i][heading[j].name;
 				}
+				name_input.value = guest_name;
+				if (guest_name) {
+					if (!updated_guest[i][heading[j].code]) {
+						updated_guest[i][heading[j].code] = {};
+					}
+					updated_guest[i][heading[j].code].first_name = guest_name;
+				}
+				name_input.addEventListener('change', function(value) {
+					debugger;
+				});
+				name_input.addEventListener('blur', function(value) {
+					debugger;
+				});
 			} else {
 				td.appendChild(document.createTextNode(guests[i][heading[j].code]));
 			}

@@ -87,9 +87,6 @@ function decorate_guest_list_table(guests) {
 					updated_guest[i].number_of_guests = value;
 					debugger;
 				});
-				select.addEventListener('click', function(value) {
-					debugger;
-				});
 			} else if (heading[j].code.substr(0, heading[j].code.length - 1) === 'guest') {
 				var name_input = document.createElement('input');
 				name_input.type = 'text';

@@ -90,8 +90,9 @@ function decorate_guest_list_table(guests) {
 			td.width = '75';
 			if (heading[j].code === 'id') {
 				td.id = 'id_' + i;
-				td.style = {'cursor': 'pointer'};
-				td.appendChild(document.createTextNode(guests[i][heading[j].code]));
+				var text_node = document.createTextNode(guests[i][heading[j].code]);
+				text_node.style = {'cursor': 'pointer'};
+				td.appendChild(text_node);
 				td.addEventListener('click', function() {
 					debugger;
 					var guest_index = this.id.substr(3, 1);

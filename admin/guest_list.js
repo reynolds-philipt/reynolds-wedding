@@ -75,7 +75,7 @@ function decorate_guest_list_table(guests) {
 				if (guests[i].number_of_guests) {
 					select.value = guests[i].number_of_guests;
 				} 
-				select.addEventListener('select', function(value) {
+				select.addEventListener('update', function(value) {
 					updated_guest[i].number_of_guests = value;
 					debugger;
 				});

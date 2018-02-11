@@ -29,9 +29,6 @@ function decorate_guest_list_table(guests) {
 	var save_button = document.createElement('BUTTON');
 	save_button.innerHTML = 'Save';
 	guest_list_div.appendChild(save_button);
-	save_button.addEventListener('click', function() {
-		debugger;
-	});
 	
 	var guest_list_table = document.createElement('TABLE');
 	var table_body = document.createElement('TBODY');
@@ -122,6 +119,9 @@ function decorate_guest_list_table(guests) {
 	}
 	debugger;
 	guest_list_div.appendChild(guest_list_table);
+	save_button.addEventListener('click', function() {
+		debugger;
+	});
 }
 
 function update_guest_list(guest_list) {

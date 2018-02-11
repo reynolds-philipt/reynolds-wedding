@@ -140,8 +140,8 @@ function decorate_guest_list_table(guests) {
 
 function update_guest_list(guest_list, guest_index) {
 	var self = this;
-	var config = self.get_config();
-	firebase.initializeApp(config);
+	// var config = self.get_config();
+	// firebase.initializeApp(config);
 	var database = firebase.database();
 	
 	var current_guest = guest_list[guest_index];

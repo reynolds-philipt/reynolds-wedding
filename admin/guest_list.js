@@ -75,6 +75,8 @@ function decorate_guest_list_table(guests) {
 				td.appendChild(document.createTextNode(guests[i][heading[j].code]));
 				td.addEventListener('click', function() {
 					debugger;
+					var guest_index = this.id.substr(3, 1);
+					update_guest_list(self.updated_guests, guest_index) {
 				});
 			} else if (heading[j].code === 'number_of_guests') {
 				var select = document.createElement('select');
@@ -115,7 +117,6 @@ function decorate_guest_list_table(guests) {
 				name_input.addEventListener('blur', function(value) {
 					var guest_id = this.id.substr(18, 1);
 					var guest = this.id.substr(11, 6);
-					if (self.updated_guests[guest_id].number_of_guests
 					if (!self.updated_guests[guest_id][guest]) {
 						self.updated_guests[guest_id][guest] = {};
 					}
@@ -133,6 +134,7 @@ function decorate_guest_list_table(guests) {
 	guest_list_div.appendChild(guest_list_table);
 	save_button.addEventListener('click', function() {
 		debugger;
+		update_guest_list(self.updated_guests, null);
 	});
 }
 

@@ -178,6 +178,21 @@ body {
 	font-size: 18px;
 }
 
+.rsvp_background_div {
+	height: 100%;
+	text-align: center;
+}
+
+.rsvp_guest_input_div {
+	
+}
+
+.rsvp_instructions_style {
+	background: rgba(64,224,208,0.7);
+	border: 2px solid #40e0d0;
+	border-radius: 20px;
+}
+
 .save_the_date_background {
 	height: 100%;
 	background-image: url("pictures/SaThDa-background.jpg");

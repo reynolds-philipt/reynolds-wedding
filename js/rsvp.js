@@ -28,7 +28,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	//Dinner select
 	var dinner_select_label = document.createTextNode('Guest\'s selection for dinner');
 	parent.appendChild(dinner_select_label);
-	var dinner_options = ['Beef', 'Pork', 'Gluten Free/Vegan', 'Child'];
+	var dinner_options = ['', 'Beef', 'Pork', 'Gluten Free/Vegan', 'Child'];
 	var dinner_select = document.createElement('select');
 	for (var i = 0; i < dinner_options.length; i++) {
 		var option = document.createElement('option');

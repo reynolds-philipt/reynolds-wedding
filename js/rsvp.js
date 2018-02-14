@@ -12,6 +12,7 @@ function rsvp() {
 function decorate_guest_input_block(parent, guest_number) {
 	// guest attending
 	var guest_attending_div = document.createElement('DIV');
+	guest_attending_div.class = 'rsvp_guest_input_divs';
 	var guest_attending_label = document.createTextNode('Unfotunately, unable to attend');
 	guest_attending_div.appendChild(guest_attending_label);
 	var guest_attending_toggle = document.createElement('BUTTON');
@@ -23,6 +24,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	
 	// Guest Name
 	var guest_name_div = document.createElement('DIV');
+	guest_name_div.class = 'rsvp_guest_input_divs';
 	var guest_name_label = document.createTextNode('Guest\'s name');
 	parent.appendChild(guest_name_label);
 	var guest_name_input = document.createElement('input');
@@ -31,6 +33,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	
 	//Dinner select
 	var dinner_select_div = document.createElement('DIV');
+	dinner_select_div.class = 'rsvp_guest_input_divs';
 	var dinner_select_label = document.createTextNode('Guest\'s selection for dinner');
 	dinner_select_div.appendChild(dinner_select_label);
 	var dinner_options = ['', 'Beef', 'Pork', 'Gluten Free/Vegan', 'Child'];
@@ -46,6 +49,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	
 	// Allergies
 	var allergies_div = document.createElement('DIV');
+	allergies_div.class = 'rsvp_guest_input_divs';
 	var allergies_label = document.createTextNode('Any food allergies the cook should be aware of?');
 	allergies_div.appendChild(allergies_label);
 	var allergies_text = document.createElement('input');

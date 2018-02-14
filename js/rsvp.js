@@ -10,7 +10,7 @@ function rsvp() {
 }
 
 function decorate_guest_input_block(parent, guest_number) {
-	// guest attending
+	// Guest attending
 	var guest_attending_div = document.createElement('DIV');
 	guest_attending_div.classList.add('rsvp_guest_input_divs');
 	
@@ -29,6 +29,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	guest_attending_div.appendChild(guest_attending_label_div);
 	parent.appendChild(guest_attending_div);
 	
+	
 	// Guest Name
 	var guest_name_div = document.createElement('DIV');
 	guest_name_div.classList.add('rsvp_guest_input_divs');
@@ -42,6 +43,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	guest_name_input.type = 'text';
 	guest_name_div.appendChild(guest_name_input);
 	parent.appendChild(guest_name_div);
+	
 	
 	//Dinner select
 	var dinner_select_div = document.createElement('DIV');
@@ -63,6 +65,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	dinner_select_div.appendChild(dinner_select);
 	parent.appendChild(dinner_select_div);
 	
+	
 	// Allergies
 	var allergies_div = document.createElement('DIV');
 	allergies_div.classList.add('rsvp_guest_input_divs');
@@ -77,21 +80,6 @@ function decorate_guest_input_block(parent, guest_number) {
 	allergies_div.appendChild(allergies_text);
 	parent.appendChild(allergies_div);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

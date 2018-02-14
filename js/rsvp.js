@@ -22,9 +22,11 @@ function decorate_guest_input_block(parent, guest_number) {
 	guest_not_attending_label_div.appendChild(document.createTextNode('unable to attend'));
 	guest_attending_div.appendChild(guest_not_attending_label_div);
 	
+	var guest_attending_toggle_div = document.createElement('DIV');
 	var guest_attending_toggle = document.createElement('BUTTON');
 	guest_attending_toggle.innerHTML = 'Testing';
-	guest_attending_div.appendChild(guest_attending_toggle);
+	guest_attending_toggle_div.appendChild(guest_attending_toggle);
+	guest_attending_div.appendChild(guest_attending_toggle_div);
 	
 	var guest_attending_label_div = document.createElement('DIV');
 	guest_attending_label_div.style.display = 'inline-block';

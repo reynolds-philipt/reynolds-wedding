@@ -26,10 +26,11 @@ function decorate_guest_input_block(parent, guest_number) {
 	var guest_name_div = document.createElement('DIV');
 	guest_name_div.class = 'rsvp_guest_input_divs';
 	var guest_name_label = document.createTextNode('Guest\'s name');
-	parent.appendChild(guest_name_label);
+	guest_name_div.appendChild(guest_name_label);
 	var guest_name_input = document.createElement('input');
 	guest_name_input.type = 'text';
-	parent.appendChild(guest_name_input);
+	guest_name_div.appendChild(guest_name_input);
+	parent.appendChild(guest_name_div);
 	
 	//Dinner select
 	var dinner_select_div = document.createElement('DIV');

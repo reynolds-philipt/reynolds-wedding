@@ -191,6 +191,11 @@ body {
 	background: rgba(64,224,208,0.7);
 	border: 2px solid #40e0d0;
 	border-radius: 20px;
+	display: inline-block;
+	padding: 10px;
+	margin: 16px;
+	position: relative;
+	width: fit-content;
 }
 
 .save_the_date_background {

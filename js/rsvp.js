@@ -16,6 +16,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	
 	var guest_not_attending_label_div = document.createElement('DIV');
 	guest_not_attending_label_div.style.display = 'inline-block';
+	guest_not_attending_label_div.style['padding-right'] = '8px';
 	guest_not_attending_label_div.appendChild(document.createTextNode('Unfotunately,'));
 	guest_not_attending_label_div.appendChild(document.createElement('br'));
 	guest_not_attending_label_div.appendChild(document.createTextNode('unable to attend'));
@@ -27,6 +28,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	
 	var guest_attending_label_div = document.createElement('DIV');
 	guest_attending_label_div.style.display = 'inline-block';
+	guest_attending_label_div.style['padding-left'] = '8px';
 	guest_attending_label_div.appendChild(document.createTextNode('Happily able'));
 	guest_attending_label_div.appendChild(document.createElement('br'));
 	guest_attending_label_div.appendChild(document.createTextNode('to attend'));

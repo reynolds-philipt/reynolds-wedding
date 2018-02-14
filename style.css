@@ -193,6 +193,10 @@ body {
 	width: fit-content;
 }
 
+.rsvp_guest_input_divs {
+	margin-top: 8px;
+}
+
 .rsvp_guest_inputs {
 }
 

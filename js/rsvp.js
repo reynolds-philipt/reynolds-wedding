@@ -4,7 +4,6 @@ function rsvp() {
 	firebase.initializeApp(config);
 	var database = firebase.database();
 
-  debugger;
 	var guest_input_div = document.getElementById('guest_input_div');
 	decorate_guest_input_block(guest_input_div, 1);
 

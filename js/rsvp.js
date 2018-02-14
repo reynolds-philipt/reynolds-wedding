@@ -15,7 +15,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	guest_attending_div.classList.add('rsvp_guest_input_divs');
 	
 	var guest_not_attending_label_div = document.createElement('DIV');
-	guest_not_attending_label_div.style.display = 'inline';
+	guest_not_attending_label_div.style.display = 'inline-block';
 	guest_not_attending_label_div.appendChild(document.createTextNode('Unfotunately,'));
 	guest_not_attending_label_div.appendChild(document.createElement('br'));
 	guest_not_attending_label_div.appendChild(document.createTextNode('unable to attend'));
@@ -26,7 +26,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	guest_attending_div.appendChild(guest_attending_toggle);
 	
 	var guest_attending_label_div = document.createElement('DIV');
-	guest_attending_label_div.style.display = 'inline';
+	guest_attending_label_div.style.display = 'inline-block';
 	guest_attending_label_div.appendChild(document.createTextNode('Happily able'));
 	guest_attending_label_div.appendChild(document.createElement('br'));
 	guest_attending_label_div.appendChild(document.createTextNode('to attend'));

@@ -12,13 +12,18 @@ function rsvp() {
 
 function decorate_guest_input_block(parent, guest_number) {
 	// guest attending
-	var guest_attending_label = document.createTextNode('Happily able to attend');
-	parent.appendChild(guest_attending_label);
+	var guest_attending_div = document.createElement('DIV');
+	var guest_attending_label = document.createTextNode('Unfotunately, unable to attend');
+	guest_attending_div.appendChild(guest_attending_label);
 	var guest_attending_toggle = document.createElement('BUTTON');
 	guest_attending_toggle.innerHTML = 'Testing';
-	parent.appendChild(guest_attending_toggle);
+	guest_attending_div.appendChild(guest_attending_toggle);
+	var guest_attending_label = document.createTextNode('Happily able to attend');
+	guest_attending_div.appendChild(guest_attending_label);
+	parent.appendChild(guest_attending_div);
 	
 	// Guest Name
+	var guest_name_div = document.createElement('DIV');
 	var guest_name_label = document.createTextNode('Guest\'s name');
 	parent.appendChild(guest_name_label);
 	var guest_name_input = document.createElement('input');
@@ -26,8 +31,9 @@ function decorate_guest_input_block(parent, guest_number) {
 	parent.appendChild(guest_name_input);
 	
 	//Dinner select
+	var dinner_select_div = document.createElement('DIV');
 	var dinner_select_label = document.createTextNode('Guest\'s selection for dinner');
-	parent.appendChild(dinner_select_label);
+	dinner_select_div.appendChild(dinner_select_label);
 	var dinner_options = ['', 'Beef', 'Pork', 'Gluten Free/Vegan', 'Child'];
 	var dinner_select = document.createElement('select');
 	for (var i = 0; i < dinner_options.length; i++) {
@@ -36,14 +42,17 @@ function decorate_guest_input_block(parent, guest_number) {
 		option.text = dinner_options[i];
 		dinner_select.appendChild(option);
 	}
-	parent.appendChild(dinner_select);
+	dinner_select_div.appendChild(dinner_select);
+	parent.appendChild(dinner_select_div);
 	
 	// Allergies
+	var allergies_div = document.createElement('DIV');
 	var allergies_label = document.createTextNode('Any food allergies the cook should be aware of?');
-	parent.appendChild(dinner_select_label);
+	allergies_div.appendChild(allergies_label);
 	var allergies_text = document.createElement('input');
 	allergies_text.type = 'text';
-	parent.appendChild(allergies_text);
+	allergies_div.appendChild(allergies_text);
+	parent.appendChild(allergies_div);
 }
 
 

@@ -184,7 +184,13 @@ body {
 }
 
 .rsvp_guest_input_div {
-	
+	background: rgba(255,127,80,0.7);
+	border: 2px solid #ff7f50;
+	border-radius: 20px;
+	display: table;
+	margin: 16px;
+	padding: 10px;
+	width: fit-content;
 }
 
 .rsvp_instructions_style {
@@ -192,8 +198,8 @@ body {
 	border: 2px solid #40e0d0;
 	border-radius: 20px;
 	display: inline-block;
-	padding: 10px;
 	margin: 16px;
+	padding: 10px;
 	position: relative;
 	width: fit-content;
 }

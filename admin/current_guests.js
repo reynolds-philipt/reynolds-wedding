@@ -46,9 +46,6 @@ function decorate_current_guests_table(guests) {
 	var self = this;
 	var current_guests_div = document.getElementById('admin_current_guests_div');
 	
-	var save_button = document.createElement('BUTTON');
-	save_button.innerHTML = 'Save';
-	current_guests_div.appendChild(save_button);
 	
 	var current_guests_table = document.createElement('TABLE');
 	var table_body = document.createElement('TBODY');
@@ -80,8 +77,6 @@ function decorate_current_guests_table(guests) {
 		tr.appendChild(th);
 	}
 	
-	this.updated_guests = guests;
-	debugger;
 	for (var i = 0; i < guests.length; i++) {
 		var updated_guest = guests[i];
 		var tr = document.createElement('TR');

@@ -68,7 +68,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	// Guest Name
 	var guest_name_div = document.createElement('DIV');
 	guest_name_div.classList.add('rsvp_guest_input_divs');
-	guest_name_div.style.width = '40%';
+	guest_name_div.style.width = '45%';
 	guest_name_div.style.display = 'inline-block';
 	
 	var guest_name_label_div = document.createElement('DIV');
@@ -86,11 +86,12 @@ function decorate_guest_input_block(parent, guest_number) {
 	//Dinner select
 	var dinner_select_div = document.createElement('DIV');
 	dinner_select_div.classList.add('rsvp_guest_input_divs');
-	dinner_select_div.style.width = '50%';
+	dinner_select_div.style.width = '45%';
 	dinner_select_div.style.display = 'inline-block';
+	dinner_select_div.style.float = 'right';
 	
 	var dinner_select_label_div = document.createElement('DIV');
-	var dinner_select_label_text = document.createTextNode('Guest\'s selection for dinner');
+	var dinner_select_label_text = document.createTextNode('Guest\'s dinner selection');
 	dinner_select_label_div.appendChild(dinner_select_label_text);
 	dinner_select_div.appendChild(dinner_select_label_div);
 	

@@ -83,7 +83,7 @@ function decorate_current_guests_table(guests) {
 		for (var j = 0; j < heading.length; j++) {
 			var td = document.createElement('TD');
 			td.width = '75';
-			if (heading[j].code.substr(0, heading[j].code.length - 1) === 'guest') {
+			if (heading[j].code.substr(0, heading[j].code.length - 1) === 'guest' && guests[i][heading[j].code]) {
 				td.appendChild(document.createTextNode(guests[i][heading[j].code].name));
 			} else {
 				td.appendChild(document.createTextNode(guests[i][heading[j].code]));

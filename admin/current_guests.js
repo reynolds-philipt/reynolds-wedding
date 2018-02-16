@@ -93,7 +93,7 @@ function decorate_current_guests_table(guests) {
 		var td = document.createElement('TD');
 		var name_input = document.createElement('input');
 		name_input.type = 'text';
-		name_input.id = 'name_input_' + heading[j].code + '_' + i;
+		name_input.id = 'name_input_' + i;
 		td.appendChild(name_input);
 		tr.appendChild(td);
 

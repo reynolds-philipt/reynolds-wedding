@@ -11,6 +11,7 @@ function rsvp() {
 
 function decorate_guest_input_block(parent, guest_number) {
 	// Guest attending
+	/*
 	var guest_attending_div = document.createElement('DIV');
 	guest_attending_div.classList.add('rsvp_guest_input_divs');
 	
@@ -36,6 +37,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	guest_attending_label_div.appendChild(document.createTextNode('to attend'));
 	guest_attending_div.appendChild(guest_attending_label_div);
 	parent.appendChild(guest_attending_div);
+	*/
 	
 	
 	// Guest Name

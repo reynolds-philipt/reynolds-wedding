@@ -13,7 +13,6 @@ function rsvp() {
 }
 
 function decorate_instruction_guest_block(parent) {
-	debugger;
 	var guest_select_div = parent.lastElementChild;
 	var guest_numbers_options = ['', 'Unfortunately unable to attend', '1', '2', '3', '4', '5', '6'];
 	
@@ -31,6 +30,7 @@ function decorate_instruction_guest_block(parent) {
 function decorate_instruction_child_block(parent) {
 	var child_select_div = parent.lastElementChild;
 	var guest_numbers = ['', '0', '1', '2', '3', '4', '5', '6'];
+	debugger;
 	parent.style = {'display': 'none'};
 }
 

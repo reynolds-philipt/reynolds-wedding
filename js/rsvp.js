@@ -31,7 +31,7 @@ function decorate_instruction_child_block(parent) {
 	var child_select_div = parent.lastElementChild;
 	var guest_numbers = ['', '0', '1', '2', '3', '4', '5', '6'];
 	debugger;
-	parent.style = {'display': 'none'};
+	parent.style.display = 'none';
 }
 
 function decorate_guest_input_block(parent, guest_number) {
@@ -76,7 +76,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	
 	var guest_name_input = document.createElement('input');
 	guest_name_input.type = 'text';
-	guest_name_input.style = {'width': '100%'};
+	guest_name_input.style.width = '100%';
 	guest_name_div.appendChild(guest_name_input);
 	parent.appendChild(guest_name_div);
 	
@@ -113,7 +113,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	
 	var allergies_text = document.createElement('input');
 	allergies_text.type = 'text';
-	allergies_text.style = {'width': '100%'};
+	allergies_text.style.width = '100%';
 	allergies_div.appendChild(allergies_text);
 	parent.appendChild(allergies_div);
 }

@@ -13,7 +13,8 @@ function rsvp() {
 }
 
 function decorate_instruction_guest_block(parent) {
-	var guest_select_div = parent.getElementById('guest_number_select');
+	debugger;
+	var guest_select_div = parent.lastElementChild;
 	var guest_numbers_options = ['', 'Unfortunately unable to attend', '1', '2', '3', '4', '5', '6'];
 	
 	var guest_select = document.createElement('select');
@@ -28,7 +29,7 @@ function decorate_instruction_guest_block(parent) {
 }
 
 function decorate_instruction_child_block(parent) {
-	var child_select_div = parent.getElementById('guest_number_select');
+	var child_select_div = parent.lastElementChild;
 	var guest_numbers = ['', '0', '1', '2', '3', '4', '5', '6'];
 	child_select_div.style = {'display': 'none'};
 }

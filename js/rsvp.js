@@ -5,9 +5,9 @@ function rsvp() {
 	var database = firebase.database();
 
 	var guest_number_select_div = document.getElementById('guest_number_select_div');
-	decorate_instruction_guest_block();
+	decorate_instruction_guest_block(guest_number_select_div);
 	var child_number_select_div = document.getElementById('child_number_select_div');
-	decorate_instruction_child_block();
+	decorate_instruction_child_block(child_number_select_div);
 	var guest_input_div = document.getElementById('guest_input_div');
 	decorate_guest_input_block(guest_input_div, 1);
 }

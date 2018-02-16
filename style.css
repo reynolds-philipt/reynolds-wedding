@@ -4,6 +4,13 @@ body {
 	width: 100%;
 }
 
+.child_number_select_div {
+	display: inline-block;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 16px;
+}
+
 .contact_div {
 	overflow-wrap: break-word;
 	text-align: center;
@@ -16,6 +23,13 @@ body {
 	border: 2px solid #000040;
 	border-radius: 20px;
 	color: white;
+}
+
+.guest_number_select_div {
+	display: inline-block;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 16px;
 }
 
 .header_container {

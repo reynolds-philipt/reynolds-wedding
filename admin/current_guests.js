@@ -90,6 +90,13 @@ function decorate_current_guests_table(guests) {
 			}
 			tr.appendChild(td);
 		}
+		var td = document.createElement('TD');
+		var name_input = document.createElement('input');
+		name_input.type = 'text';
+		name_input.id = 'name_input_' + heading[j].code + '_' + i;
+		td.appendChild(name_input);
+		tr.appendChild(td);
+
 		table_body.appendChild(tr);
 	}
 	current_guests_div.appendChild(current_guests_table);

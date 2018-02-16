@@ -31,7 +31,7 @@ function decorate_instruction_guest_block(parent) {
 function decorate_instruction_child_block(parent) {
 	var child_select_div = parent.lastElementChild;
 	var guest_numbers = ['', '0', '1', '2', '3', '4', '5', '6'];
-	child_select_div.style = {'display': 'none'};
+	parent.style = {'display': 'none'};
 }
 
 function decorate_guest_input_block(parent, guest_number) {

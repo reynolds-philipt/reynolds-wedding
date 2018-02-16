@@ -4,9 +4,33 @@ function rsvp() {
 	firebase.initializeApp(config);
 	var database = firebase.database();
 
+	var guest_number_select_div = document.getElementById('guest_number_select_div');
+	decorate_instruction_guest_block();
+	var child_number_select_div = document.getElementById('child_number_select_div');
+	decorate_instruction_child_block();
 	var guest_input_div = document.getElementById('guest_input_div');
 	decorate_guest_input_block(guest_input_div, 1);
+}
 
+function decorate_instruction_guest_block(parent) {
+	var guest_select_div = parent.getElementById('guest_number_select');
+	var guest_numbers_options = ['', 'Unfortunately unable to attend', '1', '2', '3', '4', '5', '6'];
+	
+	var guest_select = document.createElement('select');
+	for (var i = 0; i < guest_numbers_options.length; i++) {
+		var option = document.createElement('option');
+		option.value = guest_numbers_options[i];
+		option.text = guest_numbers_options[i];
+		guest_select.appendChild(option);
+	}
+	guest_select_div.appendChild(guest_select);
+	parent.appendChild(guest_select_div);
+}
+
+function decorate_instruction_child_block(parent) {
+	var child_select_div = parent.getElementById('guest_number_select');
+	var guest_numbers = ['', '0', '1', '2', '3', '4', '5', '6'];
+	child_select_div.style = {'display': 'none'};
 }
 
 function decorate_guest_input_block(parent, guest_number) {

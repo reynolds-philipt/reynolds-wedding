@@ -205,6 +205,14 @@ body {
 	text-align: center;
 }
 
+.rsvp_guest_allergies_input {
+	border-radius: 20px;
+}
+
+.rsvp_guest_dinner_select {
+	border-radius: 20px;
+}
+
 .rsvp_guest_input_div {
 	background: rgba(255,127,80,0.7);
 	border: 2px solid #ff7f50;
@@ -221,6 +229,10 @@ body {
 }
 
 .rsvp_guest_inputs {
+}
+
+.rsvp_guest_name_input {
+	border-radius: 20px;
 }
 
 .rsvp_instructions_style {

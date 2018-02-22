@@ -4,6 +4,10 @@ body {
 	width: 100%;
 }
 
+.child_number_select {
+	border-radius: 20px;
+}
+
 .child_number_select_div {
 	display: inline-block;
 	padding-left: 8px;
@@ -23,6 +27,10 @@ body {
 	border: 2px solid #000040;
 	border-radius: 20px;
 	color: white;
+}
+
+.guest_number_select {
+	border-radius: 20px;
 }
 
 .guest_number_select_div {

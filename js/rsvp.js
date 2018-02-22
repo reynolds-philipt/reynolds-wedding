@@ -14,13 +14,20 @@ function rsvp() {
 
 function decorate_instruction_guest_block(parent) {
 	var guest_select_div = parent.lastElementChild;
-	var guest_numbers_options = ['', 'Unfortunately unable to attend', '1', '2', '3', '4', '5', '6'];
+	var guest_numbers_options = [{'code': 'unselected', 'value': 'Select number of guests'},
+				     {'code': 0, 'value': 'Unfortunately unable to attend'},
+				     {'code': 1, 'value': 1},
+				     {'code': 2, 'value': 2},
+				     {'code': 3, 'value': 3},
+				     {'code': 4, 'value': 4},
+				     {'code': 5, 'value': 5},
+				     {'code': 6, 'value': 6}];
 	
 	var guest_select = document.createElement('select');
 	for (var i = 0; i < guest_numbers_options.length; i++) {
 		var option = document.createElement('option');
-		option.value = guest_numbers_options[i];
-		option.text = guest_numbers_options[i];
+		option.value = guest_numbers_options[i].code;
+		option.text = guest_numbers_options[i].value;
 		guest_select.appendChild(option);
 	}
 	guest_select_div.appendChild(guest_select);

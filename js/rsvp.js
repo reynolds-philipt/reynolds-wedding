@@ -84,6 +84,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	guest_name_div.appendChild(guest_name_label_div);
 	
 	var guest_name_input = document.createElement('input');
+	guest_name_input.classList.add('rsvp_guest_name_input');
 	guest_name_input.type = 'text';
 	guest_name_input.style.width = '100%';
 	guest_name_div.appendChild(guest_name_input);
@@ -104,6 +105,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	
 	var dinner_options = ['', 'Beef', 'Pork', 'Gluten Free/Vegan'];
 	var dinner_select = document.createElement('select');
+	dinner_select.classList.add('rsvp_guest_dinner_select');
 	dinner_select.style.width = '100%';
 	for (var i = 0; i < dinner_options.length; i++) {
 		var option = document.createElement('option');
@@ -124,10 +126,11 @@ function decorate_guest_input_block(parent, guest_number) {
 	allergies_label_div.appendChild(allergies_label_text);
 	allergies_div.appendChild(allergies_label_div);
 	
-	var allergies_text = document.createElement('input');
-	allergies_text.type = 'text';
-	allergies_text.style.width = '100%';
-	allergies_div.appendChild(allergies_text);
+	var allergies_input = document.createElement('input');
+	allergies_input.classList.add('rsvp_guest_allergies_input');
+	allergies_input.type = 'text';
+	allergies_input.style.width = '100%';
+	allergies_div.appendChild(allergies_input);
 	parent.appendChild(allergies_div);
 }
 

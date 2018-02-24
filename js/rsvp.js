@@ -23,6 +23,7 @@ function decorate_rsvp_page() {
 
 function decorate_guest_input_blocks_calculation() {
 	var selected_number_of_guests = window.user.selected_number_of_guests;
+	var rsvp_guest_input_div = document.getElementById('rsvp_guest_input_div');
 	var guest_input_div = document.getElementById('guest_input_div');
 	if (selected_number_of_guests && selected_number_of_guests > 0) {
 		for (var i = 0; i < number_of_guests; i++) {
@@ -30,6 +31,7 @@ function decorate_guest_input_blocks_calculation() {
 		}
 	} else {
 		guest_input_div.style.display = 'none';
+		rsvp_guest_input_div.style.display = 'none';
 	}
 }
 

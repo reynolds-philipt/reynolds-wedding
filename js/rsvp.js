@@ -2,7 +2,7 @@ function rsvp() {
 	var self = this;
 	var config = self.get_config();
 	firebase.initializeApp(config);
-	var database = firebase.database();
+	self.database = firebase.database();
 
 	var user_saved = self.load_local("user");
 	if (user_saved) {
@@ -148,8 +148,9 @@ function decorate_user_login() {
 }
 
 function update_user_data(user) {
+	var self = this;
 	var window_user = window.user;
-	var guests = database.ref("guests").orderByKey();
+	var guests = self.database.ref("guests").orderByKey();
 	guests.once("value")
 		.then(function(snapshot) {
 			snapshot.forEach(function(childSnapshot) {

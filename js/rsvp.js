@@ -34,6 +34,7 @@ function decorate_guest_input_blocks_calculation() {
 }
 
 function decorate_instruction_guest_block(parent) {
+	debugger;
 	var guest_select_div = parent.lastElementChild;
 	var guest_numbers_options = [{'code': 'unselected', 'value': 'Select number of guests'},
 				     {'code': 0, 'value': 'Unfortunately unable to attend'},
@@ -46,7 +47,7 @@ function decorate_instruction_guest_block(parent) {
 	var number_of_guests = window.user.number_of_guests;
 	
 	var guest_select = document.createElement('select');
-	for (var i = 0; i < number_of_guests + 2; i++) {
+	for (var i = 0; i < +number_of_guests + 2; i++) {
 		var option = document.createElement('option');
 		option.value = guest_numbers_options[i].code;
 		option.text = guest_numbers_options[i].value;

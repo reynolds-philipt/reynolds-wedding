@@ -18,8 +18,19 @@ function decorate_rsvp_page() {
 	decorate_instruction_guest_block(guest_number_select_div);
 	var child_number_select_div = document.getElementById('child_number_select_div');
 	decorate_instruction_child_block(child_number_select_div);
+	decorate_guest_input_blocks_calculation();
+}
+
+function decorate_guest_input_blocks_calculation() {
+	var selected_number_of_guests = window.user.selected_number_of_guests;
 	var guest_input_div = document.getElementById('guest_input_div');
-	decorate_guest_input_block(guest_input_div, 1);
+	if (selected_number_of_guests) {
+		for (var i = 0; i < number_of_guests; i++) {
+			decorate_guest_input_block(guest_input_div, i + 1);
+		}
+	} else {
+		guest_input_div.style.display = 'none';
+	}
 }
 
 function decorate_instruction_guest_block(parent) {

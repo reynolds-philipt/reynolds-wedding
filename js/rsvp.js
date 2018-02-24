@@ -27,11 +27,14 @@ function decorate_guest_input_blocks_calculation() {
 	var rsvp_guest_input_div = document.getElementById('rsvp_guest_input_div');
 	var guest_input_div = document.getElementById('guest_input_div');
 	if (selected_number_of_guests && +selected_number_of_guests > 0) {
+		rsvp_guest_input_div.style.display = '';
+		var guest_input_div = document.createElement('div');
+		guest_input_div.classList.add('guest_input_div');
 		for (var i = 0; i < +selected_number_of_guests; i++) {
 			decorate_guest_input_block(guest_input_div, i + 1);
 		}
+		rsvp_guest_input_div.appendChild(guest_input_div);
 	} else {
-		guest_input_div.style.display = 'none';
 		rsvp_guest_input_div.style.display = 'none';
 	}
 }
@@ -101,8 +104,10 @@ function decorate_guest_input_block(parent, guest_number) {
 	guest_attending_div.appendChild(guest_attending_label_div);
 	parent.appendChild(guest_attending_div);
 	*/
+	var guest_number_string = 'guest' + guest_number;
+	var current_guest = window.user[guest_number_string];
 	
-	
+	debugger;
 	// Guest Name
 	var guest_name_div = document.createElement('DIV');
 	guest_name_div.classList.add('rsvp_guest_input_divs');

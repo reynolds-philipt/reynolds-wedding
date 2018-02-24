@@ -52,6 +52,9 @@ function decorate_instruction_guest_block(parent) {
 		option.text = guest_numbers_options[i].value;
 		guest_select.appendChild(option);
 	}
+	guest_select.addEventListener('change', function(value) {
+		window.user.selected_number_of_guests = this.value;
+	});
 	guest_select_div.appendChild(guest_select);
 	parent.appendChild(guest_select_div);
 }

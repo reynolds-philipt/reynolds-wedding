@@ -172,6 +172,7 @@ function update_user_data(user) {
 		.then(function(snapshot) {
 			snapshot.forEach(function(childSnapshot) {
 				if (childSnapshot.key === window_user.id) {
+					/*
 					window.user = {
 						'id': childSnapshot.key,
 						'email': childSnapshot.val().email,
@@ -184,7 +185,10 @@ function update_user_data(user) {
 						'guest4': (childSnapshot.val().guest4 ? childSnapshot.val().guest4 : null),
 						'guest5': (childSnapshot.val().guest5 ? childSnapshot.val().guest5 : null),
 						'guest6': (childSnapshot.val().guest6 ? childSnapshot.val().guest6 : null),
-					};
+					};*/
+					window.user = childSnapshot.val();
+					window.user.id = childSnapshot.key;
+					debugger;
 					self.save_local("user", window.user);
 					return true;
 				}

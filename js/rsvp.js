@@ -170,6 +170,7 @@ function update_user_data(user) {
 				debugger;
 				if (childSnapshot.key === window_user.id) {
 					window.user = {
+						'id': childSnapshot.key,
 						'email': childSnapshot.val().email,
 						'first_name': childSnapshot.val().first_name,
 						'last_name': childSnapshot.val().last_name,

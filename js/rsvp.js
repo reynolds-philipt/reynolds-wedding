@@ -167,7 +167,6 @@ function update_user_data(user) {
 	guests.once("value")
 		.then(function(snapshot) {
 			snapshot.forEach(function(childSnapshot) {
-				debugger;
 				if (childSnapshot.key === window_user.id) {
 					window.user = {
 						'id': childSnapshot.key,
@@ -183,7 +182,6 @@ function update_user_data(user) {
 						'guest6': (childSnapshot.val().guest6 ? childSnapshot.val().guest6 : null),
 					};
 					self.save_local("user", window.user);
-					debugger;
 					return true;
 				}
 			});
@@ -193,7 +191,6 @@ function update_user_data(user) {
 				decorate_rsvp_page();
 			}
 		});
-	debugger;
 }
 
 

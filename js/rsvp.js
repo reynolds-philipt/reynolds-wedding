@@ -4,6 +4,11 @@ function rsvp() {
 	firebase.initializeApp(config);
 	var database = firebase.database();
 
+	var user_saved = self.load_local("user");
+	if (user_saved) {
+		update_user_data();
+	}
+
 	var guest_number_select_div = document.getElementById('guest_number_select_div');
 	decorate_instruction_guest_block(guest_number_select_div);
 	var child_number_select_div = document.getElementById('child_number_select_div');
@@ -134,7 +139,10 @@ function decorate_guest_input_block(parent, guest_number) {
 	parent.appendChild(allergies_div);
 }
 
-
+function update_user_data(user) {
+	var window_user = window.user;
+	debugger;
+}
 
 
 

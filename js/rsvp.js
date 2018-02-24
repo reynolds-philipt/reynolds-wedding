@@ -155,6 +155,7 @@ function update_user_data(user) {
 	guests.once("value")
 		.then(function(snapshot) {
 			snapshot.forEach(function(childSnapshot) {
+				debugger;
 				if (childSnapshot.val().id === window_user.id) {
 					window.user = {
 						'email': childSnapshot.val().email,

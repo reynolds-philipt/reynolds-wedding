@@ -7,6 +7,8 @@ function rsvp() {
 	var user_saved = self.load_local("user");
 	if (user_saved) {
 		update_user_data();
+	} else {
+		decorate_user_login();
 	}
 
 	var guest_number_select_div = document.getElementById('guest_number_select_div');
@@ -139,8 +141,35 @@ function decorate_guest_input_block(parent, guest_number) {
 	parent.appendChild(allergies_div);
 }
 
+function decorate_user_login() {
+	
+}
+
 function update_user_data(user) {
 	var window_user = window.user;
+	var guests = database.ref("guests").orderByKey();
+	guests.once("value")
+		.then(function(snapshot) {
+			snapshot.forEach(function(childSnapshot) {
+				if (childSnapshot.val().id === window_user.id) {
+					window.user = {
+						'email': childSnapshot.val().email,
+						'first_name': childSnapshot.val().first_name,
+						'last_name': childSnapshot.val().last_name,
+						'number_of_guests': childSnapshot.val().number_of_guests,
+						'guest1': (childSnapshot.val().guest1 ? childSnapshot.val().guest1 : null),
+						'guest2': (childSnapshot.val().guest2 ? childSnapshot.val().guest2 : null),
+						'guest3': (childSnapshot.val().guest3 ? childSnapshot.val().guest3 : null),
+						'guest4': (childSnapshot.val().guest4 ? childSnapshot.val().guest4 : null),
+						'guest5': (childSnapshot.val().guest5 ? childSnapshot.val().guest5 : null),
+						'guest6': (childSnapshot.val().guest6 ? childSnapshot.val().guest6 : null),
+					};
+					self.save_local("user", window.user);
+					debugger;
+					return true;
+				}
+			}
+		});
 	debugger;
 }
 

@@ -4,6 +4,7 @@ function rsvp() {
 	firebase.initializeApp(config);
 	self.database = firebase.database();
 
+	debugger;
 	var user_saved = self.load_local("user");
 	if (user_saved) {
 		update_user_data();

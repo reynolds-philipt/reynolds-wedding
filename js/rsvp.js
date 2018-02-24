@@ -24,7 +24,7 @@ function decorate_rsvp_page() {
 function decorate_guest_input_blocks_calculation() {
 	var selected_number_of_guests = window.user.selected_number_of_guests;
 	var guest_input_div = document.getElementById('guest_input_div');
-	if (selected_number_of_guests) {
+	if (selected_number_of_guests && selected_number_of_guests > 0) {
 		for (var i = 0; i < number_of_guests; i++) {
 			decorate_guest_input_block(guest_input_div, i + 1);
 		}

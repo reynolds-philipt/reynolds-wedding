@@ -32,9 +32,10 @@ function decorate_instruction_guest_block(parent) {
 				     {'code': 4, 'value': 4},
 				     {'code': 5, 'value': 5},
 				     {'code': 6, 'value': 6}];
+	var number_of_guests = window.user.number_of_guests;
 	
 	var guest_select = document.createElement('select');
-	for (var i = 0; i < guest_numbers_options.length; i++) {
+	for (var i = 0; i < number_of_guests + 2; i++) {
 		var option = document.createElement('option');
 		option.value = guest_numbers_options[i].code;
 		option.text = guest_numbers_options[i].value;

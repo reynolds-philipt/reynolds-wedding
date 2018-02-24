@@ -34,6 +34,7 @@ function decorate_guest_input_blocks_calculation() {
 }
 
 function decorate_instruction_guest_block(parent) {
+	var self = this;
 	debugger;
 	var guest_select_div = parent.lastElementChild;
 	var guest_numbers_options = [{'code': 'unselected', 'value': 'Select number of guests'},
@@ -55,6 +56,7 @@ function decorate_instruction_guest_block(parent) {
 	}
 	guest_select.addEventListener('change', function(value) {
 		window.user.selected_number_of_guests = this.value;
+		self.decorate_guest_input_blocks_calculation();
 	});
 	guest_select_div.appendChild(guest_select);
 	parent.appendChild(guest_select_div);

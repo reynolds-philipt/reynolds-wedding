@@ -10,7 +10,9 @@ function rsvp() {
 	} else {
 		decorate_user_login();
 	}
+}
 
+function decorate_rsvp_page() {
 	var guest_number_select_div = document.getElementById('guest_number_select_div');
 	decorate_instruction_guest_block(guest_number_select_div);
 	var child_number_select_div = document.getElementById('child_number_select_div');
@@ -168,6 +170,11 @@ function update_user_data(user) {
 					debugger;
 					return true;
 				}
+			});
+			if (!window.user) {
+				decorate_user_login();
+			} else {
+				decorate_rsvp_page();
 			}
 		});
 	debugger;

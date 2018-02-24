@@ -156,7 +156,7 @@ function update_user_data(user) {
 		.then(function(snapshot) {
 			snapshot.forEach(function(childSnapshot) {
 				debugger;
-				if (childSnapshot.val().id === window_user.id) {
+				if (childSnapshot.key === window_user.id) {
 					window.user = {
 						'email': childSnapshot.val().email,
 						'first_name': childSnapshot.val().first_name,

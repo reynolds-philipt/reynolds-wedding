@@ -200,11 +200,6 @@ body {
 	font-size: 18px;
 }
 
-.rsvp_background_div {
-	height: 100%;
-	text-align: center;
-}
-
 .rsvp_guest_allergies_input {
 	border-radius: 20px;
 }
@@ -365,6 +360,17 @@ body {
 	background-position: top;
 	position: absolute;
 	height: 90%;
+	min-height: 90%;
+	overflow: hidden;
+	width: 100%;
+}
+
+.rsvp_background_div {
+	background-image: url("pictures/rsvp-background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top;
+	height: 100%;
 	min-height: 90%;
 	overflow: hidden;
 	width: 100%;

@@ -225,11 +225,11 @@ function decorate_child_input_block(parent) {
 
 function decorate_save_button() {
 	var self = this;
-	var rsvp_background_div = document.getElementById('rsvp_inputs_divs');
+	var rsvp_save_button_div = document.getElementById('rsvp_save_button');
 	self.save_button = document.createElement('button');
 	self.save_button.innerHTML = 'Save';
 	self.save_button.classList.add('save_button');
-	rsvp_background_div.appendChild(self.save_button);
+	rsvp_save_button_div.appendChild(self.save_button);
 }
 
 function decorate_user_login() {

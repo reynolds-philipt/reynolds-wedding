@@ -214,6 +214,13 @@ body {
 }
 
 .rsvp_guest_input_div {
+}
+
+.rsvp_guest_input_divs {
+	margin: 8px;
+}
+
+.rsvp_guest_inputs {
 	background: rgba(255,127,80,0.7);
 	border: 2px solid #ff7f50;
 	border-radius: 20px;
@@ -222,13 +229,6 @@ body {
 	padding: 10px;
 	text-align: left;
 	width: fit-content;
-}
-
-.rsvp_guest_input_divs {
-	margin: 8px;
-}
-
-.rsvp_guest_inputs {
 }
 
 .rsvp_guest_name_input {

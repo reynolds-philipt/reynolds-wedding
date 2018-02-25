@@ -29,7 +29,7 @@ function decorate_guest_input_blocks_calculation() {
 	if (selected_number_of_guests && +selected_number_of_guests > 0) {
 		rsvp_guest_input_div.style.display = '';
 		var guest_input_div = document.createElement('div');
-		guest_input_div.classList.add('guest_input_div');
+		guest_input_div.classList.add('rsvp_guest_inputs');
 		for (var i = 0; i < +selected_number_of_guests; i++) {
 			decorate_guest_input_block(guest_input_div, i + 1);
 		}

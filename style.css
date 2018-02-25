@@ -200,6 +200,21 @@ body {
 	font-size: 18px;
 }
 
+.rsvp_child_input_divs {
+	margin: 8px;
+}
+
+.rsvp_child_inputs {
+	background: rgba(255,127,80,0.7);
+	border: 2px solid #ff7f50;
+	border-radius: 20px;
+	display: inline-block;
+	margin: 16px;
+	padding: 10px;
+	text-align: left;
+	width: fit-content;
+}
+
 .rsvp_guest_allergies_input {
 	border-radius: 20px;
 }

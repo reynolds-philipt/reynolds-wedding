@@ -43,8 +43,8 @@ function decorate_instruction_guest_block(parent) {
 	var self = this;
 	debugger;
 	var guest_select_div = parent.lastElementChild;
-	var guest_numbers_options = [{'code': 'unselected', 'value': 'Select number of guests'},
-				     {'code': 0, 'value': 'Unfortunately unable to attend'},
+	var guest_numbers_options = [{'code': 'unselected', 'value': 'Number of guests'},
+				     {'code': 0, 'value': 'Unable to attend'},
 				     {'code': 1, 'value': 1},
 				     {'code': 2, 'value': 2},
 				     {'code': 3, 'value': 3},
@@ -73,7 +73,7 @@ function decorate_instruction_guest_block(parent) {
 function decorate_instruction_child_block(parent) {
 	if (window.user.number_of_children && +window.user.number_of_children > 1) {
 		var child_select_div = parent.lastElementChild;
-		var child_numbers = [{'code': 'unselected', 'value': 'Select number of children attending'},
+		var child_numbers = [{'code': 'unselected', 'value': 'Number of children attending'},
 				     {'code': 0, 'value': 0},
 				     {'code': 1, 'value': 1},
 				     {'code': 2, 'value': 2},

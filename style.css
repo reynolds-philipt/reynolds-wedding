@@ -267,12 +267,14 @@ body {
 	border-radius: 4px;
 	color: #ff7f50;
 	cursor: pointer;
+	font-size: 16px;
 	margin: 32px;
 	padding: 8px;
 	padding-left: 16px;
 	padding-right: 16px;
 	position: absolute;
 	right: 0px;
+	z-index: 100;
 }
 
 .save_the_date_background {

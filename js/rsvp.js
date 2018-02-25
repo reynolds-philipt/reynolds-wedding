@@ -77,7 +77,7 @@ function decorate_instruction_guest_block(parent) {
 function decorate_instruction_child_block(parent) {
 	if (window.user.number_of_children && +window.user.number_of_children > 1) {
 		var child_select_div = parent.lastElementChild;
-		var child_numbers = [{'code': 'unselected', 'value': 'Number of children attending'},
+		var child_numbers = [{'code': 'unselected', 'value': 'Children attending'},
 				     {'code': 0, 'value': 0},
 				     {'code': 1, 'value': 1},
 				     {'code': 2, 'value': 2},

@@ -62,6 +62,8 @@ function decorate_instruction_guest_block(parent) {
 	}
 	guest_select.addEventListener('change', function(value) {
 		window.user.selected_number_of_guests = this.value;
+		var rsvp_guest_input_div = document.getElementById('rsvp_guest_input_div');
+		rsvp_guest_input_div.innerHTML = '';
 		self.decorate_guest_input_blocks_calculation();
 	});
 	guest_select_div.appendChild(guest_select);

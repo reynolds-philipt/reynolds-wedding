@@ -19,6 +19,8 @@ function decorate_rsvp_page() {
 	var child_number_select_div = document.getElementById('child_number_select_div');
 	decorate_instruction_child_block(child_number_select_div);
 	decorate_guest_input_blocks_calculation();
+	var rsvp_child_input_div = document.getElementById('rsvp_child_input_div');
+	decorate_child_input_block(rsvp_child_input_div);
 	decorate_save_button();
 }
 
@@ -26,7 +28,6 @@ function decorate_guest_input_blocks_calculation() {
 	var self = this;
 	var selected_number_of_guests = window.user.selected_number_of_guests;
 	var rsvp_guest_input_div = document.getElementById('rsvp_guest_input_div');
-	var guest_input_div = document.getElementById('guest_input_div');
 	if (selected_number_of_guests && +selected_number_of_guests > 0) {
 		rsvp_guest_input_div.style.display = '';
 		for (var i = 0; i < +selected_number_of_guests; i++) {
@@ -92,12 +93,11 @@ function decorate_instruction_child_block(parent) {
 			child_select.appendChild(option);
 		}
 		child_select.addEventListener('change', function(value) {
-			debugger;
-			/*
-			window.user.selected_number_of_guests = this.value;
-			var rsvp_guest_input_div = document.getElementById('rsvp_guest_input_div');
-			rsvp_guest_input_div.innerHTML = '';
-			self.decorate_guest_input_blocks_calculation();*/
+			window.user.selected_number_of_children = this.value;
+			var rsvp_child_input_div = document.getElementById('rsvp_child_input_div');
+			rsvp_child_input_div.innerHTML = '';
+			var rsvp_child_input_div = document.getElementById('rsvp_child_input_div');
+			self.decorate_child_input_block(rsvp_child_input_div);
 		});
 		child_select.classList.add('child_number_select');
 		child_select_div.appendChild(child_select);
@@ -110,34 +110,6 @@ function decorate_instruction_child_block(parent) {
 }
 
 function decorate_guest_input_block(parent, guest_number) {
-	// Guest attending
-	/*
-	var guest_attending_div = document.createElement('DIV');
-	guest_attending_div.classList.add('rsvp_guest_input_divs');
-	
-	var guest_not_attending_label_div = document.createElement('DIV');
-	guest_not_attending_label_div.style.display = 'inline-block';
-	guest_not_attending_label_div.style['padding-right'] = '8px';
-	guest_not_attending_label_div.appendChild(document.createTextNode('Unfotunately,'));
-	guest_not_attending_label_div.appendChild(document.createElement('br'));
-	guest_not_attending_label_div.appendChild(document.createTextNode('unable to attend'));
-	guest_attending_div.appendChild(guest_not_attending_label_div);
-	
-	var guest_attending_toggle_div = document.createElement('DIV');
-	var guest_attending_toggle = document.createElement('BUTTON');
-	guest_attending_toggle.innerHTML = 'Testing';
-	guest_attending_toggle_div.appendChild(guest_attending_toggle);
-	guest_attending_div.appendChild(guest_attending_toggle_div);
-	
-	var guest_attending_label_div = document.createElement('DIV');
-	guest_attending_label_div.style.display = 'inline-block';
-	guest_attending_label_div.style['padding-left'] = '8px';
-	guest_attending_label_div.appendChild(document.createTextNode('Happily able'));
-	guest_attending_label_div.appendChild(document.createElement('br'));
-	guest_attending_label_div.appendChild(document.createTextNode('to attend'));
-	guest_attending_div.appendChild(guest_attending_label_div);
-	parent.appendChild(guest_attending_div);
-	*/
 	var guest_number_string = 'guest' + guest_number;
 	var current_guest = window.user[guest_number_string];
 	
@@ -211,6 +183,41 @@ function decorate_guest_input_block(parent, guest_number) {
 	allergies_input.style.width = '100%';
 	allergies_div.appendChild(allergies_input);
 	parent.appendChild(allergies_div);
+}
+
+function decorate_child_input_block(parent) {
+	var number_of_children = window.user.selected_number_of_children;
+	if (number_of_children && +number_of_children > 0) {
+		parent.style.display = '';
+		var child_input_div = document.createElement('div');
+		child_input_div.classList.add('rsvp_child_inputs');
+		
+		// children names
+		var child_name_div = document.createElement('DIV');
+		child_name_div.classList.add('rsvp_guest_input_divs');
+		child_name_div.style.width = '100%';
+		child_name_div.style.display = 'inline-block';
+	
+		var child_name_label_div = document.createElement('DIV');
+		var child_name_label_text = document.createTextNode((window.user.number_of_children > 1) ? 'Children names' : 'Child name');
+		child_name_label_div.appendChild(child_name_label_text);
+		child_name_div.appendChild(child_name_label_div);
+
+		var child_name_input = document.createElement('input');
+		child_name_input.id = 'child_name_input_' + guest_number;
+		child_name_input.classList.add('rsvp_guest_name_input');
+		child_name_input.type = 'text';
+		child_name_input.style.width = '100%';
+		if (current_guest && current_guest.name) {
+			child_name_input.value = current_guest.name;
+		}
+		child_name_div.appendChild(child_name_input);
+		parent.appendChild(child_name_div);
+		
+	} else {
+		parent.style.display = 'none';
+	}
+	
 }
 
 function decorate_save_button() {

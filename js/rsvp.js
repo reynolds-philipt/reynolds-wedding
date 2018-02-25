@@ -28,12 +28,12 @@ function decorate_guest_input_blocks_calculation() {
 	var guest_input_div = document.getElementById('guest_input_div');
 	if (selected_number_of_guests && +selected_number_of_guests > 0) {
 		rsvp_guest_input_div.style.display = '';
-		var guest_input_div = document.createElement('div');
-		guest_input_div.classList.add('rsvp_guest_inputs');
 		for (var i = 0; i < +selected_number_of_guests; i++) {
+			var guest_input_div = document.createElement('div');
+			guest_input_div.classList.add('rsvp_guest_inputs');
 			decorate_guest_input_block(guest_input_div, i + 1);
+			rsvp_guest_input_div.appendChild(guest_input_div);
 		}
-		rsvp_guest_input_div.appendChild(guest_input_div);
 	} else {
 		rsvp_guest_input_div.style.display = 'none';
 	}

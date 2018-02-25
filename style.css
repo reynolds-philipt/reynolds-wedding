@@ -233,6 +233,8 @@ body {
 
 .rsvp_guest_name_input {
 	border-radius: 20px;
+	padding-left: 4px;
+	padding-right: 4px;
 }
 
 .rsvp_instructions_style {

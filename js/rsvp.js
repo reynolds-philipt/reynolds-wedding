@@ -222,7 +222,7 @@ function decorate_child_input_block(parent) {
 
 function decorate_save_button() {
 	var self = this;
-	var rsvp_background_div = document.getElementById('rsvp_background_div');
+	var rsvp_background_div = document.getElementById('rsvp_inputs_divs');
 	self.save_button = document.createElement('button');
 	self.save_button.innerHTML = 'Save';
 	self.save_button.classList.add('save_button');

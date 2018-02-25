@@ -219,6 +219,8 @@ body {
 
 .rsvp_guest_allergies_input {
 	border-radius: 20px;
+	padding-left: 4px;
+	padding-right: 4px;
 }
 
 .rsvp_guest_dinner_select {

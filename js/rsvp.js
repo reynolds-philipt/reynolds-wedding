@@ -71,11 +71,14 @@ function decorate_instruction_guest_block(parent) {
 }
 
 function decorate_instruction_child_block(parent) {
-	var child_select_div = parent.lastElementChild;
-	var guest_numbers = ['', '0', '1', '2', '3', '4', '5', '6'];
-	parent.style.display = 'none';
-	var child_menu_option = document.getElementById('child_menu');
-	child_menu_option.display = 'none';
+	if (window.user.number_of_children && +window.user.number_of_children > 1) {
+		var child_select_div = parent.lastElementChild;
+		var guest_numbers = ['', '0', '1', '2', '3', '4', '5', '6'];
+	} else {
+		parent.style.display = 'none';
+		var child_menu_option = document.getElementById('child_menu');
+		child_menu_option.display = 'none';
+	}
 }
 
 function decorate_guest_input_block(parent, guest_number) {

@@ -14,6 +14,7 @@ function rsvp() {
 }
 
 function decorate_rsvp_page() {
+	decorate_save_button();
 	var guest_number_select_div = document.getElementById('guest_number_select_div');
 	decorate_instruction_guest_block(guest_number_select_div);
 	var child_number_select_div = document.getElementById('child_number_select_div');
@@ -21,7 +22,6 @@ function decorate_rsvp_page() {
 	decorate_guest_input_blocks_calculation();
 	var rsvp_child_input_div = document.getElementById('rsvp_child_input_div');
 	decorate_child_input_block(rsvp_child_input_div);
-	decorate_save_button();
 }
 
 function decorate_guest_input_blocks_calculation() {

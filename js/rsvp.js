@@ -122,9 +122,13 @@ function decorate_guest_input_block(parent, guest_number) {
 	guest_name_div.appendChild(guest_name_label_div);
 	
 	var guest_name_input = document.createElement('input');
+	guest_name_input.id = 'guest_name_input_' + guest_number;
 	guest_name_input.classList.add('rsvp_guest_name_input');
 	guest_name_input.type = 'text';
 	guest_name_input.style.width = '100%';
+	if (current_guest && current_guest.name) {
+		guest_name_input.value = current_guest.name;
+	}
 	guest_name_div.appendChild(guest_name_input);
 	parent.appendChild(guest_name_div);
 	

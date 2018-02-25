@@ -73,7 +73,30 @@ function decorate_instruction_guest_block(parent) {
 function decorate_instruction_child_block(parent) {
 	if (window.user.number_of_children && +window.user.number_of_children > 1) {
 		var child_select_div = parent.lastElementChild;
-		var guest_numbers = ['', '0', '1', '2', '3', '4', '5', '6'];
+		var child_numbers = [{'code': 'unselected', 'value': 'Select number of children attending'},
+				     {'code': 0, 'value': 0},
+				     {'code': 1, 'value': 1},
+				     {'code': 2, 'value': 2},
+				     {'code': 3, 'value': 3},
+				     {'code': 4, 'value': 4},
+				     {'code': 5, 'value': 5},
+				     {'code': 6, 'value': 6}];
+		
+		var child_select = document.createElement('select');
+		for (var i = 0; i < +window.user.number_of_children + 2; i++) {
+			var option = document.createElement('option');
+			option.value = child_numbers[i].code;
+			option.text = child_numbers[i].value;
+			child_select.appendChild(option);
+		}
+		child_select.addEventListener('change', function(value) {
+			window.user.selected_number_of_guests = this.value;
+			var rsvp_guest_input_div = document.getElementById('rsvp_guest_input_div');
+			rsvp_guest_input_div.innerHTML = '';
+			self.decorate_guest_input_blocks_calculation();
+		});
+		child_select_div.appendChild(child_select);
+		parent.appendChild(child_select_div);
 	} else {
 		parent.style.display = 'none';
 		var child_menu_option = document.getElementById('child_menu');

@@ -203,15 +203,18 @@ function decorate_child_input_block(parent) {
 		child_name_label_div.appendChild(child_name_label_text);
 		child_name_div.appendChild(child_name_label_div);
 
-		var child_name_input = document.createElement('input');
-		child_name_input.id = 'child_name_input_' + guest_number;
-		child_name_input.classList.add('rsvp_guest_name_input');
-		child_name_input.type = 'text';
-		child_name_input.style.width = '100%';
-		if (current_guest && current_guest.name) {
-			child_name_input.value = current_guest.name;
+		for (var i = 0; i < +number_of_children; i++) {
+			var child_name_input = document.createElement('input');
+			child_name_input.id = 'child_name_input_' + i;
+			child_name_input.classList.add('rsvp_guest_name_input');
+			child_name_input.type = 'text';
+			child_name_input.style.width = '100%';
+			/*
+			if (current_guest && current_guest.name) {
+				child_name_input.value = current_guest.name;
+			}*/
+			child_name_div.appendChild(child_name_input);
 		}
-		child_name_div.appendChild(child_name_input);
 		parent.appendChild(child_name_div);
 		
 	} else {

@@ -243,6 +243,12 @@ body {
 	width: fit-content;
 }
 
+.save_button {
+	position: absolute;
+	right: 16px;
+	top: 16px;
+}
+
 .save_the_date_background {
 	height: 100%;
 	background-image: url("pictures/SaThDa-background.jpg");

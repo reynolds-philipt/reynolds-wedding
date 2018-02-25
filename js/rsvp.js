@@ -66,6 +66,7 @@ function decorate_instruction_guest_block(parent) {
 		rsvp_guest_input_div.innerHTML = '';
 		self.decorate_guest_input_blocks_calculation();
 	});
+	guest_select.classList.add('guest_number_select');
 	guest_select_div.appendChild(guest_select);
 	parent.appendChild(guest_select_div);
 }
@@ -95,6 +96,7 @@ function decorate_instruction_child_block(parent) {
 			rsvp_guest_input_div.innerHTML = '';
 			self.decorate_guest_input_blocks_calculation();
 		});
+		child_select.classList.add('child_number_select');
 		child_select_div.appendChild(child_select);
 		parent.appendChild(child_select_div);
 	} else {

@@ -19,6 +19,7 @@ function decorate_rsvp_page() {
 	var child_number_select_div = document.getElementById('child_number_select_div');
 	decorate_instruction_child_block(child_number_select_div);
 	decorate_guest_input_blocks_calculation();
+	decorate_save_button();
 }
 
 function decorate_guest_input_blocks_calculation() {
@@ -91,10 +92,12 @@ function decorate_instruction_child_block(parent) {
 			child_select.appendChild(option);
 		}
 		child_select.addEventListener('change', function(value) {
+			debugger;
+			/*
 			window.user.selected_number_of_guests = this.value;
 			var rsvp_guest_input_div = document.getElementById('rsvp_guest_input_div');
 			rsvp_guest_input_div.innerHTML = '';
-			self.decorate_guest_input_blocks_calculation();
+			self.decorate_guest_input_blocks_calculation();*/
 		});
 		child_select.classList.add('child_number_select');
 		child_select_div.appendChild(child_select);
@@ -208,6 +211,15 @@ function decorate_guest_input_block(parent, guest_number) {
 	allergies_input.style.width = '100%';
 	allergies_div.appendChild(allergies_input);
 	parent.appendChild(allergies_div);
+}
+
+function decorate_save_button() {
+	var self = this;
+	var rsvp_background_div = document.getElementById('rsvp_background_div');
+	self.save_button = document.createElement('button');
+	self.save_button.innerHTML = 'Save';
+	self.save_button.classList.add('save_button');
+	rsvp_background_div.appendChild(self.save_button);
 }
 
 function decorate_user_login() {

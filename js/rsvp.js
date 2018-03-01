@@ -231,6 +231,13 @@ function decorate_save_button() {
 	self.save_button = document.createElement('button');
 	self.save_button.innerHTML = 'Save';
 	self.save_button.classList.add('save_button');
+	self.save_button.addEventListener('click', function() {
+		var selected_number_of_guests = window.user.selected_number_of_guests;
+		for (var i = 0; i < +selected_number_of_guests; i++) {
+			var guest_number_select_div = document.getElementById('guest_name_input_' + (i + 1));
+			debugger;
+		}
+	});
 	rsvp_save_button_div.appendChild(self.save_button);
 }
 

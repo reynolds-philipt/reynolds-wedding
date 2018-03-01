@@ -235,6 +235,7 @@ function decorate_save_button() {
 		var selected_number_of_guests = window.user.selected_number_of_guests;
 		for (var i = 0; i < +selected_number_of_guests; i++) {
 			var guest_number_select_div = document.getElementById('guest_name_input_' + (i + 1));
+			window.user['guest' + (i + 1)].name = guest_number_select_div.value;
 			debugger;
 		}
 	});

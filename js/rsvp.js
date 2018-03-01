@@ -196,7 +196,7 @@ function decorate_child_input_block(parent) {
 		// children names
 		var child_name_div = document.createElement('DIV');
 		child_name_div.classList.add('rsvp_guest_input_divs');
-		child_name_div.style.width = '100%';
+		child_name_div.style.width = 'fit-content';
 		child_name_div.style.display = 'inline-block';
 	
 		var child_name_label_div = document.createElement('DIV');
@@ -210,6 +210,7 @@ function decorate_child_input_block(parent) {
 			child_name_input.classList.add('rsvp_guest_name_input');
 			child_name_input.type = 'text';
 			child_name_input.style.width = '100%';
+			child_name_input.style['margin-top'] = '4px';
 			/*
 			if (current_guest && current_guest.name) {
 				child_name_input.value = current_guest.name;

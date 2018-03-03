@@ -291,9 +291,21 @@ function decorate_save_button() {
 		if (number_of_children && number_of_children > 0) {
 			var selected_number_of_children = window.user.selected_number_of_children;
 			if (selected_number_of_children && selected_number_of_children > 0) {
-				var child_name_input_div = document.getElementById('child_name_input_' + (i + 1));
-				if (child_name_input_div
-				window.user['child' + (i + 1)].name = child_name_input_div.value;
+				for (var j = 0; j < selected_number_of_children; j++) {
+					var child_name_input_div = document.getElementById('child_name_input_' + (i + 1));
+					if (child_name_input_div && child_name_input_div.value && child_name_input_div.value !== '') {
+						window.user['child' + (i + 1)].name = child_name_input_div.value;
+					} else {
+						errors.push('No name input for Child ' + (i + 1));
+					}
+					
+					var child_allergies_input_div = document.getElementById('child_allergies_input_' + (i + 1));
+					if (child_allergies_input_div && child_allergies_input_div.value && child_allergies_input_div.value !== '') {
+						window.user['child' + (i + 1)].allergies = child_allergies_input_div.value;
+					} else {
+						// intentionally left blank.  Don't need to have an error.
+					}
+				}
 			} else {
 				errors.push('Please select how many children will be attending');
 			}

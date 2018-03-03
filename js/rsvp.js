@@ -376,6 +376,15 @@ function decorate_save_button() {
 			window.user.comment = comment_div.value;
 		}
 		
+		if (errors.length > 0) {
+			var errors_string = '';
+			for (var k = 0; k < errors.length; k++) {
+				errors_string = errors_string + ((k > 0) : ', ' ? '') + errors[k];
+			}
+			alert(errors_string);
+		} else {
+			save_user();
+		}
 		debugger;
 	});
 	rsvp_save_button_div.appendChild(self.save_button);
@@ -383,6 +392,17 @@ function decorate_save_button() {
 
 function decorate_user_login() {
 	
+}
+
+function save_user() {
+	var current_user = Object.assign({}, window.user);
+	// delete current_user.id;
+	debugger;
+	
+	/* TODO Soon save
+	var new_user = database.ref('guests/' + window.user.id).set({
+		current_user;
+	});*/
 }
 
 function update_user_data(user) {

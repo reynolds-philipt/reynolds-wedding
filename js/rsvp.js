@@ -217,7 +217,7 @@ function decorate_child_input_block(parent) {
 				child_name_input.value = current_guest.name;
 			}*/
 			child_name_div.appendChild(child_name_input);
-			parent.appendChild(child_name_div);
+			child_input_div.appendChild(child_name_div);
 			
 			// Children Allergies
 			var child_allergies_div = document.createElement('DIV');
@@ -238,7 +238,9 @@ function decorate_child_input_block(parent) {
 			child_allergies_input.style['margin-top'] = '4px';
 			
 			child_allergies_div.appendChild(child_allergies_input);
-			parent.appendChild(child_allergies_div);
+			child_input_div.appendChild(child_allergies_div);
+			
+			parent.appendChild(child_input_div);
 		}
 		
 	} else {

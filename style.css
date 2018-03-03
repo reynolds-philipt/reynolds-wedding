@@ -219,6 +219,21 @@ body {
 	width: fit-content;
 }
 
+.rsvp_comment_input_div {
+	
+}
+
+.rsvp_comment_inputs {
+	background: rgba(255,127,80,0.7);
+	border: 2px solid #ff7f50;
+	border-radius: 20px;
+	display: inline-block;
+	margin: 16px;
+	padding: 10px;
+	text-align: left;
+	width: fit-content;
+}
+
 .rsvp_guest_allergies_input {
 	border-radius: 20px;
 	padding-left: 4px;

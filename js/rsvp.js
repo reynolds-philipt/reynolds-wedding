@@ -285,7 +285,7 @@ function decorate_comment_input_block(parent) {
 	comment_div.style.display = 'block';
 
 	var comment_label_div = document.createElement('DIV');
-	var comment_label_text = document.createTextNode('Any food allergies?');
+	var comment_label_text = document.createTextNode('Any comments for Kailtyn or Philip?');
 	comment_label_div.appendChild(comment_label_text);
 	comment_div.appendChild(comment_label_div);
 
@@ -364,6 +364,16 @@ function decorate_save_button() {
 			} else {
 				errors.push('Please select how many children will be attending');
 			}
+		}
+		
+		var comment_song_div = document.getElementById('comment_song_input');
+		if (comment_song_div && comment_song_div.value && comment_song_div.value !== '') {
+			window.user.song = comment_song_div.value;
+		}
+		
+		var comment_div = document.getElementById('comment_input');
+		if (comment_div && comment_div.value && comment_div.value !== '') {
+			window.user.comment = comment_div.value;
 		}
 		
 		debugger;

@@ -234,6 +234,7 @@ body {
 }
 
 .rsvp_guest_input_divs {
+	display: block;
 	margin: 8px;
 }
 

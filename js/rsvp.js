@@ -190,21 +190,22 @@ function decorate_child_input_block(parent) {
 	var number_of_children = window.user.selected_number_of_children;
 	if (number_of_children && +number_of_children > 0) {
 		parent.style.display = '';
-		var child_input_div = document.createElement('div');
-		child_input_div.classList.add('rsvp_child_inputs');
-		
-		// children names
-		var child_name_div = document.createElement('DIV');
-		child_name_div.classList.add('rsvp_guest_input_divs');
-		child_name_div.style.width = 'fit-content';
-		child_name_div.style.display = 'inline-block';
-	
-		var child_name_label_div = document.createElement('DIV');
-		var child_name_label_text = document.createTextNode((window.user.number_of_children > 1) ? 'Children names' : 'Child name');
-		child_name_label_div.appendChild(child_name_label_text);
-		child_name_div.appendChild(child_name_label_div);
 
 		for (var i = 0; i < +number_of_children; i++) {
+			var child_input_div = document.createElement('div');
+			child_input_div.classList.add('rsvp_child_inputs');
+
+			// Children names
+			var child_name_div = document.createElement('DIV');
+			child_name_div.classList.add('rsvp_guest_input_divs');
+			child_name_div.style.width = 'fit-content';
+			child_name_div.style.display = 'inline-block';
+
+			var child_name_label_div = document.createElement('DIV');
+			var child_name_label_text = document.createTextNode('Child name');
+			child_name_label_div.appendChild(child_name_label_text);
+			child_name_div.appendChild(child_name_label_div);
+			
 			var child_name_input = document.createElement('input');
 			child_name_input.id = 'child_name_input_' + i;
 			child_name_input.classList.add('rsvp_guest_name_input');
@@ -216,8 +217,29 @@ function decorate_child_input_block(parent) {
 				child_name_input.value = current_guest.name;
 			}*/
 			child_name_div.appendChild(child_name_input);
+			parent.appendChild(child_name_div);
+			
+			// Children Allergies
+			var child_allergies_div = document.createElement('DIV');
+			child_allergies_div.classList.add('rsvp_guest_input_divs');
+			child_allergies_div.style.width = 'fit-content';
+			child_allergies_div.style.display = 'inline-block';
+
+			var child_allergies_label_div = document.createElement('DIV');
+			var child_allergies_label_text = document.createTextNode('Any food allergies?');
+			child_allergies_label_div.appendChild(child_allergies_label_text);
+			child_allergies_div.appendChild(child_allergies_label_div);
+			
+			var child_allergies_input = document.createElement('input');
+			child_allergies_input.id = 'child_allergies_input_' + i;
+			child_allergies_input.classList.add('rsvp_guest_name_input');
+			child_allergies_input.type = 'text';
+			child_allergies_input.style.width = '100%';
+			child_allergies_input.style['margin-top'] = '4px';
+			
+			child_allergies_div.appendChild(child_allergies_input);
+			parent.appendChild(child_allergies_div);
 		}
-		parent.appendChild(child_name_div);
 		
 	} else {
 		parent.style.display = 'none';
@@ -232,12 +254,52 @@ function decorate_save_button() {
 	self.save_button.innerHTML = 'Save';
 	self.save_button.classList.add('save_button');
 	self.save_button.addEventListener('click', function() {
+		var errors = [];
+		// Guests
 		var selected_number_of_guests = window.user.selected_number_of_guests;
-		for (var i = 0; i < +selected_number_of_guests; i++) {
-			var guest_number_select_div = document.getElementById('guest_name_input_' + (i + 1));
-			window.user['guest' + (i + 1)].name = guest_number_select_div.value;
-			debugger;
+		if (selected_number_of_guests) {
+			for (var i = 0; i < +selected_number_of_guests; i++) {
+				var guest_name_input_div = document.getElementById('guest_name_input_' + (i + 1));
+				if (guest_name_input_div && guest_name_input_div.value && guest_name_input_div.value !== '') {
+					window.user['guest' + (i + 1)].name = guest_name_input_div.value;
+				} else {
+					errors.push('No name input for Guest ' + (i + 1));
+				}
+				var guest_dinner_select_div = document.getElementById('dinner_select_' + (i + 1));
+				if (guest_dinner_select_div && guest_dinner_select_div.value && guest_dinner_select_div.value !== '') {
+					window.user['guest' + (i + 1)].dinner = guest_dinner_select_div.value;
+				} else {
+					var current_guest_name = (i + 1);
+					if (window.user['guest' + (i + 1)].name) {
+						current_guest_name = window.user['guest' + (i + 1)].name;
+					}
+					errors.push('No dinner selected for Guest ' + current_guest_name);
+				}
+				var guest_allergies_input_div = documnet.getElementById('allergies_input_' + (i + 1));
+				if (guest_allergies_input_div && guest_allergies_input_div.value && guest_allergies_input_div.value !== '') {
+					window.user['guest' + (i + 1)].allergies = guest_allergies_input_div.value;
+				} else {
+					// intentionally left blank.  Don't need to have an error.
+				}
+			}
+		} else {
+			errors.push('Please select how many guests will be attending');
 		}
+		
+		// Children
+		var number_of_children = window.user.number_of_children;
+		if (number_of_children && number_of_children > 0) {
+			var selected_number_of_children = window.user.selected_number_of_children;
+			if (selected_number_of_children && selected_number_of_children > 0) {
+				var child_name_input_div = document.getElementById('child_name_input_' + (i + 1));
+				if (child_name_input_div
+				window.user['child' + (i + 1)].name = child_name_input_div.value;
+			} else {
+				errors.push('Please select how many children will be attending');
+			}
+		}
+		
+		debugger;
 	});
 	rsvp_save_button_div.appendChild(self.save_button);
 }

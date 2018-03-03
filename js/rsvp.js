@@ -22,6 +22,8 @@ function decorate_rsvp_page() {
 	decorate_guest_input_blocks_calculation();
 	var rsvp_child_input_div = document.getElementById('rsvp_child_input_div');
 	decorate_child_input_block(rsvp_child_input_div);
+	var rsvp_comment_input_div = document.getElementById('rsvp_comment_input_div');
+	decorate_comment_input_block(rsvp_comment_input_div);
 }
 
 function decorate_guest_input_blocks_calculation() {
@@ -246,7 +248,58 @@ function decorate_child_input_block(parent) {
 	} else {
 		parent.style.display = 'none';
 	}
-	
+}
+
+function decorate_comment_input_block(parent) {
+	var comment_input_div = document.createElement('div');
+	comment_input_div.classList.add('rsvp_comment_inputs');
+
+	// Comment song
+	var comment_song_div = document.createElement('DIV');
+	comment_song_div.classList.add('rsvp_guest_input_divs');
+	comment_song_div.style.width = 'fit-content';
+	comment_song_div.style.display = 'block';
+
+	var comment_song_label_div = document.createElement('DIV');
+	var comment_song_label_text = document.createTextNode('Any song you would like to hear at the reception?');
+	comment_song_label_div.appendChild(comment_song_label_text);
+	comment_song_div.appendChild(comment_song_label_div);
+
+	var comment_song_input = document.createElement('input');
+	comment_song_input.id = 'comment_song_input';
+	comment_song_input.classList.add('rsvp_guest_name_input');
+	comment_song_input.type = 'text';
+	comment_song_input.style.width = '100%';
+	comment_song_input.style['margin-top'] = '4px';
+	/*
+	if (current_guest && current_guest.name) {
+		child_name_input.value = current_guest.name;
+	}*/
+	comment_song_div.appendChild(comment_song_input);
+	comment_input_div.appendChild(comment_song_div);
+
+	// Children Allergies
+	var comment_div = document.createElement('DIV');
+	comment_div.classList.add('rsvp_guest_input_divs');
+	comment_div.style.width = 'fit-content';
+	comment_div.style.display = 'block';
+
+	var comment_label_div = document.createElement('DIV');
+	var comment_label_text = document.createTextNode('Any food allergies?');
+	comment_label_div.appendChild(comment_label_text);
+	comment_div.appendChild(comment_label_div);
+
+	var comment_input = document.createElement('input');
+	comment_input.id = 'child_input';
+	comment_input.classList.add('rsvp_guest_name_input');
+	comment_input.type = 'text';
+	comment_input.style.width = '100%';
+	comment_input.style['margin-top'] = '4px';
+
+	comment_div.appendChild(comment_input);
+	comment_input_div.appendChild(comment_div);
+
+	parent.appendChild(comment_input_div);
 }
 
 function decorate_save_button() {

@@ -199,7 +199,7 @@ function decorate_child_input_block(parent) {
 			var child_name_div = document.createElement('DIV');
 			child_name_div.classList.add('rsvp_guest_input_divs');
 			child_name_div.style.width = 'fit-content';
-			child_name_div.style.display = 'inline-block';
+			child_name_div.style.display = 'block';
 
 			var child_name_label_div = document.createElement('DIV');
 			var child_name_label_text = document.createTextNode('Child name');
@@ -223,7 +223,7 @@ function decorate_child_input_block(parent) {
 			var child_allergies_div = document.createElement('DIV');
 			child_allergies_div.classList.add('rsvp_guest_input_divs');
 			child_allergies_div.style.width = 'fit-content';
-			child_allergies_div.style.display = 'inline-block';
+			child_allergies_div.style.display = 'block';
 
 			var child_allergies_label_div = document.createElement('DIV');
 			var child_allergies_label_text = document.createTextNode('Any food allergies?');

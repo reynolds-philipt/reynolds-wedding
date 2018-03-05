@@ -184,6 +184,9 @@ function decorate_guest_input_block(parent, guest_number) {
 	allergies_input.classList.add('rsvp_guest_allergies_input');
 	allergies_input.type = 'text';
 	allergies_input.style.width = '100%';
+	if (current_guest && current_guest.allergies) {
+		allergies_input.value = current_guest.allergies;
+	}
 	allergies_div.appendChild(allergies_input);
 	parent.appendChild(allergies_div);
 }
@@ -196,6 +199,7 @@ function decorate_child_input_block(parent) {
 		for (var i = 0; i < +number_of_children; i++) {
 			var child_input_div = document.createElement('div');
 			child_input_div.classList.add('rsvp_child_inputs');
+			var current_child = window.user['child' + (i + 1)];
 
 			// Children names
 			var child_name_div = document.createElement('DIV');
@@ -214,10 +218,9 @@ function decorate_child_input_block(parent) {
 			child_name_input.type = 'text';
 			child_name_input.style.width = '100%';
 			child_name_input.style['margin-top'] = '4px';
-			/*
-			if (current_guest && current_guest.name) {
-				child_name_input.value = current_guest.name;
-			}*/
+			if (current_child && current_child.name) {
+				child_name_input.value = current_child.name;
+			}
 			child_name_div.appendChild(child_name_input);
 			child_input_div.appendChild(child_name_div);
 			
@@ -238,6 +241,9 @@ function decorate_child_input_block(parent) {
 			child_allergies_input.type = 'text';
 			child_allergies_input.style.width = '100%';
 			child_allergies_input.style['margin-top'] = '4px';
+			if (current_child && current_child.allergies) {
+				child_allergies_input.value = current_child.allergies;
+			}
 			
 			child_allergies_div.appendChild(child_allergies_input);
 			child_input_div.appendChild(child_allergies_div);
@@ -270,10 +276,9 @@ function decorate_comment_input_block(parent) {
 	comment_song_input.type = 'text';
 	comment_song_input.style.width = '100%';
 	comment_song_input.style['margin-top'] = '4px';
-	/*
-	if (current_guest && current_guest.name) {
-		child_name_input.value = current_guest.name;
-	}*/
+	if (window.user && window.user.song) {
+		comment_song_input.value = window.user.song;
+	}
 	comment_song_div.appendChild(comment_song_input);
 	comment_input_div.appendChild(comment_song_div);
 
@@ -293,6 +298,9 @@ function decorate_comment_input_block(parent) {
 	comment_input.type = 'text';
 	comment_input.style.width = '100%';
 	comment_input.style['margin-top'] = '4px';
+	if (window.user && window.user.comment) {
+		comment_input.value = window.user.comment;
+	}
 
 	comment_div.appendChild(comment_input);
 	comment_input_div.appendChild(comment_div);

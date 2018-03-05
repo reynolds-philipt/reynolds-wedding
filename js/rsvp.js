@@ -379,7 +379,7 @@ function decorate_save_button() {
 		if (errors.length > 0) {
 			var errors_string = '';
 			for (var k = 0; k < errors.length; k++) {
-				errors_string = errors_string + ((k > 0) : ', ' ? '') + errors[k];
+				errors_string = errors_string + ((k > 0) ? ', ' : '') + errors[k];
 			}
 			alert(errors_string);
 		} else {

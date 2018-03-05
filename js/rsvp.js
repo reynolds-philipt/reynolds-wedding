@@ -403,9 +403,9 @@ function save_user() {
 	delete current_user.id;
 	debugger;
 	
-	var new_user = database.ref('guests/' + window.user.id).set({
-		current_user;
-	});
+	var new_user = database.ref('guests/' + window.user.id).set(
+		current_user
+	);
 }
 
 function update_user_data(user) {

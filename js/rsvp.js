@@ -288,7 +288,7 @@ function decorate_comment_input_block(parent) {
 	comment_div.appendChild(comment_label_div);
 
 	var comment_input = document.createElement('input');
-	comment_input.id = 'child_input';
+	comment_input.id = 'comment_input';
 	comment_input.classList.add('rsvp_guest_name_input');
 	comment_input.type = 'text';
 	comment_input.style.width = '100%';

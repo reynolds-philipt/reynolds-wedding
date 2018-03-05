@@ -169,8 +169,8 @@ function decorate_guest_input_block(parent, guest_number) {
 		option.text = dinner_options[i];
 		dinner_select.appendChild(option);
 	}
-	if (current_guest && current_guest.dinner_select) {
-		dinner_select.value = current_guest.dinner_select;
+	if (current_guest && current_guest.dinner) {
+		dinner_select.value = current_guest.dinner;
 	}
 	dinner_select_div.appendChild(dinner_select);
 	parent.appendChild(dinner_select_div);

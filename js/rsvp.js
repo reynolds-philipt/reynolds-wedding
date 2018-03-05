@@ -397,13 +397,12 @@ function decorate_user_login() {
 
 function save_user() {
 	var current_user = Object.assign({}, window.user);
-	// delete current_user.id;
+	delete current_user.id;
 	debugger;
 	
-	/* TODO Soon save
 	var new_user = database.ref('guests/' + window.user.id).set({
 		current_user;
-	});*/
+	});
 }
 
 function update_user_data(user) {

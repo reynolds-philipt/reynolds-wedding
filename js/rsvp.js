@@ -71,6 +71,9 @@ function decorate_instruction_guest_block(parent) {
 		rsvp_guest_input_div.innerHTML = '';
 		self.decorate_guest_input_blocks_calculation();
 	});
+	if (window.user && window.user.selected_number_of_guests) {
+		guest_select.value = window.user.selected_number_of_guests;
+	}
 	guest_select.classList.add('guest_number_select');
 	guest_select_div.appendChild(guest_select);
 	parent.appendChild(guest_select_div);
@@ -102,6 +105,9 @@ function decorate_instruction_child_block(parent) {
 			var rsvp_child_input_div = document.getElementById('rsvp_child_input_div');
 			self.decorate_child_input_block(rsvp_child_input_div);
 		});
+		if (window.user && window.user.selected_number_of_children) {
+			child_select.value = window.user.selected_number_of_children;
+		}
 		child_select.classList.add('child_number_select');
 		child_select_div.appendChild(child_select);
 		parent.appendChild(child_select_div);

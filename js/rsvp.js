@@ -328,7 +328,7 @@ function decorate_save_button() {
 					}
 					errors.push('No dinner selected for Guest ' + current_guest_name);
 				}
-				var guest_allergies_input_div = documnet.getElementById('allergies_input_' + (i + 1));
+				var guest_allergies_input_div = document.getElementById('allergies_input_' + (i + 1));
 				if (guest_allergies_input_div && guest_allergies_input_div.value && guest_allergies_input_div.value !== '') {
 					window.user['guest' + (i + 1)].allergies = guest_allergies_input_div.value;
 				} else {

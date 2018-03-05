@@ -347,6 +347,9 @@ function decorate_save_button() {
 				for (var j = 0; j < selected_number_of_children; j++) {
 					var child_name_input_div = document.getElementById('child_name_input_' + (j + 1));
 					if (child_name_input_div && child_name_input_div.value && child_name_input_div.value !== '') {
+						if (!window.user['child' + (j + 1)]) {
+							window.user['child' + (j + 1)] = {};
+						}
 						window.user['child' + (j + 1)].name = child_name_input_div.value;
 					} else {
 						errors.push('No name input for Child ' + (j + 1));

@@ -257,7 +257,6 @@ function decorate_comment_input_block(parent) {
 	// Comment song
 	var comment_song_div = document.createElement('DIV');
 	comment_song_div.classList.add('rsvp_guest_input_divs');
-	comment_song_div.style.width = 'fit-content';
 	comment_song_div.style.display = 'block';
 
 	var comment_song_label_div = document.createElement('DIV');
@@ -281,7 +280,6 @@ function decorate_comment_input_block(parent) {
 	// Children Allergies
 	var comment_div = document.createElement('DIV');
 	comment_div.classList.add('rsvp_guest_input_divs');
-	comment_div.style.width = 'fit-content';
 	comment_div.style.display = 'block';
 
 	var comment_label_div = document.createElement('DIV');

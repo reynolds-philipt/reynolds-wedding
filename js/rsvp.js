@@ -322,11 +322,11 @@ function decorate_save_button() {
 				if (guest_dinner_select_div && guest_dinner_select_div.value && guest_dinner_select_div.value !== '') {
 					window.user['guest' + (i + 1)].dinner = guest_dinner_select_div.value;
 				} else {
-					var current_guest_name = (i + 1);
+					var current_guest_name = 'Guest ' + (i + 1);
 					if (window.user['guest' + (i + 1)].name) {
 						current_guest_name = window.user['guest' + (i + 1)].name;
 					}
-					errors.push('No dinner selected for Guest ' + current_guest_name);
+					errors.push('No dinner selected for ' + current_guest_name);
 				}
 				var guest_allergies_input_div = document.getElementById('allergies_input_' + (i + 1));
 				if (guest_allergies_input_div && guest_allergies_input_div.value && guest_allergies_input_div.value !== '') {
@@ -345,16 +345,16 @@ function decorate_save_button() {
 			var selected_number_of_children = window.user.selected_number_of_children;
 			if (selected_number_of_children && selected_number_of_children > 0) {
 				for (var j = 0; j < selected_number_of_children; j++) {
-					var child_name_input_div = document.getElementById('child_name_input_' + (i + 1));
+					var child_name_input_div = document.getElementById('child_name_input_' + (j + 1));
 					if (child_name_input_div && child_name_input_div.value && child_name_input_div.value !== '') {
-						window.user['child' + (i + 1)].name = child_name_input_div.value;
+						window.user['child' + (j + 1)].name = child_name_input_div.value;
 					} else {
-						errors.push('No name input for Child ' + (i + 1));
+						errors.push('No name input for Child ' + (j + 1));
 					}
 					
-					var child_allergies_input_div = document.getElementById('child_allergies_input_' + (i + 1));
+					var child_allergies_input_div = document.getElementById('child_allergies_input_' + (j + 1));
 					if (child_allergies_input_div && child_allergies_input_div.value && child_allergies_input_div.value !== '') {
-						window.user['child' + (i + 1)].allergies = child_allergies_input_div.value;
+						window.user['child' + (j + 1)].allergies = child_allergies_input_div.value;
 					} else {
 						// intentionally left blank.  Don't need to have an error.
 					}

@@ -158,7 +158,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	dinner_select_label_div.appendChild(dinner_select_label_text);
 	dinner_select_div.appendChild(dinner_select_label_div);
 	
-	var dinner_options = ['', 'Beef', 'Pork', 'Gluten Free/Vegan'];
+	var dinner_options = ['', 'Beef', 'Pork', 'Vegetable stack'];
 	var dinner_select = document.createElement('select');
 	dinner_select.id = 'dinner_select_' + guest_number;
 	dinner_select.classList.add('rsvp_guest_dinner_select');

@@ -9,6 +9,15 @@ function header() {
       self.remove_local('user');
       render();
     });
+  } else {
+    var rsvp_header = document.getElementById('header_button_rsvp');
+    rsvp_header.style.display = 'none';
+    var venue_header = document.getElementById('header_button_venue');
+    venue_header.style.display = 'none';
+    var hotel_header = document.getElementById('header_button_hotel');
+    hotel_header.style.display = 'none';
+    // var invite_header = document.getElementById('header_button_invite');
+    // invite_header.style.display = 'none';
   }
 
   var pathname = window.location.pathname;

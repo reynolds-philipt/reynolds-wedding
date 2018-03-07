@@ -61,6 +61,7 @@ function decorate_guest_list_table(guests) {
 	heading[2] = {'name': "First Name", 'code': 'first_name'};
 	heading[3] = {'name': "Last Name", 'code': 'last_name'};
 	heading[4] = {'name': "Number of guests", 'code': 'number_of_guests'};
+	heading[4] = {'name': "Number of children", 'code': 'number_of_children'};
 	heading[5] = {'name': "Guest1", 'code': 'guest1'};
 	heading[6] = {'name': "Guest2", 'code': 'guest2'};
 	heading[7] = {'name': "Guest3", 'code': 'guest3'};
@@ -69,6 +70,7 @@ function decorate_guest_list_table(guests) {
 	heading[10] = {'name': "Guest6", 'code': 'guest6'};
 	
 	var guest_numbers = ['1', '2', '3', '4', '5', '6'];
+	var children_numbers = ['1', '2', '3', '4'];
 	
 	//TABLE COLUMNS
 	var tr = document.createElement('TR');
@@ -120,6 +122,30 @@ function decorate_guest_list_table(guests) {
 					var guest_id = array_split_ids[2];
 					self.updated_guests[guest_id].number_of_guests = this.value;
 					select.index = this.value;
+				});
+			} else if (heading[j].code === 'number_of_children') {
+				var select_children = document.createElement('select');
+				select_children.id = 'num_guests_' + i;
+				td.appendChild(select_children);
+				for (var k = 0; k < children_numbers.length; k++) {
+					var option = document.createElement('option');
+					option.value = children_numbers[k];
+					option.text = children_numbers[k];
+					select_children.appendChild(option);
+				}
+				if (guests[i].number_of_children) {
+					select_children.value = guests[i].number_of_children;
+					select_children.index = guests[i].number_of_children;
+				}  else {
+					select_children.value = '0';
+					select_children.index = '0';
+				}
+				select_children.addEventListener('change', function(value) {
+					//this.id is 'num_guests_' + i
+					var array_split_ids = this.id.split('_');
+					var guest_id = array_split_ids[2];
+					self.updated_guests[guest_id].number_of_children = this.value;
+					select_children.index = this.value;
 				});
 			} else if (heading[j].code.substr(0, heading[j].code.length - 1) === 'guest') {
 				var name_input = document.createElement('input');

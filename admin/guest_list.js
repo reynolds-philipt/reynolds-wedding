@@ -209,6 +209,7 @@ function update_guest_list(guest_list, guest_index) {
 	//var current_guest = guest_list[guest_index];
 	debugger;
 	var current_guest = Object.assign({}, guest_list[guest_index]);
+	var current_guest_id = current_guest.id;
 	delete current_guest.id;
 	/*
 	var update_user = [];
@@ -227,5 +228,5 @@ function update_guest_list(guest_list, guest_index) {
 		}
 	}*/
 	
-	var new_user = database.ref('guests/' + current_guest.id).update(current_guest);
+	var new_user = database.ref('guests/' + current_guest_id).update(current_guest);
 }

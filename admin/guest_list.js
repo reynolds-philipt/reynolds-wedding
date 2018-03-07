@@ -115,6 +115,7 @@ function decorate_guest_list_table(guests) {
 				}  else {
 					select.value = '1';
 					select.index = '1';
+					self.updated_guests[i].number_of_guests = '1';
 				}
 				select.addEventListener('change', function(value) {
 					//this.id is 'num_guests_' + i
@@ -139,6 +140,7 @@ function decorate_guest_list_table(guests) {
 				}  else {
 					select_children.value = '0';
 					select_children.index = '0';
+					self.updated_guests[i].number_of_children = '0';
 				}
 				select_children.addEventListener('change', function(value) {
 					//this.id is 'num_guests_' + i

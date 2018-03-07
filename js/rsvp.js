@@ -114,7 +114,7 @@ function decorate_instruction_child_block(parent) {
 	} else {
 		parent.style.display = 'none';
 		var child_menu_option = document.getElementById('child_menu');
-		child_menu_option.display = 'none';
+		child_menu_option.style.display = 'none';
 	}
 }
 

@@ -206,7 +206,11 @@ function update_guest_list(guest_list, guest_index) {
 	// firebase.initializeApp(config);
 	var database = firebase.database();
 	
-	var current_guest = guest_list[guest_index];
+	//var current_guest = guest_list[guest_index];
+	debugger;
+	var current_guest = Object.assign({}, guest_list[guest_index]);
+	delete current_guest.id;
+	/*
 	var update_user = [];
 	update_user[current_guest.id] = {
 		'number_of_guests': current_guest.number_of_guests,
@@ -221,7 +225,7 @@ function update_guest_list(guest_list, guest_index) {
 		} else {
 			update_user[current_guest.id]['guest' + (j + 1)].name = '';
 		}
-	}
+	}*/
 	
-	var new_user = database.ref('guests/' + current_guest.id).update(update_user[current_guest.id]);
+	var new_user = database.ref('guests/' + current_guest.id).update(current_guest);
 }

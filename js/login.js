@@ -41,7 +41,7 @@ function login() {
 			guests.once("value")
 				.then(function(snapshot) {
 					snapshot.forEach(function(childSnapshot) {
-						if (childSnapshot.val().email === user_email.value) {
+						if (childSnapshot.val().email.toUpperCase() === user_email.value.toUpperCase()) {
 							window.user = {
 								'id': childSnapshot.key,
 								'email': childSnapshot.val().email,

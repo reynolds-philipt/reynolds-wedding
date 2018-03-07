@@ -58,12 +58,13 @@ function decorate_current_guests_table(guests) {
 	heading[2] = {'name': "First Name", 'code': 'first_name'};
 	heading[3] = {'name': "Last Name", 'code': 'last_name'};
 	heading[4] = {'name': "Number of guests", 'code': 'number_of_guests'};
-	heading[5] = {'name': "Guest1", 'code': 'guest1'};
-	heading[6] = {'name': "Guest2", 'code': 'guest2'};
-	heading[7] = {'name': "Guest3", 'code': 'guest3'};
-	heading[8] = {'name': "Guest4", 'code': 'guest4'};
-	heading[9] = {'name': "Guest5", 'code': 'guest5'};
-	heading[10] = {'name': "Guest6", 'code': 'guest6'};
+	heading[5] = {'name': "Number of guests", 'code': 'number_of_children'};
+	heading[6] = {'name': "Guest1", 'code': 'guest1'};
+	heading[7] = {'name': "Guest2", 'code': 'guest2'};
+	heading[8] = {'name': "Guest3", 'code': 'guest3'};
+	heading[9] = {'name': "Guest4", 'code': 'guest4'};
+	heading[10] = {'name': "Guest5", 'code': 'guest5'};
+	heading[11] = {'name': "Guest6", 'code': 'guest6'};
 	
 	var guest_numbers = ['1', '2', '3', '4', '5', '6'];
 	

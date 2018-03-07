@@ -85,10 +85,17 @@ function decorate_guest_list_table(guests) {
 	}
 	
 	this.updated_guests = guests;
+	var white_bg = true;
 	debugger;
 	for (var i = 0; i < guests.length; i++) {
 		var updated_guest = guests[i];
 		var tr = document.createElement('TR');
+		if (white_bg) {
+			tr.style.background = '#fff';
+			white_bg = !white_bg;
+		} else {
+			white_bg = !white_bg;
+		}
 		for (var j = 0; j < heading.length; j++) {
 			var td = document.createElement('TD');
 			td.width = '75';

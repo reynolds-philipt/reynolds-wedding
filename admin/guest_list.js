@@ -202,7 +202,8 @@ function update_guest_list(guest_list, guest_index) {
 	var current_guest = guest_list[guest_index];
 	var update_user = [];
 	update_user[current_guest.id] = {
-		'number_of_guests': current_guest.number_of_guests
+		'number_of_guests': current_guest.number_of_guests,
+		'number_of_children': current_guest.number_of_children,
 	};
 	for(var j = 0; j < current_guest.number_of_guests; j++) {
 		if (!update_user[current_guest.id]['guest' + (j + 1)]) {

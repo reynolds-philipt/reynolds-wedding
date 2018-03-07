@@ -72,7 +72,7 @@ function decorate_guest_list_table(guests) {
 	heading[11] = {'name': "Guest6", 'code': 'guest6'};
 	
 	var guest_numbers = ['1', '2', '3', '4', '5', '6'];
-	var children_numbers = ['1', '2', '3', '4'];
+	var children_numbers = ['0', '1', '2', '3', '4'];
 	
 	//TABLE COLUMNS
 	var tr = document.createElement('TR');

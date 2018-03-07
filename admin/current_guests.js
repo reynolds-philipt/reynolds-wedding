@@ -10,6 +10,9 @@ function current_guests() {
 	firebase_guests.once("value")
 		.then(function(snapshot) {
 			snapshot.forEach(function(childSnapshot) {
+				var user = childSnapshot.val();
+				user.id = childSnapshot.key;
+				/*
 				var user = {
 					'id': childSnapshot.key,
 					'email': childSnapshot.val().email,
@@ -35,7 +38,7 @@ function current_guests() {
 				} 
 				if (childSnapshot.val().guest6) {
 					user.guest6 = childSnapshot.val().guest6;
-				} 
+				}*/
 				guests.push(user);
 			});
 			decorate_current_guests_table(guests);

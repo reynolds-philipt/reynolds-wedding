@@ -212,12 +212,14 @@ body {
 
 .registry_item_bbab {
 	background: url("pictures/BBAB.jpg");
+	cursor: pointer;
 	height: 85px;
 	width: 225px;
 }
 
 .registry_item_second {
 	background: url("pictures/BBAB.jpg");
+	cursor: pointer;
 	height: 85px;
 	width: 225px;
 }

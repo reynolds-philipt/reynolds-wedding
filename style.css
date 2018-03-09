@@ -384,6 +384,17 @@ body {
 	width: 100%;
 }
 
+.hotel_background_div {
+	background-image: url("pictures/hotel_background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top;
+	height: 100%;
+	min-height: 90%;
+	overflow: hidden;
+	width: 100%;
+}
+
 .login_background_div {
 	background-image: url("pictures/57-napa.jpg");
 	background-size: cover;

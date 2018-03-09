@@ -204,6 +204,16 @@ body {
 	font-size: 18px;
 }
 
+.registry_item {
+	
+}
+
+.registry_item_bbab {
+	background: url("pictures/BBAB.jpg");
+	height: 85px;
+	width: 225px;
+}
+
 .rsvp_child_input_divs {
 	margin: 8px;
 }

@@ -4,7 +4,7 @@ function header() {
 
   var user_saved = self.load_local('user');
   if (user_saved) {
-    if (window.user.number_of_guests && window.user.number_of_guests >= 1) {
+    if (window.user.number_of_guests && +window.user.number_of_guests >= 1) {
       show_header_confirmed_users();
     } else {
       hide_header_confirmed_users();

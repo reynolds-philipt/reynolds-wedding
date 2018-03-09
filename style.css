@@ -428,3 +428,14 @@ body {
 	overflow: hidden;
 	width: 100%;
 }
+
+.venue_background_div {
+	background-image: url("pictures/venue_background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top;
+	height: 100%;
+	min-height: 90%;
+	overflow: hidden;
+	width: 100%;
+}

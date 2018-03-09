@@ -205,7 +205,7 @@ body {
 }
 
 .registry_item {
-	float: right;
+	text-align: right;
 	margin-right: 100px;
 	margin-top: 50px;
 }

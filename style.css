@@ -205,10 +205,18 @@ body {
 }
 
 .registry_item {
-	
+	float: right;
+	margin-right: 100px;
+	margin-top: 50px;
 }
 
 .registry_item_bbab {
+	background: url("pictures/BBAB.jpg");
+	height: 85px;
+	width: 225px;
+}
+
+.registry_item_second {
 	background: url("pictures/BBAB.jpg");
 	height: 85px;
 	width: 225px;

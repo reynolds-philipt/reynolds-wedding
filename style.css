@@ -385,7 +385,7 @@ body {
 }
 
 .hotel_background_div {
-	background-image: url("pictures/hotel_background.jpg");
+	background-image: url("pictures/hotel_background_1.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top;
@@ -430,7 +430,7 @@ body {
 }
 
 .registry_background_div {
-	background-image: url("pictures/registry_background.jpg");
+	background-image: url("pictures/registry_background_1.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top;

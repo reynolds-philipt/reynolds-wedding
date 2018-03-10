@@ -14,7 +14,6 @@ function login() {
 	
 	var user_saved = self.load_local("user");
 	if (user_saved) {
-		debugger;
 		if (!window.user.number_of_guests) {
 			var guests_db = database.ref("guests").orderByKey();
 			guests_db.once("value")

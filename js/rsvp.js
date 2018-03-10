@@ -45,7 +45,6 @@ function decorate_guest_input_blocks_calculation() {
 
 function decorate_instruction_guest_block(parent) {
 	var self = this;
-	debugger;
 	var guest_select_div = parent.lastElementChild;
 	var guest_numbers_options = [{'code': 'unselected', 'value': 'Number of guests'},
 				     {'code': 0, 'value': 'Unable to attend'},
@@ -74,6 +73,7 @@ function decorate_instruction_guest_block(parent) {
 		guest_select.value = window.user.selected_number_of_guests;
 	}
 	guest_select.classList.add('guest_number_select');
+	guest_select.style['margin-top'] = '4px';
 	guest_select_div.appendChild(guest_select);
 	parent.appendChild(guest_select_div);
 }
@@ -108,6 +108,7 @@ function decorate_instruction_child_block(parent) {
 			child_select.value = window.user.selected_number_of_children;
 		}
 		child_select.classList.add('child_number_select');
+		child_select.style['margin-top'] = '4px';
 		child_select_div.appendChild(child_select);
 		parent.appendChild(child_select_div);
 	} else {
@@ -121,7 +122,6 @@ function decorate_guest_input_block(parent, guest_number) {
 	var guest_number_string = 'guest' + guest_number;
 	var current_guest = window.user[guest_number_string];
 	
-	debugger;
 	// Guest Name
 	var guest_name_div = document.createElement('DIV');
 	guest_name_div.classList.add('rsvp_guest_input_divs');
@@ -138,6 +138,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	guest_name_input.classList.add('rsvp_guest_name_input');
 	guest_name_input.type = 'text';
 	guest_name_input.style.width = '100%';
+	guest_name_input.style['margin-top'] = '4px';
 	if (current_guest && current_guest.name) {
 		guest_name_input.value = current_guest.name;
 	}
@@ -162,6 +163,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	dinner_select.id = 'dinner_select_' + guest_number;
 	dinner_select.classList.add('rsvp_guest_dinner_select');
 	dinner_select.style.width = '100%';
+	dinner_select.style['margin-top'] = '4px';
 	for (var i = 0; i < dinner_options.length; i++) {
 		var option = document.createElement('option');
 		option.value = dinner_options[i];
@@ -189,6 +191,7 @@ function decorate_guest_input_block(parent, guest_number) {
 	allergies_input.classList.add('rsvp_guest_allergies_input');
 	allergies_input.type = 'text';
 	allergies_input.style.width = '100%';
+	allergies_input.style['margin-top'] = '4px';
 	if (current_guest && current_guest.allergies) {
 		allergies_input.value = current_guest.allergies;
 	}

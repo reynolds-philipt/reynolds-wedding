@@ -181,8 +181,8 @@ function welcome(returning) {
 	email_header.innerHTML = "Welcome " + (returning ? " back " : "") + window.user.first_name + "!";
 	var guest_set_up = (window.user.number_of_guests && +window.user.number_of_guests > 0);
 	email_p.innerHTML = (guest_set_up ?
-		 "Please go to the RSVP page to let us know<br>if you will be able to join us in celebrating." :
-		 "We will send out an email invitation for you<br>once your account is set up in the next few days.");
+		 "Please go to the RSVP page to let us know if you will be able to join us in celebrating." :
+		 "We will send out an email invitation for you once your account is set up in the next few days.");
 
 	var header_user_login = document.getElementById('header_user_login_out');
 	header_user_login.innerHTML = window.user.first_name + ' ' + window.user.last_name + ' (Sign out)';

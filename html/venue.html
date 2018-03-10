@@ -24,6 +24,7 @@
 						<p><u><b>Reception:</b></u> Dinner and dancing to follow the ceremony</p>
 					</div>
 					<div class="venue_details" style="float: right">
+						<div id="map"></div>
 						<h2>Blu Falls</h2>
 						<p>A description will be here</p>
 					</div>
@@ -34,6 +35,9 @@
 	<footer>
 		<script type="text/javascript">
 			add_load_event(venue());
+		</script>
+		<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
 		</script>
 	</footer>
 </html>

@@ -4,7 +4,6 @@ function rsvp() {
 	firebase.initializeApp(config);
 	self.database = firebase.database();
 
-	debugger;
 	var user_saved = self.load_local("user");
 	if (user_saved) {
 		update_user_data();
@@ -423,7 +422,12 @@ function save_user() {
 	
 	var rsvp_inputs_divs = document.getElementById('rsvp_inputs_divs');
 	rsvp_inputs_divs.innerHTML = "";
-	//var guest_number_select_div = document.getElementById('guest_number_select_div');
+	
+	var rsvp_thank_you = document.createElement('div');
+	rsvp_thank_you.id = 'rsvp_thank_you';
+	rsvp_thank_you.innerHTML = 'Thank you for RSVPing.  We look forward to celebrating with you May 19th!';
+	rsvp_thank_you.classList.add('rsvp_instructions_style');
+	rsvp_inputs_divs.appendChild(rsvp_thank_you);
 }
 
 function update_user_data(user) {

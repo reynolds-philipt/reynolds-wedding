@@ -361,6 +361,7 @@ body {
 }
 
 .venue_map {
+	height: 400px;
 	width: 30%;
 }
 

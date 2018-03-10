@@ -14,6 +14,7 @@ function login() {
 	
 	var user_saved = self.load_local("user");
 	if (user_saved) {
+		debugger;
 		if (!window.user.number_of_guests) {
 			var guests_db = database.ref("guests").orderByKey();
 			guests_db.once("value")
@@ -159,7 +160,7 @@ function welcome(returning) {
 	var guest_set_up = (window.user.number_of_guests && +window.user.number_of_guests > 0);
 	email_p.innerHTML = "Welcome " + (returning ? " back " : "") + window.user.first_name + "!" +
 		(guest_set_up ? "  We will send out an email<br>invitation for you once your account is set up in the next few days." :
-		 "  Please go to the RSVP page to let us know if you will be able to join us in celebrating.";
+		 "  Please go to the RSVP page to let us know if you will be able to join us in celebrating.");
 
 	var header_user_login = document.getElementById('header_user_login_out');
 	header_user_login.innerHTML = window.user.first_name + ' ' + window.user.last_name + ' (Sign out)';

@@ -158,7 +158,6 @@ function welcome(returning) {
 
 	var header_user_login = document.getElementById('header_user_login_out');
 	header_user_login.innerHTML = window.user.first_name + ' ' + window.user.last_name + ' (Sign out)';
-	debugger;
 	header_user_login.addEventListener('click', function() {
 		self.remove_local('user');
 		render();

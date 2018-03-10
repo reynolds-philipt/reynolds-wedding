@@ -188,6 +188,15 @@ body {
 	width: 30%;
 }
 
+.hotel_picture {
+	background-image: url("pictures/hampton_front.jpg");
+	border-radius: 20px;
+	height: 496px;
+	margin: 50px;
+	min-width: 400px;
+	width: 600px;
+}
+
 .login_container {
         width: 50%;
 }

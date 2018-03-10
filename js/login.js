@@ -15,7 +15,6 @@ function login() {
 	var user_saved = self.load_local("user");
 	if (user_saved) {
 		var guests_db = database.ref("guests").orderByKey();
-		debugger;
 		guests_db.once("value")
 			.then(function(snapshot) {
 				snapshot.forEach(function(childSnapshot) {
@@ -29,7 +28,6 @@ function login() {
 							'first_name': childSnapshot.val().first_name,
 							'last_name': childSnapshot.val().last_name,
 						};*/
-						debugger;
 						self.save_local("user", window.user);
 						return true;
 					}
@@ -59,7 +57,6 @@ function login() {
 		var self = this;
 		if (self.displaying_names === false) {
 			var guests = database.ref("guests").orderByKey();
-			debugger;
 			guests.once("value")
 				.then(function(snapshot) {
 					snapshot.forEach(function(childSnapshot) {
@@ -73,7 +70,6 @@ function login() {
 								'first_name': childSnapshot.val().first_name,
 								'last_name': childSnapshot.val().last_name,
 							};*/
-							debugger;
 							self.save_local("user", window.user);
 							return true;
 						}

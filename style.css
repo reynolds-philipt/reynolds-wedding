@@ -95,6 +95,7 @@ body {
 .header_button_container {
         position: absolute;
         bottom: 0;
+	font-size: 16px;
 }
 
 .header_button {
@@ -147,6 +148,7 @@ body {
 
 .header_user_login_out {
 	color: #ff7f50;
+	font-size: 16px;
 	margin-right: 20px;
         margin-top: 20px;
         right: 0;

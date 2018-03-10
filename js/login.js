@@ -122,12 +122,32 @@ function login() {
 	};
 	
 	user_submit.addEventListener('click', function() {
-		submit_user();
+		var first_name = first_name_input.value;
+		var last_name = last_name_input.value;
+		if ((first_name && first_name !== '') || (last_name && last_name !== '')) {
+			submit_user();
+		} else if ((!first_name || first_name === '') && (!last_name || last_name === '')) {
+			alert('Need to add a first name and a last name');
+		} else if (!first_name || first_name === '') {
+			alert('Need to add a first name');
+		} else if (!last_name || last_name === '') {
+			alert('Need to add a last name');
+		}
 	});
 	
 	user_email.addEventListener('keydown', function(event) {
 		if (event.keyCode === 13) {
-			submit_user();
+			var first_name = first_name_input.value;
+			var last_name = last_name_input.value;
+			if ((first_name && first_name !== '') || (last_name && last_name !== '')) {
+				submit_user();
+			} else if ((!first_name || first_name === '') && (!last_name || last_name === '')) {
+				alert('Need to add a first name and a last name');
+			} else if (!first_name || first_name === '') {
+				alert('Need to add a first name');
+			} else if (!last_name || last_name === '') {
+				alert('Need to add a last name');
+			}
 		}
 	});
 }

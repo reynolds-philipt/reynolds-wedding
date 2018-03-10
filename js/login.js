@@ -77,6 +77,9 @@ function login() {
 								'last_name': childSnapshot.val().last_name,
 							};*/
 							self.save_local("user", window.user);
+							if (window.user.number_of_guests && +window.user.number_of_guests > 0) {
+								document.location.reload();
+							}
 							return true;
 						}
 					});

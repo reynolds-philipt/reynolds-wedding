@@ -394,10 +394,10 @@ body {
 .venue_picture {
 	background-image: url("pictures/blufalls_front_1.jpg");
 	border-radius: 20px;
-	height: 400px;
+	height: 409px;
 	margin: 50px;
 	min-width: 400px;
-	width: 30%;
+	width: 600px;
 }
 
 .email_input {

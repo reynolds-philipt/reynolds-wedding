@@ -382,8 +382,18 @@ body {
 }
 
 .venue_map {
+	background-image: 
 	border-radius: 20px;
 	float: right;
+	height: 400px;
+	margin: 50px;
+	min-width: 400px;
+	width: 30%;
+}
+
+.venue_picture {
+	background-image: url("pictures/blufalls_front.jpg");
+	border-radius: 20px;
 	height: 400px;
 	margin: 50px;
 	min-width: 400px;

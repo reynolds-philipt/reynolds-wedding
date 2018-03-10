@@ -17,9 +17,12 @@
 		<div class="under_header">
 			<div id="hotel_background_div" class="hotel_background_div">
 				<div style="overflow-y: auto">
-					<h2>Hotel</h2>
-					<p>address for hotel</p>
-					<p>maybe a map?</p>
+					<div class="hotel_details" style="float: left">
+						<h2 style="cursor: pointer;" onclick="window.open('https://www.google.com/search?q=BluFalls')"><u>Hampton Inn Anderson </u></h2>
+						<p><b>Group Code: REY</b></p>
+						<p>The block will be available for use until 4/27/2018 and it is first come first serve.  So if you want a room at the reduced rate make sure to sign up early.</p>
+					</div>
+					<div id="map" class="hotel_map"></div>
 				</div>
 			</div>
 		</div>
@@ -27,6 +30,9 @@
 	<footer>
 		<script type="text/javascript">
 			add_load_event(hotel());
+		</script>
+		<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWrNBgiqq5iT_Fgrs-KhA9K37rBETR4Xs&callback=initMap">
 		</script>
 	</footer>
 </html>

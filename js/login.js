@@ -19,7 +19,7 @@ function login() {
 		guests_db.once("value")
 			.then(function(snapshot) {
 				snapshot.forEach(function(childSnapshot) {
-					if (childSnapshot.val().email.toUpperCase() === user_email.value.toUpperCase()) {
+					if (childSnapshot.val().email.toUpperCase() === window.user.email.toUpperCase()) {
 						window.user = childSnapshot.val();
 						window.user.id = childSnapshot.key;
 						/*

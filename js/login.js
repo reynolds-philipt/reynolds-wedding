@@ -14,7 +14,26 @@ function login() {
 	
 	var user_saved = self.load_local("user");
 	if (user_saved) {
-		welcome(true);
+		var guests_db = database.ref("guests").orderByKey();
+		guests_db.once("value")
+			.then(function(snapshot) {
+				snapshot.forEach(function(childSnapshot) {
+					if (childSnapshot.val().email.toUpperCase() === user_email.value.toUpperCase()) {
+						window.user = childSnapshot.val();
+						window.user.id = childSnapshot.key;
+						/*
+						window.user = {
+							'id': childSnapshot.key,
+							'email': childSnapshot.val().email,
+							'first_name': childSnapshot.val().first_name,
+							'last_name': childSnapshot.val().last_name,
+						};*/
+						self.save_local("user", window.user);
+						return true;
+					}
+				});
+				welcome(true);
+			});
 	}
 	
 	user_email.addEventListener('focus', function() {
@@ -42,12 +61,15 @@ function login() {
 				.then(function(snapshot) {
 					snapshot.forEach(function(childSnapshot) {
 						if (childSnapshot.val().email.toUpperCase() === user_email.value.toUpperCase()) {
+							window.user = childSnapshot.val();
+							window.user.id = childSnapshot.key;
+							/*
 							window.user = {
 								'id': childSnapshot.key,
 								'email': childSnapshot.val().email,
 								'first_name': childSnapshot.val().first_name,
 								'last_name': childSnapshot.val().last_name,
-							};
+							};*/
 							self.save_local("user", window.user);
 							return true;
 						}

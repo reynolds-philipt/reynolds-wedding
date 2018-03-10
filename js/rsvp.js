@@ -420,6 +420,10 @@ function save_user() {
 	var new_user = database.ref('guests/' + window.user.id).set(
 		current_user
 	);
+	
+	var rsvp_inputs_divs = document.getElementById('rsvp_inputs_divs');
+	rsvp_inputs_divs.innerHTML = "";
+	//var guest_number_select_div = document.getElementById('guest_number_select_div');
 }
 
 function update_user_data(user) {

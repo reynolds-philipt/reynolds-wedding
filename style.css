@@ -349,6 +349,18 @@ body {
 	width: fit-content;
 }
 
+.rsvp_thank_you_div {
+	background: rgba(64,224,208,0.7);
+	border: 2px solid #40e0d0;
+	border-radius: 20px;
+	display: inline-block;
+	margin: 60px;
+	max-width: 300px;
+	padding: 20px;
+	position: relative;
+	width: fit-content;
+}
+
 .save_button {
 	background: #000040;
 	border: 1px solid #ff7f50;

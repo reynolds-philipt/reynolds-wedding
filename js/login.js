@@ -19,6 +19,10 @@ function login() {
 			.then(function(snapshot) {
 				snapshot.forEach(function(childSnapshot) {
 					if (childSnapshot.val().email.toUpperCase() === window.user.email.toUpperCase()) {
+						debugger;
+						if (window.user === childSnapshot.val()) {
+							return true;
+						}
 						window.user = childSnapshot.val();
 						window.user.id = childSnapshot.key;
 						/*

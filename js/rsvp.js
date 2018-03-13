@@ -364,7 +364,7 @@ function decorate_save_button() {
 		
 		// Children
 		var number_of_children = window.user.number_of_children;
-		if (number_of_children && number_of_children > 0) {
+		if ((number_of_children && number_of_children > 0) && selected_number_of_guests > 0) {
 			var selected_number_of_children = window.user.selected_number_of_children;
 			debugger;
 			if (selected_number_of_children && selected_number_of_children >= 0) {

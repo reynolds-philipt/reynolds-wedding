@@ -44,10 +44,10 @@ function hide_header_confirmed_users() {
   var hotel_divider = document.getElementById('header_button_divider_hotel');
   hotel_divider.style.display = 'none';
 
-  // var invite_header = document.getElementById('header_button_invite');
-  // invite_header.style.display = 'none';
-  // var invite_divider = document.getElementById('header_button_divider_invite');
-  // invite_divider.style.display = 'none';
+  var invite_header = document.getElementById('header_button_invitation');
+  invite_header.style.display = 'none';
+  var invite_divider = document.getElementById('header_button_divider_invitation');
+  invite_divider.style.display = 'none';
 }
 
 function show_header_confirmed_users() {
@@ -66,8 +66,8 @@ function show_header_confirmed_users() {
   var hotel_divider = document.getElementById('header_button_divider_hotel');
   hotel_divider.style.display = '';
 
-  // var invite_header = document.getElementById('header_button_invite');
-  // invite_header.style.display = '';
-  // var invite_divider = document.getElementById('header_button_divider_invite');
-  // invite_divider.style.display = '';
+  var invite_header = document.getElementById('header_button_invitation');
+  invite_header.style.display = '';
+  var invite_divider = document.getElementById('header_button_divider_invitation');
+  invite_divider.style.display = '';
 }

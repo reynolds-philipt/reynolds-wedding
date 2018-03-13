@@ -19,11 +19,14 @@ function login() {
 			.then(function(snapshot) {
 				snapshot.forEach(function(childSnapshot) {
 					if (childSnapshot.val().email.toUpperCase() === window.user.email.toUpperCase()) {
-						if (window.user.number_of_children === childSnapshot.val().number_of_children && window.user.number_of_guests === childSnapshot.val().number_of_guests) {
+						if (window.user.number_of_children !== childSnapshot.val().number_of_children && window.user.number_of_guests !== childSnapshot.val().number_of_guests) {
+							
+							window.user = childSnapshot.val();
+							window.user.id = childSnapshot.key;
+							self.save_local("user", window.user);
+							document.location.reload();
 							return true;
 						}
-						window.user = childSnapshot.val();
-						window.user.id = childSnapshot.key;
 						/*
 						window.user = {
 							'id': childSnapshot.key,
@@ -31,10 +34,6 @@ function login() {
 							'first_name': childSnapshot.val().first_name,
 							'last_name': childSnapshot.val().last_name,
 						};*/
-						self.save_local("user", window.user);
-						if (window.user.number_of_guests && +window.user.number_of_guests > 0) {
-							document.location.reload();
-						}
 						return true;
 					}
 				});

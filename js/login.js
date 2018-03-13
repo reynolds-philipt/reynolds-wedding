@@ -189,9 +189,17 @@ function welcome(returning) {
 	email_header.style.display = '';
 	email_header.innerHTML = "Welcome " + (returning ? " back " : "") + window.user.first_name + "!";
 	var guest_set_up = (window.user.number_of_guests && +window.user.number_of_guests > 0);
-	email_p.innerHTML = (guest_set_up ?
-		 "Please go to the RSVP page to let us know if you will be able to join us in celebrating." :
-		 "We will send out an email invitation for you once your account is set up in the next few days.");
+	if (guest_set_up) {
+		if (window.user.selected_number_of_guests && +window.user.selected_number_of_guests > 0) {
+			email_p.innerHTML = "We are so happy to be able to share our special evening with you.";
+		} else if (window.user.selected_number_of_guests && +window.user.selected_number_of_guests === 0) {
+			email_p.innerHTML = "We are sorry to see that you are unable to make the event.  If your plans change just update your answer on the RSVP page.";
+		} else {
+			email_p.innerHTML = "Please go to the RSVP page to let us know if you will be able to join us in celebrating.";
+		}
+	} else {
+		email_p.innerHTML = "We will send out an email invitation for you once your account is set up in the next few days.";
+	}
 
 	var header_user_login = document.getElementById('header_user_login_out');
 	header_user_login.innerHTML = window.user.first_name + ' ' + window.user.last_name + ' (Sign out)';

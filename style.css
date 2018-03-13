@@ -205,8 +205,8 @@ body {
 
 .invitation_background {
 	height: 100%;
-	background-image: url("pictures/invitation-background.jpeg");
-	background-repeat: repeat;
+	background-image: url("pictures/invitation_background.jpeg");
+	background-size: cover;
 	overflow: hidden;
 	text-align: center;
 }

@@ -206,9 +206,6 @@ function decorate_guest_input_block(parent, guest_number) {
 }
 
 function decorate_child_input_block(parent) {
-	if (window.user.selected_number_of_guests && window.user.selected_number_of_guests === '0') {
-		return;
-	}
 	var number_of_children = window.user.selected_number_of_children;
 	if (number_of_children && +number_of_children > 0) {
 		parent.style.display = '';
@@ -269,6 +266,9 @@ function decorate_child_input_block(parent) {
 		}
 		
 	} else {
+		parent.style.display = 'none';
+	}
+	if (window.user.selected_number_of_guests && window.user.selected_number_of_guests === '0') {
 		parent.style.display = 'none';
 	}
 }

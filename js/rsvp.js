@@ -368,7 +368,6 @@ function decorate_save_button() {
 		var number_of_children = window.user.number_of_children;
 		if ((number_of_children && number_of_children > 0) && selected_number_of_guests > 0) {
 			var selected_number_of_children = window.user.selected_number_of_children;
-			debugger;
 			if (selected_number_of_children && selected_number_of_children >= 0) {
 				for (var j = 0; j < selected_number_of_children; j++) {
 					var child_name_input_div = document.getElementById('child_name_input_' + (j));
@@ -426,7 +425,6 @@ function decorate_user_login() {
 function save_user() {
 	var current_user = Object.assign({}, window.user);
 	delete current_user.id;
-	debugger;
 	
 	var new_user = database.ref('guests/' + window.user.id).set(
 		current_user

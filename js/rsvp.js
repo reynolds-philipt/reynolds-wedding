@@ -85,9 +85,6 @@ function decorate_instruction_guest_block(parent) {
 }
 
 function decorate_instruction_child_block(parent) {
-	if (window.user.selected_number_of_children && window.user.selected_number_of_children === 0) {
-		return;
-	}
 	if (window.user.number_of_children && +window.user.number_of_children > 1) {
 		var child_select_div = parent.lastElementChild;
 		var child_numbers = [{'code': 'unselected', 'value': 'Children attending'},
@@ -209,6 +206,9 @@ function decorate_guest_input_block(parent, guest_number) {
 }
 
 function decorate_child_input_block(parent) {
+	if (window.user.selected_number_of_children && window.user.selected_number_of_children === 0) {
+		return;
+	}
 	var number_of_children = window.user.selected_number_of_children;
 	if (number_of_children && +number_of_children > 0) {
 		parent.style.display = '';

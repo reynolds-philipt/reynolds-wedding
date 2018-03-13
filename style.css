@@ -248,16 +248,18 @@ body {
 
 .registry_item_bbab {
 	background: url("pictures/BBAB.jpg");
+	background-size: cover;
 	cursor: pointer;
 	height: 85px;
 	width: 225px;
 }
 
 .registry_item_target {
-	background: url("pictures/target_logo.svg");
+	background: url("pictures/Target_logo.svg");
+	background-size: cover;
 	cursor: pointer;
-	height: 85px;
-	width: 225px;
+	height: 192px;
+	width: 144px;
 }
 
 .registry_item_second {

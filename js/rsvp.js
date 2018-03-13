@@ -29,8 +29,12 @@ function decorate_guest_input_blocks_calculation() {
 	var self = this;
 	var selected_number_of_guests = window.user.selected_number_of_guests;
 	var rsvp_guest_input_div = document.getElementById('rsvp_guest_input_div');
+	var rsvp_comment_input_div = document.getElementById('rsvp_comment_input_div');
+	var rsvp_child_input_div = document.getElementById('rsvp_child_input_div');
 	if (selected_number_of_guests && +selected_number_of_guests > 0) {
 		rsvp_guest_input_div.style.display = '';
+		rsvp_comment_input_div.style.display = '';
+		rsvp_child_input_div.style.display = '';
 		for (var i = 0; i < +selected_number_of_guests; i++) {
 			var guest_input_div = document.createElement('div');
 			guest_input_div.id = 'guest_input_div_' + (+i + 1);
@@ -40,6 +44,8 @@ function decorate_guest_input_blocks_calculation() {
 		}
 	} else {
 		rsvp_guest_input_div.style.display = 'none';
+		rsvp_comment_input_div.style.display = 'none';
+		rsvp_child_input_div.style.display = 'none';
 	}
 }
 
@@ -68,15 +74,6 @@ function decorate_instruction_guest_block(parent) {
 		var rsvp_guest_input_div = document.getElementById('rsvp_guest_input_div');
 		rsvp_guest_input_div.innerHTML = '';
 		self.decorate_guest_input_blocks_calculation();
-		var rsvp_comment_input_div = document.getElementById('rsvp_comment_input_div');
-		var rsvp_child_input_div = document.getElementById('rsvp_child_input_div');
-		if (this.value === '0') {
-			rsvp_comment_input_div.style.display = 'none';
-			rsvp_child_input_div.style.display = 'none';
-		} else {
-			rsvp_comment_input_div.style.display = '';
-			rsvp_child_input_div.style.display = '';
-		}
 	});
 	if (window.user && window.user.selected_number_of_guests) {
 		guest_select.value = window.user.selected_number_of_guests;

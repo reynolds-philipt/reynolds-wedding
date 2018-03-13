@@ -206,7 +206,7 @@ function decorate_guest_input_block(parent, guest_number) {
 }
 
 function decorate_child_input_block(parent) {
-	if (window.user.selected_number_of_guests && window.user.selected_number_of_guests === 0) {
+	if (window.user.selected_number_of_guests && window.user.selected_number_of_guests === '0') {
 		return;
 	}
 	var number_of_children = window.user.selected_number_of_children;

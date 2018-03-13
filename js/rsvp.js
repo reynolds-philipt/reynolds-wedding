@@ -70,7 +70,7 @@ function decorate_instruction_guest_block(parent) {
 		self.decorate_guest_input_blocks_calculation();
 		var rsvp_comment_input_div = document.getElementById('rsvp_comment_input_div');
 		debugger;
-		if (this.value === 'Unable to attend') {
+		if (this.value === '0') {
 			rsvp_comment_input_div.style.display = none;
 		} else {
 			rsvp_comment_input_div.style.display = '';

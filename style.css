@@ -253,6 +253,13 @@ body {
 	width: 225px;
 }
 
+.registry_item_target {
+	background: url("pictures/target_logo.svg");
+	cursor: pointer;
+	height: 85px;
+	width: 225px;
+}
+
 .registry_item_second {
 	background: url("pictures/BBAB.jpg");
 	cursor: pointer;

@@ -203,6 +203,19 @@ body {
 	width: 600px;
 }
 
+.invitation_background {
+	height: 100%;
+	background-image: url("pictures/SaThDa-background.jpg");
+	background-repeat: repeat;
+	overflow: hidden;
+	text-align: center;
+}
+
+.invitation_style {
+	margin: auto;
+	display: inline-block;
+}
+
 .login_container {
         width: 50%;
 }

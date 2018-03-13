@@ -406,7 +406,6 @@ function decorate_save_button() {
 		} else {
 			save_user();
 		}
-		debugger;
 	});
 	rsvp_save_button_div.appendChild(self.save_button);
 }
@@ -458,7 +457,6 @@ function update_user_data(user) {
 					};*/
 					window.user = childSnapshot.val();
 					window.user.id = childSnapshot.key;
-					debugger;
 					self.save_local("user", window.user);
 					return true;
 				}

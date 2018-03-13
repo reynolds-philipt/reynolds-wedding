@@ -249,6 +249,7 @@ body {
 .registry_item_bbab {
 	background: url("pictures/BBAB.jpg");
 	background-size: cover;
+	border: none;
 	cursor: pointer;
 	height: 85px;
 	width: 225px;
@@ -257,6 +258,7 @@ body {
 .registry_item_target {
 	background: url("pictures/Target_logo.svg");
 	background-size: cover;
+	border: none;
 	cursor: pointer;
 	height: 192px;
 	width: 144px;

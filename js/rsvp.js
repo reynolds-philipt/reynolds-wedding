@@ -436,7 +436,7 @@ function save_user() {
 	var rsvp_thank_you = document.createElement('div');
 	rsvp_thank_you.id = 'rsvp_thank_you';
 	rsvp_thank_you.innerHTML = 'Thank you for RSVP\'ing.  We look forward to celebrating with you May 19th!';
-	rsvp_thank_you.classList.add('rsvp_instructions_style');
+	rsvp_thank_you.classList.add('rsvp_thank_you_div');
 	rsvp_inputs_divs.appendChild(rsvp_thank_you);
 }
 

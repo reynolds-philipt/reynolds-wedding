@@ -20,7 +20,8 @@ function login() {
 				snapshot.forEach(function(childSnapshot) {
 					if (childSnapshot.val().email.toUpperCase() === window.user.email.toUpperCase()) {
 						debugger;
-						if (window.user === childSnapshot.val()) {
+						var 
+						if (window.user.number_of_children === childSnapshot.val().number_of_children && window.user.number_of_guests === childSnapshot.val().number_of_guests) {
 							return true;
 						}
 						window.user = childSnapshot.val();

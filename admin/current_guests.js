@@ -62,12 +62,26 @@ function decorate_current_guests_table(guests) {
 	heading[3] = {'name': "Last Name", 'code': 'last_name'};
 	heading[4] = {'name': "Number of guests", 'code': 'number_of_guests'};
 	heading[5] = {'name': "Number of children", 'code': 'number_of_children'};
-	heading[6] = {'name': "Guest1", 'code': 'guest1'};
-	heading[7] = {'name': "Guest2", 'code': 'guest2'};
-	heading[8] = {'name': "Guest3", 'code': 'guest3'};
-	heading[9] = {'name': "Guest4", 'code': 'guest4'};
-	heading[10] = {'name': "Guest5", 'code': 'guest5'};
-	heading[11] = {'name': "Guest6", 'code': 'guest6'};
+	heading[6] = {'name': "Guest1", 'code': 'guest1_name'};
+	heading[7] = {'name': "Guest1 Dinner", 'code': 'guest1_dinner'};
+	heading[8] = {'name': "Guest1 Allergies", 'code': 'guest1_allergies'};
+	heading[9] = {'name': "Guest2", 'code': 'guest2_name'};
+	heading[10] = {'name': "Guest2 Dinner", 'code': 'guest2_dinner'};
+	heading[11] = {'name': "Guest2 Allergies", 'code': 'guest2_allergies'};
+	heading[12] = {'name': "Guest3", 'code': 'guest3_name'};
+	heading[13] = {'name': "Guest3 Dinner", 'code': 'guest3_dinner'};
+	heading[14] = {'name': "Guest3 Allergies", 'code': 'guest3_allergies'};
+	heading[15] = {'name': "Guest4", 'code': 'guest4_name'};
+	heading[16] = {'name': "Guest4 Dinner", 'code': 'guest4_dinner'};
+	heading[17] = {'name': "Guest4 Allergies", 'code': 'guest4_allergies'};
+	heading[18] = {'name': "Guest5", 'code': 'guest5_name'};
+	heading[19] = {'name': "Guest5 Dinner", 'code': 'guest5_dinner'};
+	heading[20] = {'name': "Guest5 Allergies", 'code': 'guest5_allergies'};
+	heading[21] = {'name': "Guest6", 'code': 'guest6_name'};
+	heading[22] = {'name': "Guest6 Dinner", 'code': 'guest6_dinner'};
+	heading[23] = {'name': "Guest6 Allergies", 'code': 'guest6_allergies'};
+	heading[24] = {'name': "Song", 'code': 'song'};
+	heading[25] = {'name': "Comment", 'code': 'comment'};
 	
 	var guest_numbers = ['1', '2', '3', '4', '5', '6'];
 	
@@ -88,8 +102,13 @@ function decorate_current_guests_table(guests) {
 			var td = document.createElement('TD');
 			td.width = '75';
 			td.id = heading[j].code;
-			if (heading[j].code.substr(0, heading[j].code.length - 1) === 'guest' && guests[i][heading[j].code]) {
+			var split_code = heading[j].code.split('_');
+			if (split_code[0] === 'guest' && split_code[1] === 'name' && guests[i][split_code[0]] && guests[i][split_code[0]].name) {
 				td.appendChild(document.createTextNode(guests[i][heading[j].code].name));
+			} else if (split_code[0] === 'guest' && split_code[1] === 'dinner' && guests[i][split_code[0]] && guests[i][split_code[0]].dinner) {
+				td.appendChild(document.createTextNode(guests[i][heading[j].code].dinner));
+			} else if (split_code[0] === 'guest' && split_code[1] === 'dinner' && guests[i][split_code[0]] && guests[i][split_code[0]].allergies) {
+				td.appendChild(document.createTextNode(guests[i][heading[j].code].allergies));
 			} else {
 				td.appendChild(document.createTextNode(guests[i][heading[j].code]));
 			}

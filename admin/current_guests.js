@@ -109,7 +109,7 @@ function decorate_current_guests_table(guests) {
 				td.appendChild(document.createTextNode(guests[i][split_code[0]].name));
 			} else if (split_code[0].substr(0, 5) === 'guest' && split_code[1] === 'dinner' && guests[i][split_code[0]] && guests[i][split_code[0]].dinner) {
 				td.appendChild(document.createTextNode(guests[i][split_code[0]].dinner));
-			} else if (split_code[0].substr(0, 5) === 'guest' && split_code[1] === 'dinner' && guests[i][split_code[0]] && guests[i][split_code[0]].allergies) {
+			} else if (split_code[0].substr(0, 5) === 'guest' && split_code[1] === 'allergies' && guests[i][split_code[0]] && guests[i][split_code[0]].allergies) {
 				td.appendChild(document.createTextNode(guests[i][split_code[0]].allergies));
 			} else {
 				td.appendChild(document.createTextNode(guests[i][heading[j].code]));

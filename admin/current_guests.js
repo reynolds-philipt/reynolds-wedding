@@ -106,11 +106,11 @@ function decorate_current_guests_table(guests) {
 			td.id = heading[j].code;
 			var split_code = heading[j].code.split('_');
 			if (split_code[0].substr(0, 5) === 'guest' && split_code[1] === 'name' && guests[i][split_code[0]] && guests[i][split_code[0]].name) {
-				td.appendChild(document.createTextNode(guests[i][heading[j].code].name));
+				td.appendChild(document.createTextNode(guests[i][split_code[0]].name));
 			} else if (split_code[0].substr(0, 5) === 'guest' && split_code[1] === 'dinner' && guests[i][split_code[0]] && guests[i][split_code[0]].dinner) {
-				td.appendChild(document.createTextNode(guests[i][heading[j].code].dinner));
+				td.appendChild(document.createTextNode(guests[i][split_code[0]].dinner));
 			} else if (split_code[0].substr(0, 5) === 'guest' && split_code[1] === 'dinner' && guests[i][split_code[0]] && guests[i][split_code[0]].allergies) {
-				td.appendChild(document.createTextNode(guests[i][heading[j].code].allergies));
+				td.appendChild(document.createTextNode(guests[i][split_code[0]].allergies));
 			} else {
 				td.appendChild(document.createTextNode(guests[i][heading[j].code]));
 			}

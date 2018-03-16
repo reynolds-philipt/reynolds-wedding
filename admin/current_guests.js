@@ -102,7 +102,11 @@ function decorate_current_guests_table(guests) {
 		var tr = document.createElement('TR');
 		for (var j = 0; j < heading.length; j++) {
 			var td = document.createElement('TD');
-			td.width = '75';
+			td['max-width'] = '250';
+			td.style['max-width'] = '250';
+			td['max-height'] = '100px';
+			td.style['max-height'] = '100px';
+			td.style.overflow = 'hidden';
 			td.id = heading[j].code;
 			var split_code = heading[j].code.split('_');
 			if (split_code[0].substr(0, 5) === 'guest' && split_code[1] === 'name' && guests[i][split_code[0]] && guests[i][split_code[0]].name) {

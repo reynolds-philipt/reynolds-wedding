@@ -1,3 +1,8 @@
+// prevent XSS Injection
+function htmlEntities(str) {
+  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
 function login() {
 	var self = this;
 	var config = self.get_config();
@@ -8,8 +13,8 @@ function login() {
 	var email_form = document.getElementById('email_form');
 	var email_p = document.getElementById('email_p');
 	var user_email = document.getElementById('user_email');
-	var first_name_input = document.getElementById('user_first_name');
-	var last_name_input = document.getElementById('user_last_name');
+	var first_name_input = htmlEntities(document.getElementById('user_first_name'));
+	var last_name_input = htmlEntities(document.getElementById('user_last_name'));
 	var user_submit = document.getElementById('user_submit');
 	
 	var user_saved = self.load_local("user");
